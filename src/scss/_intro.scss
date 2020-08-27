@@ -1,0 +1,26 @@
+.intro {
+  position: relative;
+  grid-column: full-start / full-end;
+  padding: 20rem 20vw;
+  background-color: rgb(150, 8, 8);
+
+  &__title-designer {
+    color: $color-white;
+    font-size: 22rem;
+    opacity: 0.3;
+    z-index: 99;
+  }
+  &__title-developer {
+    position: absolute;
+    top: 5rem;
+    left: 5rem;
+    color: $color-black;
+    font-size: 35rem;
+    line-height: 1;
+    z-index: 2;
+  }
+  &__description {
+    color: aliceblue;
+    font-size: 6rem;
+  }
+}
