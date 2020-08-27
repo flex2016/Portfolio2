@@ -1,2 +1,93 @@
-$yellow: #FF0;
-$grey: #CCC;
+// COLOR VARIABLES
+$color-primary: #f84525;
+
+$color-secondary: #1f1e1c;
+
+$color-grey-light-1: #cccccc;
+$color-grey-light-2: #9299a0;
+
+$color-grey-dark-1: #6f7781;
+$color-grey-dark-2: #6d5d4b;
+
+$color-white: #fff;
+$color-black: #000;
+// FONT VARIABLES
+$font-primary: "spartan_regular", sans-serif;
+$font-display: "sk", sans-serif;
+
+// RESPONSIVE BREAKPOINTS
+$bp-largest: 75em; // 1200px
+$bp-large: 62.5em; // 1000px
+$bp-medium: 50em; // 800px;
+$bp-small: 37.5em; // 600px;
+$bp-xsSmall: 26.25em; // 420px;
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+@font-face {
+  font-family: sui;
+  src: url(sui.ttf);
+}
+
+@font-face {
+  font-family: montserrat_bold;
+  src: url(Montserrat-Bold.woff);
+}
+
+@font-face {
+  font-family: spartan_regular;
+  src: url(spartan_regular.otf);
+}
+
+@font-face {
+  font-family: sk;
+  src: url(sk.otf);
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; // 10px/16px = 62.5% -> 1rem = 10px
+  scroll-behavior: smooth;
+  @media only screen and (max-width: $bp-largest) {
+    font-size: 50%;
+  }
+}
+
+body {
+  font-family: $font-primary;
+  color: $color-secondary;
+  font-weight: 300;
+  line-height: 1.6;
+}
+
+ul,
+nav {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: $color-grey-light-2;
+}
+
+.container {
+  display: grid;
+  background: $color-grey-light-1;
+  grid-template-rows: 100vh min-content 60vw;
+  grid-template-columns:
+    [full-start]minmax(6rem, 1fr) [center-start]repeat(
+      8,
+      [col-start] minmax(min-content, 14rem) [col-end]
+    )
+    [center-end]minmax(6rem, 1fr) [full-end];
+
+  @media only screen and (max-width: $bp-medium) {
+    grid-template-rows: 100vh;
+  }
+}
