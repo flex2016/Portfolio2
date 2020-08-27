@@ -79,7 +79,7 @@ a {
 .container {
   display: grid;
   background: $color-grey-light-1;
-  grid-template-rows: 100vh min-content 60vw;
+  grid-template-rows: 100vh min-content min-content min-content 20vh;
   grid-template-columns:
     [full-start]minmax(6rem, 1fr) [center-start]repeat(
       8,

@@ -1,0 +1,13 @@
+.footer {
+  position: relative;
+  grid-column: full-start / full-end;
+  background-color: $color-primary;
+  padding: 5rem;
+  &__logo {
+    position: absolute;
+    width: 40rem;
+    top: -20rem;
+    left: 40%;
+    opacity: 0.5;
+  }
+}
