@@ -1,22 +1,24 @@
 .intro {
   position: relative;
   grid-column: full-start / full-end;
-  padding: 20rem 20vw;
-  background-color: rgb(150, 8, 8);
+  padding: 10% 20vw;
+  background-color: $color-primary;
 
   &__title-designer {
     color: $color-white;
     font-size: 22rem;
-    opacity: 0.3;
+    opacity: 0.8;
     z-index: 99;
+    margin-bottom: 5rem;
   }
   &__title-developer {
     position: absolute;
-    top: 5rem;
+    top: 30rem;
     left: 5rem;
     color: $color-black;
     font-size: 35rem;
     line-height: 1;
+    opacity: 0.5;
     z-index: 2;
   }
   &__description {
