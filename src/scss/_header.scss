@@ -79,11 +79,13 @@
     color: $color-white;
     text-transform: uppercase;
     font-size: 2rem;
+    z-index: 55;
   }
   &__social {
     position: fixed;
     bottom: 2rem;
     right: 0;
+    z-index: 55;
 
     text-transform: uppercase;
     font-size: 2rem;

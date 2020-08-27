@@ -9,7 +9,7 @@
   color: $color-white;
   line-height: 1;
   margin: 3rem 0 5rem;
-  box-shadow: 0.2rem .8rem 0 -0.2rem $color-white;
+  // box-shadow: 0.2rem .8rem 0 -0.2rem $color-white;
 
   &--dark {
     color: $color-grey-dark-1;
@@ -22,7 +22,7 @@
   color: $color-white;
   line-height: 1;
   margin: 3rem 0 5rem;
-  box-shadow: 0.2rem .8rem 0 -0.2rem $color-secondary;
+  box-shadow: 0.2rem 0.8rem 0 -0.2rem $color-secondary;
 
   &--light {
     color: $color-grey-light-1;
@@ -99,7 +99,7 @@
 }
 
 .cnt {
-  box-shadow: 0.2rem .8rem 0 -0.2rem $color-secondary;
+  box-shadow: 0.2rem 0.8rem 0 -0.2rem $color-secondary;
 }
 
 .mb-lg {
