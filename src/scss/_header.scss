@@ -1,5 +1,5 @@
 .header {
-  overflow: auto;
+  overflow: hidden;
   background-color: $color-grey-light-1;
   grid-column: full-start / full-end;
 
@@ -150,11 +150,12 @@
     color: $color-white;
     text-shadow: 0px 0px 2px #201f1c6e;
     text-transform: uppercase;
-    font-family: "sui", sans-serif;
+    font-family: $font-primary;
     text-align: left;
-    letter-spacing: 2rem;
+    letter-spacing: 0.5rem;
     font-size: 12rem;
-    font-weight: 700;
+
+    font-weight: 900;
     opacity: 1;
 
     @supports (display: grid) {
@@ -162,7 +163,7 @@
       grid-column: 2 / -1;
       align-self: center;
       justify-self: center;
-      letter-spacing: 2rem;
+      letter-spacing: 0.5rem;
       // margin-right: -6rem;
 
       position: initial;

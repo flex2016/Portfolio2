@@ -2,7 +2,9 @@ const { src, dest, parallel, series, watch } = require("gulp");
 
 // Load plugins
 
+const babel = require("gulp-babel");
 const uglify = require("gulp-uglify");
+const terser = require("gulp-terser");
 const rename = require("gulp-rename");
 const sass = require("gulp-sass");
 const autoprefixer = require("gulp-autoprefixer");
@@ -28,8 +30,9 @@ function js() {
 
   return src(source)
     .pipe(changed(source))
+    .pipe(babel())
+    .pipe(terser())
     .pipe(concat("bundle.js"))
-    .pipe(uglify())
     .pipe(
       rename({
         extname: ".min.js",
