@@ -2,7 +2,6 @@ const { src, dest, parallel, series, watch } = require("gulp");
 
 // Load plugins
 
-const babel = require("gulp-babel");
 const uglify = require("gulp-uglify");
 const terser = require("gulp-terser");
 const rename = require("gulp-rename");
@@ -13,6 +12,10 @@ const concat = require("gulp-concat");
 const clean = require("gulp-clean");
 const imagemin = require("gulp-imagemin");
 const changed = require("gulp-changed");
+const rollup = require("gulp-better-rollup");
+const babel = require("rollup-plugin-babel");
+const resolve = require("rollup-plugin-node-resolve");
+const commonjs = require("rollup-plugin-commonjs");
 const browsersync = require("browser-sync").create();
 
 // Clean assets
@@ -30,7 +33,7 @@ function js() {
 
   return src(source)
     .pipe(changed(source))
-    .pipe(babel())
+    .pipe(rollup({ plugins: [babel(), resolve(), commonjs()] }, "umd"))
     .pipe(terser())
     .pipe(concat("bundle.js"))
     .pipe(

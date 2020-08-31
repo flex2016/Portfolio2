@@ -14,6 +14,7 @@
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^7.0.1",
     "gulp-babel": "^8.0.0",
+    "gulp-better-rollup": "^4.0.1",
     "gulp-changed": "^4.0.2",
     "gulp-clean": "^0.4.0",
     "gulp-concat": "^2.6.1",
@@ -23,6 +24,10 @@
     "gulp-sass": "^4.1.0",
     "gulp-terser": "^1.4.0",
     "gulp-uglify": "^3.0.2",
+    "rollup": "^2.26.7",
+    "rollup-plugin-babel": "^4.4.0",
+    "rollup-plugin-commonjs": "^10.1.0",
+    "rollup-plugin-node-resolve": "^5.2.0",
     "sass": "^1.26.10"
   },
   "dependencies": {
