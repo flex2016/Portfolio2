@@ -1,6 +1,6 @@
 .header {
   overflow: hidden;
-  background-color: $color-grey-light-1;
+  background-color: $color-black;
   grid-column: full-start / full-end;
 
   text-align: center;
@@ -72,6 +72,42 @@
     //   display: none;
     // }
   }
+
+  &__logo-big {
+    position: absolute;
+    top: 4.5rem;
+    left: 10rem;
+
+    height: 154.5rem;
+    width: 156rem;
+    opacity: 0.2;
+    // path {
+    //   fill: black;
+    // }
+
+    // @supports (display: grid) {
+    //   grid-row: 1 / 12;
+    //   grid-column: 1 / 12;
+    //   align-self: center;
+    //   justify-self: center;
+    //   margin-right: 4rem;
+    //   position: initial;
+    //   z-index: 1;
+    // }
+
+    // @media only screen and (max-width: $bp-medium) {
+    //   justify-self: start;
+    //   align-self: start;
+    // }
+
+    // @media only screen and (max-height: $bp-xsSmall) {
+    //   display: none;
+    // }
+
+    // @media only screen and (max-width: $bp-xsSmall) {
+    //   display: none;
+    // }
+  }
   &__contact {
     position: fixed;
     bottom: 3rem;
@@ -80,6 +116,7 @@
     text-transform: uppercase;
     font-size: 2rem;
     z-index: 55;
+    cursor: pointer;
   }
   &__social {
     position: fixed;
