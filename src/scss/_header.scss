@@ -55,22 +55,23 @@
       grid-column: 1 / 2;
       align-self: center;
       justify-self: center;
-      margin-right: 4rem;
+      margin-top: -2rem;
+      margin-left: -10rem;
       position: initial;
     }
 
-    // @media only screen and (max-width: $bp-medium) {
-    //   justify-self: start;
-    //   align-self: start;
-    // }
+    @media only screen and (max-width: $bp-medium) {
+      justify-self: start;
+      align-self: start;
+    }
 
-    // @media only screen and (max-height: $bp-xsSmall) {
-    //   display: none;
-    // }
+    @media only screen and (max-height: $bp-xsSmall) {
+      display: none;
+    }
 
-    // @media only screen and (max-width: $bp-xsSmall) {
-    //   display: none;
-    // }
+    @media only screen and (max-width: $bp-xsSmall) {
+      display: none;
+    }
   }
 
   &__logo-big {
@@ -81,42 +82,34 @@
     height: 154.5rem;
     width: 156rem;
     opacity: 0.2;
-    // path {
-    //   fill: black;
-    // }
+    // z-index: 1;
+    overflow: hidden;
+    @media only screen and (max-width: $bp-large) {
+      height: 104.5rem;
+      width: 106rem;
+    }
 
-    // @supports (display: grid) {
-    //   grid-row: 1 / 12;
-    //   grid-column: 1 / 12;
-    //   align-self: center;
-    //   justify-self: center;
-    //   margin-right: 4rem;
-    //   position: initial;
-    //   z-index: 1;
-    // }
+    @media only screen and (max-height: $bp-xsSmall) {
+      display: none;
+    }
 
-    // @media only screen and (max-width: $bp-medium) {
-    //   justify-self: start;
-    //   align-self: start;
-    // }
-
-    // @media only screen and (max-height: $bp-xsSmall) {
-    //   display: none;
-    // }
-
-    // @media only screen and (max-width: $bp-xsSmall) {
-    //   display: none;
-    // }
+    @media only screen and (max-width: $bp-xsSmall) {
+      display: none;
+    }
   }
   &__contact {
     position: fixed;
-    bottom: 3rem;
-    left: 3rem;
+    bottom: 2rem;
+    left: 2vw;
     color: $color-white;
     text-transform: uppercase;
     font-size: 2rem;
     z-index: 55;
     cursor: pointer;
+    transition: all 0.2s;
+    &:hover {
+      color: $color-primary;
+    }
   }
   &__social {
     position: fixed;
@@ -126,11 +119,17 @@
 
     text-transform: uppercase;
     font-size: 2rem;
+
     & a {
-      margin: 0 4rem 0 0;
+      margin: 0 4.5rem 0 0;
       color: $color-white;
+      transition: all 0.2s;
+      &:hover {
+        color: $color-primary;
+      }
     }
     & a:first-child {
+      margin: 0 4rem 0 0;
     }
   }
 
@@ -138,7 +137,7 @@
     font-size: 1.8rem;
     display: flex;
     flex-direction: row;
-    // margin-right: -2rem;
+    margin-right: -3.5rem;
     // position: absolute;
     // top: calc(100vh - 45rem);
     // left: 30vw;
@@ -153,13 +152,13 @@
       align-self: center;
       justify-self: center;
       // margin-right: -2rem;
-      position: initial;
+      // position: initial;
     }
   }
   &__nav-button {
     display: block;
     cursor: pointer;
-    font-size: 2rem;
+    font-size: 2.5rem;
     background: none;
     border: 0;
     margin: 0 4rem 0 0;
@@ -178,6 +177,9 @@
   }
   &__nav-button:hover a {
     animation: glitch-anim-text 0.5s linear alternate 1 backwards;
+    transition: all 0.2s;
+
+    color: $color-primary;
   }
   &__big {
     position: relative;
