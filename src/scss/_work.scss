@@ -40,9 +40,9 @@
   //   background-image: none;
   // }
 
-  img {
-    width: 70%;
-  }
+  // img {
+  //   width: 70%;
+  // }
 
   h3 {
     @media only screen and (max-width: $bp-small) {
@@ -53,7 +53,11 @@
       font-size: 5.2rem;
     }
   }
-
+  &__heading {
+    font-size: 5rem;
+    color: $color-white;
+    opacity: 0.5;
+  }
   &__list {
     display: grid;
     grid-template-columns: auto auto;
@@ -83,6 +87,9 @@
 
   &__img {
     // width: 80rem;
+
+    width: 70%;
+
     border-radius: 1%;
     display: block;
     margin-bottom: 3rem;
