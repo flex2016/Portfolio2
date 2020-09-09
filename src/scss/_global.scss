@@ -27,7 +27,7 @@ $bp-xsSmall: 26.25em; // 420px;
 *::after {
   margin: 0;
   padding: 0;
-  box-sizing: inherit;
+  box-sizing: block;
 }
 
 @font-face {

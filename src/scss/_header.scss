@@ -86,13 +86,18 @@
     opacity: 0.1;
     // z-index: 1;
     overflow: hidden;
-    @media only screen and (max-width: $bp-large) {
+    @media only screen and (max-width: $bp-largest) {
       height: 104.5rem;
       width: 106rem;
     }
 
-    @media only screen and (max-height: $bp-xsSmall) {
-      display: none;
+    @media only screen and (max-width: $bp-large) {
+      height: 60rem;
+      width: 60rem;
+    }
+    @media only screen and (max-width: $bp-medium) {
+      height: 20rem;
+      width: 20rem;
     }
 
     @media only screen and (max-width: $bp-xsSmall) {
