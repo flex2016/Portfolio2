@@ -112,6 +112,7 @@
     font-size: 1.7;
     left: 60vw;
     top: 80%;
+    z-index: 99;
   }
 
   &__img {
@@ -211,7 +212,7 @@ button {
     z-index: 3;
 
     &:after {
-      z-index: 2;
+      z-index: -1;
       transform: rotate(0deg);
       width: 100%;
       transition: transform 0.2s ease-in-out, width 0.3s ease-in-out 0.2s;
