@@ -76,33 +76,37 @@
 
   &__logo-big {
     position: absolute;
-    top: 4.5rem;
-    left: 10rem;
-
-    height: 154.5rem;
-    width: 156rem;
+    // top: 4.5rem;
+    // left: 10rem;
+    z-index: 0;
+    height: 100vh;
+    width: 80%;
     filter: invert(1) brightness(50%) sepia(100%) saturate(1%) blur(1px)
       drop-shadow(16px 16px 20px black) invert(5%);
     opacity: 0.1;
     // z-index: 1;
     overflow: hidden;
-    @media only screen and (max-width: $bp-largest) {
-      height: 104.5rem;
-      width: 106rem;
-    }
+    // @media only screen and (max-width: $bp-xlarge) {
+    //   height: 104.5rem;
+    //   width: 106rem;
+    // }
+    // @media only screen and (max-width: $bp-largest) {
+    //   height: 104.5rem;
+    //   width: 106rem;
+    // }
 
-    @media only screen and (max-width: $bp-large) {
-      height: 60rem;
-      width: 60rem;
-    }
-    @media only screen and (max-width: $bp-medium) {
-      height: 20rem;
-      width: 20rem;
-    }
+    // @media only screen and (max-width: $bp-large) {
+    //   height: 50rem;
+    //   width: 50rem;
+    // }
+    // @media only screen and (max-width: $bp-medium) {
+    //   height: 20rem;
+    //   width: 20rem;
+    // }
 
-    @media only screen and (max-width: $bp-xsSmall) {
-      display: none;
-    }
+    // @media only screen and (max-width: $bp-xsSmall) {
+    //   display: none;
+    // }
   }
   &__contact {
     position: fixed;
@@ -118,33 +122,33 @@
       color: $color-primary;
     }
   }
-  &__social {
-    position: fixed;
-    bottom: 2rem;
-    right: 0;
-    z-index: 55;
+  // &__social {
+  //   position: fixed;
+  //   bottom: 2rem;
+  //   right: 0;
+  //   z-index: 55;
 
-    text-transform: uppercase;
-    font-size: 2rem;
+  //   text-transform: uppercase;
+  //   font-size: 2rem;
 
-    & a {
-      margin: 0 4.5rem 0 0;
-      color: $color-black;
-      transition: all 0.2s;
-      &:hover {
-        color: $color-primary;
-      }
-    }
-    & a:first-child {
-      margin: 0 4rem 0 0;
-    }
-  }
+  //   & a {
+  //     margin: 0 4.5rem 0 0;
+  //     color: $color-black;
+  //     transition: all 0.2s;
+  //     &:hover {
+  //       color: $color-primary;
+  //     }
+  //   }
+  //   & a:first-child {
+  //     margin: 0 4rem 0 0;
+  //   }
+  // }
 
   &__nav {
     font-size: 1.8rem;
     display: flex;
     flex-direction: row;
-    margin-right: -3.5rem;
+    // margin-right: -3.5rem;
     // position: absolute;
     // top: calc(100vh - 45rem);
     // left: 30vw;
@@ -155,11 +159,16 @@
 
     @supports (display: grid) {
       grid-row: 1 / 2;
-      grid-column: 10 / 11;
+      grid-column: 8 / 11;
       align-self: center;
-      justify-self: center;
-      // margin-right: -2rem;
+      justify-self: end;
+      // margin-right: 0rem;
       // position: initial;
+    }
+    @media only screen and (max-width: $bp-medium) {
+      // font-size: 12rem;
+      // letter-spacing: 4rem;
+      // margin-right: -4rem;
     }
   }
   &__nav-button {
@@ -199,7 +208,7 @@
     font-family: $font-primary;
     text-align: left;
     letter-spacing: 0.5rem;
-    font-size: 12rem;
+    font-size: clamp(4rem, 4vw, 12rem);
 
     font-weight: 900;
     opacity: 1;
@@ -217,33 +226,34 @@
       left: 0%;
     }
     @media only screen and (max-width: $bp-largest) {
-      font-size: 12rem;
+      // font-size: 12rem;
       letter-spacing: 4rem;
       margin-right: -4rem;
     }
 
     @media only screen and (max-width: $bp-large) {
-      font-size: 9.2rem;
+      // font-size: 9.2rem;
     }
 
     @media only screen and (max-width: $bp-medium) {
       letter-spacing: 2.5rem;
       margin-right: -2.5rem;
-      font-size: 7.5rem;
+      // font-size: 7.5rem;
     }
 
     @media only screen and (max-width: $bp-small) {
       letter-spacing: 1rem;
       margin-right: -1rem;
-      font-size: 6rem;
+      // font-size: 6rem;
     }
 
     @media only screen and (max-width: $bp-xsSmall) {
-      font-size: 4.5rem;
+      // font-size: 4.5rem;
+      // margin-right: 0;
     }
 
     @media only screen and (max-height: $bp-xsSmall) {
-      transform: translateY(1.5rem);
+      // transform: translateY(1.5rem);
     }
   }
 }
@@ -255,6 +265,7 @@
   width: 42px;
   height: 78px;
   z-index: 20;
+  cursor: pointer;
   background: #4e5559
     linear-gradient(transparent 0%, transparent 50%, #ffffff 50%, #ffffff 100%);
   background-size: 100% 200%;

@@ -1,28 +1,29 @@
 .intro {
   position: relative;
   grid-column: full-start / full-end;
-  padding: 10% 20vw;
+  padding: 10%;
   background-color: $color-primary;
 
   &__title-designer {
     color: $color-white;
-    font-size: 22rem;
+    font-size: clamp(5rem, 10vw, 20rem);
     opacity: 0.8;
     z-index: 4;
     margin-bottom: 5rem;
   }
   &__title-developer {
     position: absolute;
-    top: 30rem;
-    left: 5rem;
+    top: 20%;
+    left: 17%;
     color: $color-black;
-    font-size: 35rem;
+    font-size: clamp(5rem, 15vw, 35rem);
     line-height: 1;
     opacity: 0.5;
     z-index: 2;
   }
   &__description {
+    margin-top: 15rem;
     color: aliceblue;
-    font-size: 6rem;
+    font-size: clamp(3rem, 10vw, 10rem);
   }
 }

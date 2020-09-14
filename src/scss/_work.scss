@@ -54,6 +54,7 @@
     }
   }
   &__heading {
+    width: 40%;
     font-size: 5rem;
     color: $color-white;
     opacity: 0.5;
@@ -90,7 +91,7 @@
     left: 40%;
     top: 20%;
     color: $color-primary;
-    font-size: 20rem;
+    font-size: clamp(9rem, 10vw, 20rem);
     line-height: 100%;
     transition: all 0.2s;
   }
@@ -101,9 +102,9 @@
   }
   &__type {
     position: absolute;
-    font-size: 2.5rem;
+    font-size: clamp(1.5rem, 1vw, 2.5rem);
     letter-spacing: 1rem;
-    left: 68vw;
+    left: 70%;
     top: 60%;
     transform: rotate(90deg);
   }
@@ -176,6 +177,13 @@ button {
   border-right: 1px solid $color-primary;
   position: relative;
   transition: color 0.2s ease-in-out 0s;
+  @media only screen and (max-width: $bp-small) {
+    font-size: 1.2rem;
+    height: 25px;
+    line-height: 25px;
+    margin-right: 12px;
+    padding: 0 2px;
+  }
 
   &:before,
   &:after {
@@ -204,6 +212,9 @@ button {
     z-index: 3;
     transition: width 0.3s ease-in-out, transform 0.2s ease-in-out 0.3s,
       z-index 0.15s ease-in-out;
+    @media only screen and (max-width: $bp-small) {
+      height: 25px;
+    }
   }
 
   &:hover {
