@@ -59,19 +59,24 @@
       margin-left: -10rem;
       position: initial;
     }
-
+    @media only screen and (max-width: $bp-largest) {
+      // justify-self: start;
+      // align-self: start;
+      margin-left: 10rem;
+    }
     @media only screen and (max-width: $bp-medium) {
-      justify-self: start;
-      align-self: start;
+      // justify-self: start;
+      // align-self: start;
+      margin-left: 2rem;
     }
 
-    @media only screen and (max-height: $bp-xsSmall) {
-      display: none;
-    }
+    // @media only screen and (max-height: $bp-xsSmall) {
+    //   display: none;
+    // }
 
-    @media only screen and (max-width: $bp-xsSmall) {
-      display: none;
-    }
+    // @media only screen and (max-width: $bp-xsSmall) {
+    //   display: none;
+    // }
   }
 
   &__logo-big {
@@ -86,27 +91,27 @@
     opacity: 0.1;
     // z-index: 1;
     overflow: hidden;
-    // @media only screen and (max-width: $bp-xlarge) {
-    //   height: 104.5rem;
-    //   width: 106rem;
-    // }
-    // @media only screen and (max-width: $bp-largest) {
-    //   height: 104.5rem;
-    //   width: 106rem;
-    // }
+    @media only screen and (max-width: $bp-xlarge) {
+      height: 104.5rem;
+      width: 106rem;
+    }
+    @media only screen and (max-width: $bp-largest) {
+      height: 110.5rem;
+      width: 112rem;
+    }
 
-    // @media only screen and (max-width: $bp-large) {
-    //   height: 50rem;
-    //   width: 50rem;
-    // }
-    // @media only screen and (max-width: $bp-medium) {
-    //   height: 20rem;
-    //   width: 20rem;
-    // }
+    @media only screen and (max-width: $bp-large) {
+      height: 100rem;
+      width: 100rem;
+    }
+    @media only screen and (max-width: $bp-medium) {
+      height: 50rem;
+      width: 50rem;
+    }
 
-    // @media only screen and (max-width: $bp-xsSmall) {
-    //   display: none;
-    // }
+    @media only screen and (max-width: $bp-xsSmall) {
+      display: none;
+    }
   }
   &__contact {
     position: fixed;
