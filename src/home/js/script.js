@@ -1,7 +1,3 @@
-import "../scss/test.scss";
-
-const foo = (name) => {
-  console.log(`Hello ${name}`);
+module.exports = {
+  greetings: "Hello from my-helper-module!!",
 };
-
-foo("taras");

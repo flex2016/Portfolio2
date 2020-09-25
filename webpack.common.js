@@ -1,12 +1,16 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+var package = require("./package.json");
 
 module.exports = {
-  entry: "./src/home/js/index.js",
+  entry: {
+    index: "./src/home/js/index.js",
+    vendor: Object.keys(package.dependencies),
+  },
   module: {
     rules: [
       {
-        test: /\.js$/,
+        test: /\.(js)$/,
         exclude: /node_modules/,
         use: {
           loader: "babel-loader",
@@ -17,6 +21,7 @@ module.exports = {
       },
     ],
   },
+  resolve: { extensions: [".js", ".ts"] },
   plugins: [
     new HtmlWebpackPlugin({
       filename: "index.html",
