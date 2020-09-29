@@ -1,11 +1,20 @@
-@import "./global.scss";
-@import "./typography.scss";
-@import "./header.scss";
-// @import "./main.scss";
-@import "./work.scss";
-@import "./intro.scss";
-@import "./personal-projects.scss";
-@import "./footer.scss";
+// @import "./global.scss";
+// @import "./typography.scss";
+// @import "./header.scss";
+
+// @import "./work.scss";
+// @import "./intro.scss";
+// @import "./personal-projects.scss";
+// @import "./footer.scss";
+
+@import "global.scss";
+@import "header.scss";
+@import "typography.scss";
+@import "main.scss";
+@import "work.scss";
+@import "intro.scss";
+@import "personal-projects.scss";
+@import "footer.scss";
 .swiper-container {
   width: 800px;
   height: 300px;
