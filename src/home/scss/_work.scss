@@ -93,12 +93,13 @@
     color: $color-primary;
     font-size: clamp(9rem, 10vw, 20rem);
     line-height: 100%;
+    opacity: 0.8;
     transition: all 0.2s;
   }
   &__details-heading a:hover {
     color: $color-primary;
-    // opacity: 0.8;
-    letter-spacing: 0.5rem;
+    opacity: 1;
+    // letter-spacing: 0.5rem;
   }
   &__type {
     position: absolute;

@@ -14,16 +14,5 @@
 @import "work.scss";
 @import "intro.scss";
 @import "personal-projects.scss";
+@import "contact.scss";
 @import "footer.scss";
-.swiper-container {
-  width: 800px;
-  height: 300px;
-  padding: 50px;
-}
-
-.swiper-slide {
-  background-position: center;
-  background-size: cover;
-  width: 300px;
-  height: 300px;
-}

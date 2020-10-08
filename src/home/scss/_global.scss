@@ -1,5 +1,5 @@
 // COLOR VARIABLES
-$color-primary: rgb(150, 8, 8);
+$color-primary: #ef1618;
 
 $color-secondary: #1f1e1c;
 
@@ -12,8 +12,8 @@ $color-grey-dark-2: #6d5d4b;
 $color-white: #fff;
 $color-black: #000;
 // FONT VARIABLES
-$font-primary: "sans-serif", sans-serif;
-$font-display: "sk", sans-serif;
+$font-primary: "Black Ops One";
+$font-display: "Black Ops One";
 
 // RESPONSIVE BREAKPOINTS
 $bp-xlarge: 100em; // 1600px;
@@ -79,7 +79,7 @@ a {
 .container {
   display: grid;
   background: $color-grey-light-1;
-  grid-template-rows: 100vh min-content min-content min-content 20vh;
+  grid-template-rows: 100vh repeat(4, min-max(min-content, 14rem)) 20vh;
   grid-template-columns:
     [full-start]minmax(6rem, 1fr) [center-start]repeat(
       8,

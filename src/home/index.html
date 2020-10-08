@@ -10,6 +10,11 @@
       integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
       crossorigin="anonymous"
     />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="//fonts.googleapis.com/css?family=Black+Ops+One"
+    />
     <!-- Link Swiper's CSS -->
     <!-- <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" /> -->
     <!-- <link rel="stylesheet" href="../dist/main.css" /> -->
@@ -35,7 +40,10 @@
         <button class="header__nav-button"><a href="#work">Work</a></button>
         <button class="header__nav-button"><a href="#work">About</a></button>
       </nav>
-      <h1 class="header__big">I help Businesses Grow</h1>
+      <h1 class="header__big">Chase your dreams,</h1>
+      <br />
+      <h1 class="header__big--1">not the competition</h1>
+      <h2 class="header__small">Tell Me what you need and MAGIC WILL HAPPEN</h2>
       <a href="#work" class="mouse"></a>
     </header>
     <section class="work" id="work">
@@ -43,7 +51,9 @@
       <div class="work__list">
         <div class="work__details" data-aos="fade-right">
           <h1 class="work__details-heading">
-            <a href="https://blcremationsystems.com/" target="_blank">B&L</a>
+            <a href="https://blcremationsystems.com/" target="_blank"
+              >B&L Cremation</a
+            >
           </h1>
           <h5 class="work__type heading-3">Identity & Website</h5>
           <div class="work__type-link">
@@ -105,48 +115,85 @@
       </p>
     </section>
     <section class="personal">
-      <h3 class="heading-2">Personal Projects</h3>
+      <h3 class="heading-1">Personal Projects</h3>
 
       <div class="swiper-container">
         <div class="swiper-wrapper">
-          <div
-            class="swiper-slide"
-            style="background-image: url(assets/img/fire.jpg)"
-          ></div>
-          <div
-            class="swiper-slide"
-            style="background-image: url(assets/img/fire.jpg)"
-          ></div>
-          <div
-            class="swiper-slide"
-            style="background-image: url(assets/img/fire.jpg)"
-          ></div>
-          <div
-            class="swiper-slide"
-            style="background-image: url(assets/img/fire.jpg)"
-          ></div>
-          <div
-            class="swiper-slide"
-            style="background-image: url(assets/img/fire.jpg)"
-          ></div>
-          <div
-            class="swiper-slide"
-            style="background-image: url(assets/img/fire.jpg)"
-          ></div>
-          <div
-            class="swiper-slide"
-            style="background-image: url(assets/img/fire.jpg)"
-          ></div>
-          <div
-            class="swiper-slide"
-            style="background-image: url(assets/img/fire.jpg)"
-          ></div>
+          <div class="swiper-slide"></div>
+          <div class="swiper-slide"></div>
+          <div class="swiper-slide"></div>
+          <div class="swiper-slide"></div>
         </div>
         <!-- Add Pagination -->
-        <div class="swiper-pagination"></div>
+        <!-- <div class="swiper-pagination"></div> -->
         <!-- Add Arrows -->
-        <!-- <div class="swiper-button-prev"></div>
-        <div class="swiper-button-next"></div> -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+      </div>
+    </section>
+    <section class="contact" id="contact">
+      <div class="contact__start">
+        <h2 class="contact__start-title">Start Project</h2>
+      </div>
+      <div class="contact__work">
+        <h2 class="contact__work-title">Let's Work</h2>
+        <h3 class="contact__interest">
+          Interested in working together? Lets Start!
+        </h3>
+      </div>
+
+      <div class="contact__middle">
+        <h2 class="contact__middle-text">
+          To find out the cost of yoursite, leave a request. I will contact you
+          shortly to discuss the project.
+        </h2>
+      </div>
+      <div class="contact__arrow">
+        <i class="contact__arrow-icon fas fa-arrow-down"></i>
+      </div>
+      <div class="contact__form">
+        <form
+          action="https://formspree.io/mail.4kreative@gmail.com"
+          method="POST"
+        >
+          <div class="form__group">
+            <input
+              name="name"
+              type="text"
+              class="form__input"
+              placeholder="Full name"
+              id="name"
+              required="required"
+            />
+            <label for="name" class="form__label">Full name</label>
+          </div>
+          <div class="form__group">
+            <input
+              name="email"
+              name="_replyto"
+              type="email"
+              class="form__input"
+              placeholder="Email address"
+              id="email"
+              required="required"
+            />
+            <label for="email" class="form__label">Email address</label>
+          </div>
+          <div class="form__group">
+            <textarea
+              name="message"
+              rows="6"
+              class="form__input"
+              id="message"
+              name="message"
+              placeholder="Tell us about your project (Scope, timeline, budget, etc."
+              name="message"
+              required="required"
+            ></textarea>
+            <label for="message" class="form__label"> Message</label>
+          </div>
+          <button class="form__btn btn">Send Request!</button>
+        </form>
       </div>
     </section>
     <footer class="footer">
