@@ -9,7 +9,7 @@ module.exports = {
     // vendor: "./src/home/js/vendor.js",
     index: "./src/home/js/index.js",
 
-    // project: "./src/project/js/project.js",
+    project: "./src/project/js/project.js",
   },
   module: {
     rules: [
@@ -45,12 +45,12 @@ module.exports = {
       chunks: ["index"],
       template: path.resolve(__dirname, "src/home", "index.html"),
     }),
-    // new HtmlWebpackPlugin({
-    //   filename: "./project/project.html",
-    //   inject: true,
-    //   chunks: ["project"],
-    //   template: path.resolve(__dirname, "src/project", "project.html"),
-    // }),
+    new HtmlWebpackPlugin({
+      filename: "project.html",
+      inject: true,
+      chunks: ["project"],
+      template: path.resolve(__dirname, "src/project", "project.html"),
+    }),
 
     new CopyWebpackPlugin({
       patterns: [

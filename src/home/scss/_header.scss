@@ -186,6 +186,7 @@
     padding: 0;
     text-transform: inherit;
     letter-spacing: 0.2rem;
+    font-family: $font-primary;
     // font-weight: inherit;
     color: $color-black;
     & a {
@@ -269,7 +270,7 @@
     color: $color-black;
     text-shadow: 0px 0px 2px #201f1c6e;
     text-transform: uppercase;
-    font-family: $font-primary;
+    // font-family: $font-primary;
     text-align: left;
     letter-spacing: 0.5rem;
     font-size: clamp(4rem, 4vw, 12rem);

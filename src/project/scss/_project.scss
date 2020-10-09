@@ -1,0 +1,114 @@
+.project {
+  &__nav {
+    background-color: $color-white;
+    grid-column: full-start / full-end;
+    display: grid;
+    justify-items: flex-end;
+  }
+  &__header {
+    grid-column: center-start / center-end;
+    padding: 5rem 0;
+    margin-left: 20rem;
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.5rem;
+    &-title {
+      font-size: 2rem;
+      text-decoration: underline;
+    }
+    &-column {
+      display: flex;
+      flex-direction: column;
+      & span:nth-of-type(2) {
+        color: $color-grey-light-2;
+      }
+    }
+    &-link {
+      color: $color-black;
+      font-size: 2rem;
+    }
+  }
+  &__client {
+    grid-column: full-start / full-end;
+    // background-color: $color-primary;
+    margin-bottom: 20rem;
+
+    &-name {
+      font-size: clamp(5rem, 10vw, 20rem);
+      margin-left: 50rem;
+    }
+    &-desc {
+      font-size: clamp(5rem, 10vw, 5rem);
+      padding: 0 25rem;
+      margin-bottom: 20rem;
+    }
+    &-image {
+    }
+    &-image img {
+      display: block;
+      margin: 0 auto;
+      width: 80%;
+      height: 1200px;
+    }
+  }
+  &__challenge {
+    grid-column: full-start / full-end;
+    // background-color: $color-primary;
+    margin-bottom: 20rem;
+
+    &-name {
+      font-size: clamp(5rem, 10vw, 20rem);
+      margin-left: 50rem;
+    }
+    &-desc {
+      font-size: clamp(5rem, 10vw, 5rem);
+      padding: 0 25rem;
+      margin-bottom: 5rem;
+    }
+    &__objective {
+      padding: 0 40rem;
+      margin-bottom: 20rem;
+      &-name {
+        font-size: 4rem;
+        font-weight: 600;
+        margin-bottom: 2rem;
+      }
+      &-desc {
+        font-size: 3rem;
+      }
+    }
+    &-image {
+    }
+    &-image img {
+      display: block;
+      margin: 0 auto;
+      width: 80%;
+      height: 1200px;
+    }
+  }
+  &__concept,
+  &__solution,
+  &__impact {
+    grid-column: full-start / full-end;
+    // background-color: $color-primary;
+    margin-bottom: 20rem;
+
+    &-name {
+      font-size: clamp(5rem, 10vw, 20rem);
+      margin-left: 50rem;
+    }
+    &-desc {
+      font-size: clamp(5rem, 10vw, 5rem);
+      padding: 0 25rem;
+      margin-bottom: 20rem;
+    }
+    &-image {
+    }
+    &-image img {
+      display: block;
+      margin: 0 auto;
+      width: 80%;
+      height: 1200px;
+    }
+  }
+}

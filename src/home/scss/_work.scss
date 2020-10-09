@@ -54,11 +54,13 @@
     }
   }
   &__heading {
-    width: 40%;
-    font-size: 5rem;
+    width: 25%;
+    font-size: clamp(4rem, 2vw, 5rem);
     color: $color-white;
-    opacity: 0.5;
-    padding: 10rem;
+    opacity: 1;
+    padding: 3rem 5rem 3rem 1rem;
+    margin: 12rem 0;
+    background-color: $color-primary;
   }
   &__list {
     display: grid;
