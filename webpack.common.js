@@ -27,14 +27,26 @@ module.exports = {
         test: /\.(png|jp(e*)g|svg)$/,
         use: [
           {
-            loader: "url-loader",
+            loader: "file-loader",
             options: {
               limit: 8000, // Convert images < 8kb to base64 strings
-              name: "images/[hash]-[name].[ext]",
+              name: "assets/img/[hash]-[name].[ext]",
             },
           },
         ],
       },
+      {
+         test: /\.(eot|woff|woff2|ttf|otf)(\?\S*)?$/,
+         use: [{
+                loader: 'file-loader',
+
+                   options: {
+                    name: '[name].[ext]',
+                    outputPath: 'assets/fonts/',
+
+                    }
+                }]
+            },
     ],
   },
   resolve: { extensions: [".js", ".ts"] },
@@ -55,7 +67,7 @@ module.exports = {
     new CopyWebpackPlugin({
       patterns: [
         { from: "src/img", to: "assets/img" },
-        { from: "src/fonts", to: "assets/fonts" },
+
       ],
     }),
   ],

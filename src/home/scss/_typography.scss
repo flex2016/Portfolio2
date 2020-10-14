@@ -1,19 +1,52 @@
 %heading {
-  font-family: $font-display;
+  font-family: $font-primary-bold;
   font-weight: 400;
 }
 
 .heading-1 {
   @extend %heading;
-  font-size: 8rem;
+  font-size: clamp(4rem, 8vw, 14rem);
   color: $color-white;
-  line-height: 1;
-  margin: 3rem 0 5rem;
+  line-height: 1.6;
+  font-weight: 900;
+  text-transform: uppercase;
+  // margin: 3rem 0 5rem;
   // box-shadow: 0.2rem .8rem 0 -0.2rem $color-white;
 
   &--dark {
-    color: $color-grey-dark-1;
+    @extend %heading;
+    // font-size: clamp(4rem, 8vw, 14rem);
+    // color: $color-black;
+    // line-height: 1.6;
+    // font-weight: 900;
+    // text-transform: uppercase;
   }
+  // @media only screen and (min-resolution: 192dpi) and (min-width: 37.5em),
+  //   only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 37.5em),
+  //   only screen and (min-width: 125em) {
+  //   background-image: url("../img/hex.jpg");
+  // }
+
+  // @media only screen and (max-width: $bp-medium) {
+  //   padding: 0;
+  //   @supports (display: grid) {
+  //     grid-column: 1 / -1;
+  //     padding: 2rem;
+  //   }
+  // }
+
+  // @media only screen and (max-width: $bp-small) {
+  //   background-position: right;
+  // }
+
+  // @media only screen and (max-height: $bp-xsSmall) {
+  //   padding: 0;
+  // }
+
+  // @media only screen and (max-width: $bp-xsSmall) {
+  //   padding: 0;
+  //   padding-bottom: 3rem;
+  // }
 }
 
 .heading-2 {
@@ -61,13 +94,17 @@
 .heading-4 a {
   color: $color-primary;
 }
+.heading-5 {
+  margin-top: 2rem;
+  font-size: 2rem;
+}
 
 .btn {
   background-color: $color-primary;
   color: #fff;
   border: none;
   border-radius: 0;
-  font-family: $font-display;
+  font-family: $font-primary;
   font-size: 2.2rem;
   text-transform: uppercase;
   padding: 1.8rem 3rem;
@@ -114,9 +151,4 @@
   font-size: 2.2rem;
   text-transform: uppercase;
   font-weight: 700;
-}
-
-.heading-5 {
-  margin-top: 2rem;
-  font-size: 2rem;
 }

@@ -6,9 +6,9 @@
     justify-items: flex-end;
   }
   &__header {
-    grid-column: center-start / center-end;
+    grid-column: col-start 6 / col-end 12;
     padding: 5rem 0;
-    margin-left: 20rem;
+
     display: flex;
     justify-content: space-between;
     font-size: 1.5rem;
@@ -28,53 +28,68 @@
       font-size: 2rem;
     }
   }
-  &__client {
-    grid-column: full-start / full-end;
+  &__client,
+  &__concept,
+  &__solution,
+  &__impact {
+    grid-column: col-start 1 / col-end 12;
     // background-color: $color-primary;
     margin-bottom: 20rem;
 
     &-name {
-      font-size: clamp(5rem, 10vw, 20rem);
-      margin-left: 50rem;
+      font-size: clamp(5rem, 10vw, 25rem);
+      margin-left: 20rem;
+      font-weight: 700;
+      font-family: $font-display;
     }
     &-desc {
-      font-size: clamp(5rem, 10vw, 5rem);
-      padding: 0 25rem;
+      font-size: clamp(3rem, 10vw, 4.5rem);
+      opacity: 0.5;
+      // padding: 0 25rem;
+      // margin-right: 10rem;
       margin-bottom: 20rem;
     }
     &-image {
+      display: grid;
+      place-items: center;
+      // align-items: center;
     }
     &-image img {
       display: block;
-      margin: 0 auto;
+      // margin: 0 auto;
       width: 80%;
-      height: 1200px;
+      height: 1000px;
     }
   }
   &__challenge {
-    grid-column: full-start / full-end;
+    grid-column: col-start 1 / col-end 12;
     // background-color: $color-primary;
     margin-bottom: 20rem;
 
     &-name {
       font-size: clamp(5rem, 10vw, 20rem);
-      margin-left: 50rem;
+      margin-left: 20rem;
+
+      font-weight: 700;
     }
     &-desc {
-      font-size: clamp(5rem, 10vw, 5rem);
-      padding: 0 25rem;
-      margin-bottom: 5rem;
+      font-size: clamp(3rem, 10vw, 4.5rem);
+      // padding: 0 25rem;
+      opacity: 0.5;
+      margin-bottom: 10rem;
     }
     &__objective {
-      padding: 0 40rem;
+      padding: 0 20rem;
       margin-bottom: 20rem;
+      width: 50%;
       &-name {
         font-size: 4rem;
         font-weight: 600;
         margin-bottom: 2rem;
       }
       &-desc {
-        font-size: 3rem;
+        font-size: clamp(2rem, 10vw, 3rem);
+        opacity: 0.5;
       }
     }
     &-image {
@@ -86,29 +101,90 @@
       height: 1200px;
     }
   }
-  &__concept,
-  &__solution,
-  &__impact {
-    grid-column: full-start / full-end;
+  &__results {
+    grid-column: col-start 2 / col-end 12;
     // background-color: $color-primary;
     margin-bottom: 20rem;
+    margin-left: 5rem;
 
     &-name {
       font-size: clamp(5rem, 10vw, 20rem);
-      margin-left: 50rem;
+      // margin-left: 20rem;
+      font-weight: 700;
     }
     &-desc {
-      font-size: clamp(5rem, 10vw, 5rem);
-      padding: 0 25rem;
+      font-size: clamp(1.5rem, 10vw, 2.5rem);
+      opacity: 0.5;
+      // padding: 0 25rem;
+      // margin-right: 10rem;
       margin-bottom: 20rem;
     }
     &-image {
+      display: grid;
+      place-items: center;
+      // align-items: center;
     }
     &-image img {
       display: block;
-      margin: 0 auto;
+      // margin: 0 auto;
       width: 80%;
-      height: 1200px;
+      height: 1000px;
     }
   }
+  &__sidescroll {
+    grid-column: full-start / full-end;
+    background-color: blue;
+  }
+  // &__concept,
+  // &__solution,
+  // &__impact {
+  //   grid-column: full-start / full-end;
+  //   // background-color: $color-primary;
+  //   margin-bottom: 20rem;
+
+  //   &-name {
+  //     font-size: clamp(5rem, 10vw, 20rem);
+  //     margin-left: 50rem;
+  //   }
+  //   &-desc {
+  //     font-size: clamp(5rem, 10vw, 5rem);
+  //     padding: 0 25rem;
+  //     margin-bottom: 20rem;
+  //   }
+  //   &-image {
+  //   }
+  //   &-image img {
+  //     display: block;
+  //     margin: 0 auto;
+  //     width: 80%;
+  //     height: 1200px;
+  //   }
+  // }
+}
+.swiper-container-two {
+  overflow: hidden;
+  width: 80%;
+  height: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
 }

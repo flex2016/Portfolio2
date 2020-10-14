@@ -97,6 +97,7 @@
     line-height: 100%;
     opacity: 0.8;
     transition: all 0.2s;
+    font-family: $font-display;
   }
   &__details-heading a:hover {
     color: $color-primary;
@@ -110,6 +111,7 @@
     left: 70%;
     top: 60%;
     transform: rotate(90deg);
+    font-family: $font-primary-bold;
   }
   &__type-link {
     position: absolute;

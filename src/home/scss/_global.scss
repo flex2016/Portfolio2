@@ -12,8 +12,10 @@ $color-grey-dark-2: #6d5d4b;
 $color-white: #fff;
 $color-black: #000;
 // FONT VARIABLES
-$font-primary: "Black Ops One";
-$font-display: "Black Ops One";
+$font-primary: "KaruReg", "sans-serif";
+$font-primary-bold: "KaruBold", "sans-serif";
+$font-primary-light: "KaruLight", "sans-serif";
+$font-display: "KaruBold", "sans-serif";
 
 // RESPONSIVE BREAKPOINTS
 $bp-xlarge: 100em; // 1600px;
@@ -31,27 +33,21 @@ $bp-xsSmall: 26.25em; // 420px;
   box-sizing: block;
 }
 
-// @font-face {
-//   font-family: sui;
-//   src: url(sui.ttf);
-// }
-
-// @font-face {
-//   font-family: montserrat_bold;
-//   src: url(/dist/assets/fonts/Montserrat-Bold.woff);
-// }
-
-// @font-face {
-//   font-family: spartan_regular;
-//   src: url(spartan_regular.otf);
-// }
-
-// @font-face {
-//   font-family: sk;
-//   src: url(sk.otf);
-// }
+@font-face {
+  font-family: KaruBold;
+  src: url(/src/fonts/Karu-Bold.otf);
+}
+@font-face {
+  font-family: KaruReg;
+  src: url(/src/fonts/Karu-Regular.otf);
+}
+@font-face {
+  font-family: KaruLight;
+  src: url(/src/fonts/Karu-Light.otf);
+}
 
 html {
+  // overflow: hidden;
   box-sizing: border-box;
   font-size: 62.5%; // 10px/16px = 62.5% -> 1rem = 10px
   scroll-behavior: smooth;
@@ -64,7 +60,7 @@ body {
   font-family: $font-primary;
   color: $color-secondary;
   font-weight: 300;
-  line-height: 1.6;
+  // line-height: 1.6;
 }
 
 ul,
@@ -75,13 +71,10 @@ nav {
 a {
   text-decoration: none;
 }
-h2 {
-  font-weight: 100;
-}
 
 .container {
   display: grid;
-  background: $color-grey-light-1;
+  // background: $color-grey-light-1;
   grid-template-rows: 100vh repeat(4, minmax(min-content, 14rem)) 20vh;
   grid-template-columns:
     [full-start]minmax(6rem, 1fr) [center-start]repeat(
@@ -96,17 +89,33 @@ h2 {
 }
 .container-two {
   display: grid;
-  background: $color-grey-light-1;
+  // background: $color-grey-light-1;
 
-  grid-template-rows: 10vh repeat(5, minmax(min-content, 14rem)) 20vh;
+  grid-template-rows: 10vh repeat(8, minmax(min-content, 14rem)) 20vh;
   grid-template-columns:
     [full-start]minmax(6rem, 1fr) [center-start]repeat(
-      8,
+      12,
       [col-start] minmax(min-content, 14rem) [col-end]
     )
     [center-end]minmax(6rem, 1fr) [full-end];
 
   @media only screen and (max-width: $bp-medium) {
-    grid-template-rows: 100vh;
+    // grid-template-rows: 100vh;
+  }
+}
+
+.underline--magical {
+  background-image: linear-gradient(
+    120deg,
+    $color-primary 0%,
+    $color-primary 100%
+  );
+
+  background-repeat: no-repeat;
+  background-size: 100% 0.3em;
+  background-position: 0 80%;
+  transition: background-size 0.25s ease-in;
+  &:hover {
+    background-size: 100% 80%;
   }
 }
