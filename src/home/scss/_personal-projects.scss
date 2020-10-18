@@ -4,8 +4,8 @@
 }
 
 .swiper-container {
-  width: 1200px;
-  height: 800px;
+  width: 70vw;
+  height: 40vw;
   padding-top: 50px;
   padding-bottom: 50px;
 }
@@ -16,6 +16,7 @@
   background: #fff;
   background-image: url(/src/img/fire.jpg);
   background-size: cover;
+  background-position: center;
   /* Center slide text vertically */
   display: -webkit-box;
   display: -ms-flexbox;

@@ -4,12 +4,17 @@ const package = require("./package.json");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
 
 module.exports = {
+  target: "web",
   entry: {
     // vendor: Object.keys(package.dependencies),
     // vendor: "./src/home/js/vendor.js",
     index: "./src/home/js/index.js",
 
     project: "./src/project/js/project.js",
+  },
+    output: {
+    filename: "[name].[contenthash].js",
+    path: path.resolve(__dirname, "dist"),
   },
   module: {
     rules: [
@@ -67,12 +72,7 @@ module.exports = {
     new CopyWebpackPlugin({
       patterns: [
         { from: "src/img", to: "assets/img" },
-
       ],
     }),
   ],
-  output: {
-    filename: "[name].[contenthash].js",
-    path: path.resolve(__dirname, "dist"),
-  },
 };

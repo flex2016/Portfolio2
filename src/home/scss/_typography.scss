@@ -1,11 +1,10 @@
 %heading {
   font-family: $font-primary-bold;
-  font-weight: 400;
 }
 
-.heading-1 {
-  @extend %heading;
-  font-size: clamp(4rem, 8vw, 14rem);
+.heading__bold {
+  font-family: $font-primary-bold;
+  font-size: calc(20 + (36 - 20) * ((100vw - 300px) / (1600 - 300px)));
   color: $color-white;
   line-height: 1.6;
   font-weight: 900;
@@ -14,39 +13,13 @@
   // box-shadow: 0.2rem .8rem 0 -0.2rem $color-white;
 
   &--dark {
-    @extend %heading;
-    // font-size: clamp(4rem, 8vw, 14rem);
-    // color: $color-black;
-    // line-height: 1.6;
-    // font-weight: 900;
-    // text-transform: uppercase;
+    font-family: $font-primary-bold;
+    font-size: clamp(4rem, 8vw, 14rem);
+    color: $color-black;
+    line-height: 1.6;
+    font-weight: 900;
+    text-transform: uppercase;
   }
-  // @media only screen and (min-resolution: 192dpi) and (min-width: 37.5em),
-  //   only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 37.5em),
-  //   only screen and (min-width: 125em) {
-  //   background-image: url("../img/hex.jpg");
-  // }
-
-  // @media only screen and (max-width: $bp-medium) {
-  //   padding: 0;
-  //   @supports (display: grid) {
-  //     grid-column: 1 / -1;
-  //     padding: 2rem;
-  //   }
-  // }
-
-  // @media only screen and (max-width: $bp-small) {
-  //   background-position: right;
-  // }
-
-  // @media only screen and (max-height: $bp-xsSmall) {
-  //   padding: 0;
-  // }
-
-  // @media only screen and (max-width: $bp-xsSmall) {
-  //   padding: 0;
-  //   padding-bottom: 3rem;
-  // }
 }
 
 .heading-2 {
