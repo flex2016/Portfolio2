@@ -21,7 +21,7 @@ $font-display: "Archivo Black", "sans-serif";
 $bp-xlarge: 100em; // 1600px;
 $bp-largest: 75em; // 1200px
 $bp-large: 62.5em; // 1000px
-$bp-medium: 50em; // 800px;
+$bp-medium: 47.875em; // 800px;
 $bp-small: 37.5em; // 600px;
 $bp-xsSmall: 26.25em; // 420px;
 
@@ -106,7 +106,7 @@ a {
 .underline--magical {
   background-image: linear-gradient(
     120deg,
-    $color-primary 0%,
+    $color-white 0%,
     $color-primary 100%
   );
 
