@@ -59,10 +59,17 @@
       margin-left: 4rem;
       // position: initial;
     }
-    @media only screen and (max-width: $bp-largest) {
+    @media only screen and (max-width: $bp-xlarge) {
       // justify-self: start;
       // align-self: start;
-      // margin-left: -10rem;
+      margin-top: 1.5rem;
+      margin-left: 0rem;
+    }
+    @media only screen and (max-width: $bp-largest) {
+      justify-self: start;
+      align-self: start;
+      margin-top: 2rem;
+      margin-left: 0rem;
     }
     @media only screen and (max-width: $bp-large) {
       align-self: end;
@@ -76,7 +83,7 @@
       // justify-self: start;
       // align-self: end;
       margin-left: 0rem;
-      margin-top: 1rem;
+      margin-top: 2rem;
     }
 
     // @media only screen and (max-height: $bp-xsSmall) {
@@ -186,8 +193,16 @@
       // margin-right: 0rem;
       position: initial;
     }
+    @media only screen and (max-width: $bp-xlarge) {
+      // justify-self: start;
+      // align-self: start;
+      margin-top: 2.6rem;
+      margin-left: 0rem;
+    }
+    @media only screen and (max-width: $bp-largest) {
+      margin-top: -7rem;
+    }
     @media only screen and (max-height: $bp-large) {
-      align-self: flex-start;
       margin-top: 2rem;
     }
     @media only screen and (max-width: $bp-medium) {
@@ -266,10 +281,26 @@
       top: 0%;
       left: 0%;
     }
-    @media only screen and (min-width: $bp-largest) {
-      // font-size: 12rem;
+    @media only screen and (max-width: $bp-xlarge) {
+      // justify-self: start;
+      // align-self: start;
+      margin-top: 2.6rem;
+      margin-left: 2rem;
       letter-spacing: 3rem;
+      grid-row: 3 / 6;
+      line-height: 1.2;
+      font-size: clamp(6.5rem, 15vw, 15rem);
+    }
+    @media only screen and (max-width: $bp-largest) {
+      // font-size: 12rem;
+      // letter-spacing: 3rem;
+      // font-size: clamp(6.5rem, 15vw, 20rem);
       // margin-right: -4rem;
+      grid-row: 4 / 5;
+      grid-column: 1 / -1;
+      align-self: center;
+      justify-self: center;
+      letter-spacing: 0.5rem;
     }
 
     @media only screen and (max-width: $bp-large) {
@@ -278,7 +309,15 @@
       grid-column: 2 / -1;
       grid-row: 3 / 6;
     }
-    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
+    @media only screen and (max-device-height: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
+      font-size: clamp(6.5rem, 12vw, 20rem);
+      line-height: 1.2;
+      margin-left: 2rem;
+      grid-column: 1 / -1;
+      grid-row: 3 / 5;
+    }
+
+    @media only screen and (min-device-width: 768px) and (max-device-width: 823px) and (orientation: landscape) {
       font-size: clamp(6.5rem, 7vw, 14rem);
       grid-column: 1 / -1;
     }
@@ -294,12 +333,29 @@
       font-size: clamp(5.25rem, 6vw, 14rem);
       line-height: 1.2;
     }
+    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
+      font-size: clamp(6.5rem, 15vw, 20rem);
+      grid-row: 3 / 6;
+      grid-column: 1 / -1;
+      margin-left: 2rem;
+      line-height: 1.2;
+    }
 
     @media only screen and (max-width: $bp-small) {
       // letter-spacing: 1rem;
       // margin-right: -1rem;
       // font-size: 6rem;
       font-size: clamp(4.4rem, 6vw, 14rem);
+    }
+    @media only screen and (min-device-width: 540px) and (max-device-width: 560px) and (orientation: portrait) {
+      font-size: clamp(6.5rem, 15vw, 20rem);
+      grid-row: 3 / 7;
+      // grid-column: 1 / -1;
+    }
+    @media only screen and (min-device-width: 720px) and (max-device-width: 720px) and (orientation: landscape) {
+      font-size: clamp(6.5rem, 10vw, 20rem);
+      // grid-row: 3 / 6;
+      // grid-column: 1 / -1;
     }
 
     @media only screen and (max-width: $bp-xsSmall) {
@@ -322,7 +378,7 @@
     top: 15%;
     left: 0%;
     opacity: 0.5;
-    color: $color-black;
+    color: $color-grey-light-1;
     text-shadow: 2px 2px 2px #201f1c6e;
     text-transform: uppercase;
     font-family: $font-primary-bold;
@@ -344,19 +400,41 @@
       top: 0%;
       left: 0%;
     }
-    @media only screen and (min-width: $bp-largest) {
+    @media only screen and (max-width: $bp-xlarge) {
+      // justify-self: start;
+      // align-self: start;
+      margin-top: 2.6rem;
+      margin-left: 2rem;
+      letter-spacing: 3rem;
+      grid-row: 7 / 10;
+      line-height: 1.2;
+      font-size: clamp(6.5rem, 10vw, 12rem);
+    }
+    @media only screen and (max-width: $bp-largest) {
       // font-size: 12rem;
       letter-spacing: 3rem;
       // margin-right: -4rem;
+      grid-row: 5 / 8;
+      grid-column: 1 / -1;
+      align-self: center;
+      justify-self: center;
+      letter-spacing: 0rem;
     }
 
     @media only screen and (max-width: $bp-large) {
       // font-size: 9.2rem;
-      font-size: clamp(6.8rem, 9vw, 14rem);
-      grid-column: 2 / -1;
-      grid-row: 6 / 8;
+      // font-size: clamp(6.8rem, 9vw, 14rem);
+      // grid-column: 2 / -1;
+      // grid-row: 6 / 8;
     }
-    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
+    @media only screen and (max-device-height: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
+      font-size: clamp(6.5rem, 10vw, 20rem);
+      line-height: 1.2;
+      margin-left: 2rem;
+      grid-column: 1 / -1;
+      grid-row: 6 / 9;
+    }
+    @media only screen and (min-device-width: 768px) and (max-device-width: 823px) and (orientation: landscape) {
       font-size: clamp(6.5rem, 7vw, 14rem);
       grid-column: 1 / -1;
       grid-row: 6 / 7;
@@ -371,6 +449,12 @@
       grid-row: 5 / 8;
       font-size: clamp(5.5rem, 6vw, 14rem);
     }
+    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
+      font-size: clamp(6.5rem, 12vw, 15rem);
+      grid-row: 7 / 9;
+      margin-left: 2rem;
+      line-height: 1.2;
+    }
 
     @media only screen and (max-width: $bp-small) {
       // letter-spacing: 1rem;
@@ -381,6 +465,18 @@
         grid-row: 6 / 8;
         grid-column: 1 / -1;
       }
+    }
+    @media only screen and (min-device-width: 540px) and (max-device-width: 560px) and (orientation: portrait) {
+      font-size: clamp(6.5rem, 12vw, 20rem);
+      grid-row: 8 / 9;
+
+      // grid-column: 1 / -1;
+    }
+    @media only screen and (min-device-width: 720px) and (max-device-width: 720px) and (orientation: landscape) {
+      font-size: clamp(6.5rem, 10vw, 20rem);
+      grid-row: 6 / 8;
+
+      // grid-column: 1 / -1;
     }
 
     @media only screen and (max-width: $bp-xsSmall) {
@@ -414,7 +510,7 @@
     opacity: 1;
 
     @supports (display: grid) {
-      grid-row: 6 / 8;
+      grid-row: 7 /9;
       grid-column: 3 / -1;
       align-self: center;
       justify-self: center;
@@ -425,11 +521,24 @@
       top: 0%;
       left: 0%;
     }
+    @media only screen and (max-width: $bp-xlarge) {
+      // justify-self: start;
+      // align-self: start;
+      grid-row: 10 /-1;
+      grid-column: 7 / -1;
+      font-size: clamp(1.8rem, 4vw, 2.5rem);
+    }
     @media only screen and (max-width: $bp-largest) {
       // font-size: 12rem;
       // letter-spacing: 4rem;
       // margin-right: -4rem;
       grid-row: 7 / 8;
+      display: block;
+    }
+    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
+      grid-row: 9 / 10;
+      grid-column: 1 / -1;
+      margin-left: 2rem;
     }
 
     @media only screen and (max-width: $bp-large) {
@@ -437,6 +546,9 @@
       grid-row: 7 / 10;
       grid-column: 1 / -1;
       font-size: clamp(1.8rem, 3vw, 3.5rem);
+    }
+    @media only screen and (max-device-height: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
+      grid-row: 8 / 10;
     }
 
     @media only screen and (max-width: $bp-medium) {
@@ -448,11 +560,30 @@
       font-size: clamp(1.8rem, 3vw, 3.5rem);
     }
 
+    @media only screen and (min-device-width: 768px) and (max-device-width: 1023px) and (orientation: portrait) {
+      grid-row: 8 / 11;
+      grid-column: 4 / -1;
+    }
+    @media only screen and (min-device-width: 1023px) and (max-device-width: 1024px) and (orientation: landscape) {
+      grid-row: 8 / 11;
+      grid-column: 4 / -1;
+    }
+
     @media only screen and (max-width: $bp-small) {
       // letter-spacing: 1rem;
       // margin-right: -1rem;
       // font-size: 6rem;
       display: none;
+    }
+    // @media only screen and (min-device-width: 540px) and (max-device-width: 560px) and (orientation: portrait) {
+    //   margin-top: 5rem;
+    //   font-size: clamp(6.5rem, 12vw, 20rem);
+    //   // grid-row: 3 / 6;
+    //   // grid-column: 1 / -1;
+    // }
+    @media only screen and (min-device-width: 720px) and (max-device-width: 720px) and (orientation: landscape) {
+      grid-row: 9 / 10;
+      // grid-column: 1 / -1;
     }
 
     @media only screen and (max-width: $bp-xsSmall) {
