@@ -59,6 +59,12 @@
       margin-left: 4rem;
       // position: initial;
     }
+    @media only screen and (min-width: $bp-xlarge) {
+      // justify-self: start;
+      // align-self: start;
+      margin-top: 1.5rem;
+      margin-left: 1rem;
+    }
     @media only screen and (max-width: $bp-xlarge) {
       // justify-self: start;
       // align-self: start;
@@ -94,7 +100,53 @@
     //   display: none;
     // }
   }
+  &__chase {
+    position: absolute;
+    // top: 4.5rem;
+    // left: 10rem;
+    z-index: 0;
+    height: 60%;
+    width: 80%;
+    opacity: 0.8;
+    // transform: scaleX(-1);
+    filter: invert(0) brightness(100%) sepia(10%) saturate(1%) blur(1px)
+      invert(5%);
 
+    // z-index: 1;
+    overflow: hidden;
+
+    @supports (display: grid) {
+      grid-row: 4 / 6;
+      grid-column: 6 / -1;
+      align-self: center;
+      justify-self: end;
+      // margin-right: 0rem;
+      position: initial;
+      z-index: 0;
+    }
+    // @media only screen and (max-width: $bp-xlarge) {
+    //   height: 104.5rem;
+    //   width: 106rem;
+    // }
+    // @media only screen and (max-width: $bp-largest) {
+    //   height: 110.5rem;
+    //   width: 112rem;
+    // }
+
+    // @media only screen and (max-width: $bp-large) {
+    //   height: 100rem;
+    //   width: 96rem;
+    // }
+    // @media only screen and (max-width: $bp-medium) {
+    //   height: 62.5rem;
+    //   width: 66rem;
+    // }
+
+    // @media only screen and (max-width: $bp-xsSmall) {
+    //   height: 42.5rem;
+    //   width: 36rem;
+    // }
+  }
   &__logo-big {
     position: absolute;
     // top: 4.5rem;
@@ -260,7 +312,7 @@
     position: relative;
     top: 10%;
     left: 0%;
-
+    z-index: 2;
     color: $color-black;
     text-shadow: 2px 2px 2px #201f1c6e;
     text-transform: uppercase;
@@ -280,6 +332,16 @@
       position: initial;
       top: 0%;
       left: 0%;
+    }
+    @media only screen and (min-width: $bp-xlarge) {
+      // justify-self: start;
+      // align-self: start;
+
+      margin-left: 12rem;
+      letter-spacing: 3rem;
+      grid-row: 2 / 6;
+      line-height: 1;
+      font-size: clamp(6.5rem, 20vw, 20rem);
     }
     @media only screen and (max-width: $bp-xlarge) {
       // justify-self: start;
@@ -372,12 +434,16 @@
     @media only screen and (max-height: $bp-xsSmall) {
       // transform: translateY(1.5rem);
     }
+    &-ur {
+      color: $color-white;
+    }
   }
   &__big--1 {
     position: relative;
     top: 15%;
     left: 0%;
     opacity: 0.5;
+    z-index: 2;
     color: $color-grey-light-1;
     text-shadow: 2px 2px 2px #201f1c6e;
     text-transform: uppercase;
@@ -399,6 +465,16 @@
       position: initial;
       top: 0%;
       left: 0%;
+    }
+    @media only screen and (min-width: $bp-xlarge) {
+      // justify-self: start;
+      // align-self: start;
+
+      margin-left: 12rem;
+      letter-spacing: 3rem;
+      grid-row: 6 / 10;
+      line-height: 1;
+      font-size: clamp(6.5rem, 15vw, 15rem);
     }
     @media only screen and (max-width: $bp-xlarge) {
       // justify-self: start;
@@ -520,6 +596,18 @@
       position: initial;
       top: 0%;
       left: 0%;
+    }
+    @media only screen and (min-width: $bp-2xlarge) {
+      // justify-self: start;
+      // align-self: start;
+      margin-right: 4rem;
+    }
+    @media only screen and (min-width: $bp-xlarge) {
+      // justify-self: start;
+      // align-self: start;
+      margin-top: 4rem;
+      grid-row: 9 /-1;
+      grid-column: 7 / 11;
     }
     @media only screen and (max-width: $bp-xlarge) {
       // justify-self: start;
