@@ -3,9 +3,9 @@
   grid-column: full-start / full-end;
   padding: 10rem 8vw;
   display: grid;
-  // align-content: center;
-  // justify-content: center;
-  // justify-items: center;
+  align-content: center;
+  justify-content: center;
+  justify-items: left;
   grid-row-gap: 5rem;
   opacity: 1;
 
@@ -44,35 +44,43 @@
   //   width: 70%;
   // }
 
-  h3 {
-    @media only screen and (max-width: $bp-small) {
-      font-size: 7rem;
-    }
+  // h3 {
+  //   @media only screen and (max-width: $bp-small) {
+  //     font-size: 7rem;
+  //   }
 
-    @media only screen and (max-width: $bp-xsSmall) {
-      font-size: 5.2rem;
-    }
-  }
+  //   @media only screen and (max-width: $bp-xsSmall) {
+  //     font-size: 5.2rem;
+  //   }
+  // }
   &__heading {
-    width: 25%;
+    // width: 25%;
     font-size: clamp(4rem, 2vw, 5rem);
     color: $color-white;
     opacity: 1;
     padding: 3rem 5rem 3rem 1rem;
-    margin: 12rem 0;
+    margin: 10rem 0;
     background-color: $color-primary;
+    @media only screen and (max-width: $bp-medium) {
+      margin: 0;
+    }
+    @media only screen and (max-width: $bp-small) {
+      font-size: clamp(3rem, 2vw, 5rem);
+
+      padding: 2rem 4rem 2rem 1rem;
+    }
   }
   &__list {
-    display: grid;
-    grid-template-columns: auto auto;
-    grid-column-gap: 1rem;
-    grid-row-gap: 8vh;
-    align-items: start;
+    // display: grid;
+    // grid-template-columns: auto auto;
+    // grid-column-gap: 1rem;
+    // grid-row-gap: 8vh;
+    // align-items: start;
 
     @media only screen and (max-width: $bp-largest) {
-      grid-template-columns: 1fr;
+      // grid-template-columns: 1fr;
 
-      grid-row-gap: 0vh;
+      // grid-row-gap: 0vh;
     }
   }
   // &__details {
@@ -90,14 +98,32 @@
   // }
   &__details-heading a {
     position: absolute;
-    left: 40%;
+    left: 35%;
     top: 20%;
+    width: 50%;
     color: $color-primary;
-    font-size: clamp(9rem, 10vw, 20rem);
+    font-size: clamp(6rem, 10vw, 20rem);
     line-height: 100%;
     opacity: 0.8;
     transition: all 0.2s;
     font-family: $font-display;
+    @media only screen and (max-width: $bp-xlarge) {
+      left: 8%;
+      top: 32%;
+    }
+    @media only screen and (max-width: $bp-large) {
+      top: 40%;
+    }
+    @media only screen and (max-width: $bp-medium) {
+      top: 29.5%;
+    }
+
+    @media only screen and (max-width: $bp-small) {
+      top: 37.5%;
+    }
+    @media only screen and (max-width: $bp-small) and (orientation: landscape) {
+      top: 32.5%;
+    }
   }
   &__details-heading a:hover {
     color: $color-primary;
@@ -111,26 +137,57 @@
     left: 70%;
     top: 60%;
     transform: rotate(90deg);
-    font-family: $font-primary-bold;
+    font-family: $font-primary;
+    // font-size: clamp(1.8rem, 1vw, 2.2rem);
+    color: $color-primary;
+    text-transform: uppercase;
+    @media only screen and (max-width: $bp-xlarge) {
+      left: 70%;
+      top: 55%;
+      letter-spacing: 0.5rem;
+    }
+    @media only screen and (max-width: $bp-large) {
+      left: 68%;
+      top: 70%;
+    }
+    @media only screen and (max-width: $bp-small) {
+      transform: rotate(0deg);
+      left: 9%;
+      top: 82%;
+    }
   }
   &__type-link {
     position: absolute;
     font-size: 1.7;
-    left: 60vw;
+    right: 20%;
     top: 80%;
     z-index: 99;
+    @media only screen and (max-width: $bp-xlarge) {
+      right: 17%;
+      top: 75%;
+    }
+    @media only screen and (max-width: $bp-large) {
+      right: 24%;
+      top: 85%;
+    }
+    @media only screen and (max-width: $bp-medium) {
+      left: 0%;
+      top: 93%;
+      display: none;
+    }
   }
 
   &__img {
     // width: 80rem;
 
-    width: 70%;
+    width: 80%;
 
     border-radius: 1%;
     display: block;
-    margin-bottom: 3rem;
-    @media only screen and (max-width: $bp-medium) {
+    margin: 10rem 0;
+    @media only screen and (max-width: $bp-small) {
       margin-bottom: 7rem;
+      width: 100%;
     }
   }
 
@@ -183,11 +240,13 @@ button {
   position: relative;
   transition: color 0.2s ease-in-out 0s;
   @media only screen and (max-width: $bp-small) {
-    font-size: 1.2rem;
+    // font-size: 1.2rem;
     height: 25px;
     line-height: 25px;
     margin-right: 12px;
     padding: 0 2px;
+
+    width: 50%;
   }
 
   &:before,
