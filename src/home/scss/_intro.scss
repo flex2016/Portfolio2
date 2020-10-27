@@ -6,27 +6,37 @@
 
   &__title-designer {
     color: $color-white;
-    font-size: clamp(10rem, 20vw, 25rem);
+    font-size: clamp(7rem, 17vw, 25rem);
     opacity: 1;
     z-index: 4;
-    margin-bottom: 5rem;
+
     font-family: $font-primary-bold;
+    @media only screen and (max-width: $bp-small) {
+      margin-left: -1rem;
+    }
   }
   &__title-developer {
     position: absolute;
     top: 20%;
-    left: 17%;
+    left: 3%;
     color: $color-black;
-    font-size: clamp(15rem, 15vw, 35rem);
+    font-size: clamp(7rem, 17vw, 35rem);
     line-height: 1;
     opacity: 0.9;
     z-index: 2;
     font-family: $font-primary-bold;
+    @media only screen and (max-width: $bp-small) {
+      left: 2%;
+    }
   }
   &__description {
     margin-top: 15rem;
     color: aliceblue;
     font-size: clamp(3rem, 10vw, 10rem);
     font-family: "sans-serif";
+    @media only screen and (max-width: $bp-small) {
+      // font-size: 9.2rem;
+      margin-top: 10rem;
+    }
   }
 }
