@@ -1,19 +1,48 @@
 .personal {
+  padding: 10rem;
   grid-column: center-start / center-end;
-  // background-color: aqua;
+  display: grid;
+  align-content: center;
+  justify-content: center;
+  justify-items: left;
+  @media only screen and (max-width: $bp-small) {
+    grid-column: full-start / full-end;
+    padding: 10rem 2rem;
+  }
+  &__heading {
+    font-size: clamp(3rem, 2vw, 5rem);
+    color: $color-white;
+    opacity: 1;
+    padding: 3rem 5rem 3rem 1rem;
+    margin: 0rem 0 10rem -12rem;
+    background-color: $color-primary;
+    // box-shadow: 0.2rem 0.8rem 0 -0.2rem $color-black;
+    @media only screen and (max-width: $bp-small) {
+      margin: 0rem 0 5rem 0rem;
+    }
+  }
 }
 
 .swiper-container {
   width: 70vw;
   height: 40vw;
-  padding-top: 50px;
-  padding-bottom: 50px;
+
+  @media only screen and (max-width: $bp-largest) {
+    width: 70vw;
+    height: 50vw;
+  }
+  @media only screen and (max-width: $bp-small) {
+    // margin: 0px;
+    width: 100vw;
+    height: 70vw;
+  }
 }
 
 .swiper-slide {
   text-align: center;
   font-size: 18px;
   background: #fff;
+  object-fit: cover;
   background-image: url(/src/img/fire.jpg);
   background-size: cover;
   background-position: center;
@@ -30,4 +59,16 @@
   -ms-flex-align: center;
   -webkit-align-items: center;
   align-items: center;
+  & a {
+    height: 100%;
+    width: 100%;
+  }
+}
+.swiper-button-prev,
+.swiper-button-next {
+  color: $color-white;
+  transition: all 0.2s;
+  &:hover {
+    color: $color-primary;
+  }
 }
