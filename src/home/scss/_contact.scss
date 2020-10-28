@@ -1,5 +1,5 @@
 .contact {
-  overflow: auto;
+  // overflow: hidden;
   background-color: #2f2e2e;
   // background-image: url("../img/contact_img-small.jpg");
   background-size: cover;
@@ -9,41 +9,79 @@
   // display: grid;
   align-content: center;
   justify-content: center;
-  grid-row-gap: 2rem;
+  // grid-row-gap: 2rem;
   opacity: 1;
-  display: grid;
-  grid-gap: 10px;
-  grid-template-rows: repeat(8, 1fr);
-  grid-template-columns: repeat(10, 1fr);
+  // display: grid;
+  // grid-gap: 10px;
+  // grid-template-rows: repeat(8, 1fr);
+  // grid-template-columns: repeat(10, 1fr);
+  display: flex;
+  flex-wrap: wrap;
+  // flex-direction: column;
+  // padding: 20rem 0;
   @media only screen and (min-resolution: 192dpi) and (min-width: 37.5em),
     only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 37.5em),
     only screen and (min-width: 125em) {
     // background-image: url("../img/contact_img.jpg");
   }
 
+  @media only screen and (max-width: $bp-medium) {
+    display: flex;
+    flex-direction: column;
+  }
+
   @media only screen and (max-width: $bp-small) {
-    padding: 4rem 2vw 8rem;
   }
   &__start {
-    overflow: visible;
+    flex-basis: 40%;
+
     // background-color: #2f2e2e;
-    grid-row: 2 / 3;
-    grid-column: 1 / 5;
+    // grid-row: 2 / 3;
+    // grid-column: 1 / 5;
+    cursor: default;
     background-color: $color-primary;
     font-family: $font-display;
     font-weight: 100;
     text-transform: uppercase;
     display: grid;
     align-self: center;
-    padding: 11rem 0px 12rem 17rem;
+    padding: 9rem 0px 9rem 17rem;
     color: $color-white;
+    margin-bottom: 20rem;
+    @media only screen and (max-width: $bp-xlarge) {
+      padding: 6rem 0px 6rem 7rem;
+      margin-bottom: 0rem;
+    }
+    @media only screen and (max-width: $bp-medium) {
+      align-self: flex-start;
+      margin-top: 11rem;
+      padding: 6rem 20px 6rem 7rem;
+    }
+    @media only screen and (max-width: $bp-small) {
+      padding: 6rem 5rem 6rem 13rem;
+    }
+    @media only screen and (max-width: $bp-xsSmall) {
+      padding: 5rem;
+      align-self: auto;
+    }
     &-title {
       align-self: center;
       justify-self: center;
-      font-size: clamp(3rem, 4vw, 12rem);
+      font-size: clamp(3rem, 5.5vw, 6rem);
+      @media only screen and (max-width: $bp-xlarge) {
+        font-size: 3vw;
+      }
+      // @media only screen and (max-width: $bp-medium) {
+      //   justify-self: left;
+      //   margin-right: 5rem;
+      // }
+      @media only screen and (max-width: $bp-small) {
+        font-size: 4rem;
+      }
     }
   }
   &__work {
+    flex-basis: 60%;
     grid-row: 2 / 3;
     grid-column: 5 / -1;
     text-transform: uppercase;
@@ -52,11 +90,33 @@
     position: relative;
     display: grid;
     justify-items: center;
-    font-family: $font-display;
+    font-family: $font-primary-bold;
+    margin-bottom: 20rem;
+    margin-top: 40rem;
+    @media only screen and (max-width: $bp-xlarge) {
+      margin-top: 32rem;
+      margin-bottom: 0rem;
+    }
+
+    @media only screen and (max-width: $bp-medium) {
+      flex-basis: 100%;
+      margin-top: 12rem;
+    }
 
     &-title {
       font-size: clamp(6rem, 10vw, 12rem);
       margin-bottom: 15rem;
+      @media only screen and (max-width: $bp-xlarge) {
+        font-size: 8vw;
+        margin-right: -2rem;
+      }
+      @media only screen and (max-width: $bp-medium) {
+        font-size: 11vw;
+      }
+      @media only screen and (max-width: $bp-xsSmall) {
+        margin: 0;
+        font-size: 13vw;
+      }
     }
   }
   &__interest {
@@ -65,46 +125,123 @@
     top: 33%;
     left: 42%;
     width: 25%;
-    font-size: clamp(2.2rem, 2.5vw, 2.5rem);
+    font-size: clamp(2.2rem, 0.5vw, 12.5rem);
     font-family: $font-primary;
 
     margin: 0px 20rem 10rem 0rem;
     text-transform: uppercase;
     align-self: center;
     color: $color-white;
+    @media only screen and (max-width: $bp-xlarge) {
+      width: 35%;
+    }
+    @media only screen and (max-width: $bp-medium) {
+      width: 60%;
+      margin: 0;
+    }
+    @media only screen and (max-width: $bp-xsSmall) {
+      margin: 0;
+      // font-size: 13vw;
+    }
   }
   &__middle {
-    grid-row: 4 / 6;
-    grid-column: 2 / 8;
+    // grid-row: 4 / 6;
+    // grid-column: 2 / 8;
     color: $color-white;
     font-size: clamp(3rem, 2.5vw, 4rem);
     display: flex;
     align-items: center;
+    justify-content: flex-end;
     z-index: 2;
+    // overflow: visible;
+
+    @media only screen and (max-width: $bp-medium) {
+      flex-basis: 100%;
+    }
+    @media only screen and (max-width: $bp-small) {
+      // display: flex;
+      // justify-items: center;
+      // flex-direction: column;
+    }
+    &-text {
+      flex-basis: 65%;
+      margin-right: -20rem;
+      z-index: 15;
+      @media only screen and (max-width: $bp-xlarge) {
+        margin-right: -12rem;
+        font-size: 2.3vw;
+      }
+      @media only screen and (max-width: $bp-medium) {
+        margin-top: -16rem;
+        transform: translate(16rem);
+      }
+      @media only screen and (max-width: $bp-small) {
+        flex-basis: 100%;
+        font-size: 3vw;
+        transform: translate(9rem);
+      }
+      @media only screen and (max-width: $bp-xsSmall) {
+        flex-basis: 185%;
+        font-size: 3.3vw;
+
+        transform: translate(3rem);
+      }
+    }
   }
 
   &__arrow {
-    grid-row: 4 / 6;
-    grid-column: 7 / -1;
+    flex-basis: 35%;
+    // grid-row: 4 / 6;
+    // grid-column: 7 / -1;
     background-color: $color-primary;
     align-self: center;
-    margin-top: 20rem;
-    padding: 11rem 0;
+    margin: 35rem 0 20rem 0;
+    // margin-top: 35rem;
+    padding: 9rem 0;
     display: grid;
     justify-items: center;
+    // z-index: 15;
+    @media only screen and (max-width: $bp-xlarge) {
+      margin-top: 30rem;
+      padding: 6rem 0;
+    }
+    @media only screen and (max-width: $bp-medium) {
+      flex-basis: 60%;
+      margin-top: 24rem;
+      padding: 6rem 20px 6rem 7rem;
+    }
+    @media only screen and (max-width: $bp-small) {
+      flex-basis: 100%;
+    }
     &-icon {
-      font-size: clamp(3rem, 2.5vw, 10rem);
+      font-size: clamp(3rem, 5.5vw, 6rem);
       color: $color-white;
       align-self: center;
-      padding-right: 20rem;
+      padding-right: 12rem;
+      @media only screen and (max-width: $bp-small) {
+        padding-right: 0rem;
+      }
     }
   }
 
   &__form {
-    grid-row: 6 / -1;
-    grid-column: 5 / 9;
+    margin: 20rem 0;
+    width: 60%;
+    align-self: center;
+    // grid-row: 6 / -1;
+    // grid-column: 5 / 9;
     display: grid;
     align-items: center;
+    @media only screen and (min-width: $bp-2xlarge) {
+      width: 40%;
+    }
+    @media only screen and (max-width: $bp-medium) {
+      margin: 0;
+      padding: 3rem;
+    }
+    @media only screen and (max-width: $bp-small) {
+      width: 100%;
+    }
   }
 }
 
@@ -117,7 +254,7 @@
 
     @media only screen and (max-width: $bp-small) {
       padding: 2rem;
-      width: 100vw;
+      width: 90%;
     }
   }
 
@@ -152,17 +289,41 @@
   }
 
   &__label {
-    font-size: 1.2rem;
+    font-size: 1.6rem;
     font-weight: 700;
     margin-left: 2rem;
     margin-top: 0.7rem;
     display: block;
     transition: all 0.3s;
+    color: #e4e4e4;
   }
 
   &__input:placeholder-shown + &__label {
     opacity: 0;
     visibility: hidden;
     transform: translateY(-4rem);
+  }
+}
+
+.btn {
+  background-color: $color-primary;
+  color: #fff;
+  border: none;
+  border-radius: 0;
+  font-family: $font-primary-bold;
+  font-size: 2.2rem;
+  text-transform: uppercase;
+  padding: 1.8rem 3rem;
+  cursor: pointer;
+  transition: all 0.2s;
+  @media only screen and (max-width: $bp-small) {
+    transform: translateX(5rem);
+  }
+  @media only screen and (max-width: $bp-xsSmall) {
+    transform: translateX(4rem);
+  }
+
+  &:hover {
+    background-color: $color-secondary;
   }
 }
