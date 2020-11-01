@@ -57,16 +57,22 @@ module.exports = {
   resolve: { extensions: [".js", ".ts"] },
   plugins: [
     new HtmlWebpackPlugin({
-      filename: "index.html",
+      filename: "index.html", // output file
       inject: true,
       chunks: ["index"],
-      template: path.resolve(__dirname, "src/home", "index.html"),
+      template: path.resolve(__dirname, "src/home", "index.html"),// template file
     }),
+    // new HtmlWebpackPlugin({
+    //   filename: "project.html", // output file
+    //   inject: true,
+    //   chunks: ["project"],
+    //   template: path.resolve(__dirname, "src/project", "project.html"),// template file
+    // }),
     new HtmlWebpackPlugin({
-      filename: "project.html",
+      filename: "bl.html", // output file
       inject: true,
       chunks: ["project"],
-      template: path.resolve(__dirname, "src/project", "project.html"),
+      template: path.resolve(__dirname, "src/project", "bl.html"),// template file
     }),
 
     new CopyWebpackPlugin({
