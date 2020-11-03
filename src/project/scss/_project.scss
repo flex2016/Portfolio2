@@ -47,7 +47,7 @@
       opacity: 0.5;
       // padding: 0 25rem;
       // margin-right: 10rem;
-      margin-bottom: 20rem;
+      margin-bottom: 15rem;
     }
     &-image {
       display: grid;
@@ -133,6 +133,14 @@
   }
   &__sidescroll {
     grid-column: full-start / full-end;
+    &-name {
+      font-size: clamp(1.5rem, 3vw, 2rem);
+      font-weight: 100;
+    }
+    &-desc {
+      font-size: clamp(1.5rem, 5vw, 8rem);
+      font-weight: 700;
+    }
   }
   // &__concept,
   // &__solution,
