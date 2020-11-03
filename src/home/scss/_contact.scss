@@ -40,8 +40,7 @@
     // grid-column: 1 / 5;
     cursor: default;
     background-color: $color-primary;
-    font-family: $font-display;
-    font-weight: 100;
+    font-family: $font-primary-bold;
     text-transform: uppercase;
     display: grid;
     align-self: center;
@@ -77,6 +76,9 @@
       // }
       @media only screen and (max-width: $bp-small) {
         font-size: 4rem;
+      }
+      @media only screen and (max-width: $bp-xsSmall) {
+        font-size: 3rem;
       }
     }
   }
@@ -141,6 +143,9 @@
     }
     @media only screen and (max-width: $bp-xsSmall) {
       margin: 0;
+      top: -36%;
+      left: 10%;
+      width: 80%;
       // font-size: 13vw;
     }
   }

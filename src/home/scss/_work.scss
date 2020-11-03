@@ -1,7 +1,7 @@
 .work {
   position: relative;
   grid-column: full-start / full-end;
-  padding: 10rem 8vw;
+  // padding: 10rem 8vw;
   display: grid;
   align-content: center;
   justify-content: center;
@@ -31,11 +31,9 @@
   //     url(../img/work_bg.jpg);
   // }
 
-  // @media only screen and (max-width: $bp-small) {
-  //   grid-row-gap: 2rem;
-  //   padding: 7rem 5rem;
-  //   background-position: inherit;
-  // }
+  @media only screen and (max-width: $bp-xsSmall) {
+    justify-items: center;
+  }
   // @media only screen and (max-width: $bp-xsSmall) {
   //   background-image: none;
   // }
@@ -55,20 +53,34 @@
   // }
   &__heading {
     // width: 25%;
-    font-size: clamp(4rem, 2vw, 5rem);
+    font-size: clamp(4rem, 5.5vw, 6rem);
     color: $color-white;
     opacity: 1;
-    padding: 3rem 5rem 3rem 1rem;
-    margin: 10rem 0;
+    font-family: $font-primary-bold;
+    padding: 9rem 5rem 9rem 19rem;
+    margin: 20rem 0;
+    align-self: center;
     background-color: $color-primary;
 
+    @media only screen and (max-width: $bp-xlarge) {
+      font-size: 3vw;
+      padding: 6rem 5rem 6rem 10rem;
+    }
+
     @media only screen and (max-width: $bp-medium) {
-      margin: 0;
+      margin-top: 11rem;
+      // padding: 7rem;
     }
     @media only screen and (max-width: $bp-small) {
-      font-size: clamp(3rem, 2vw, 5rem);
-
-      padding: 2rem 4rem 2rem 1rem;
+      // font-size: clamp(3rem, 2vw, 5rem);
+      font-size: 4rem;
+    }
+    @media only screen and (max-width: $bp-xsSmall) {
+      // font-size: clamp(3rem, 2vw, 5rem);
+      font-size: 3rem;
+      padding: 5rem;
+      width: 100%;
+      text-align: center;
     }
   }
   &__list {
@@ -77,6 +89,7 @@
     // grid-column-gap: 1rem;
     // grid-row-gap: 8vh;
     // align-items: start;
+    padding: 10rem 8vw;
 
     @media only screen and (max-width: $bp-largest) {
       // grid-template-columns: 1fr;
@@ -99,8 +112,8 @@
   // }
   &__details-heading a {
     position: absolute;
-    left: 35%;
-    top: 20%;
+    left: 28%;
+    top: 30%;
     width: 50%;
     color: $color-primary;
     font-size: clamp(6rem, 10vw, 20rem);

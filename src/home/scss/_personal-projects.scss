@@ -1,24 +1,45 @@
 .personal {
-  padding: 10rem;
-  grid-column: center-start / center-end;
+  padding: 10rem 0;
+  grid-column: full-start / full-end;
   display: grid;
   align-content: center;
-  justify-content: center;
+  // justify-content: center;
   justify-items: left;
   @media only screen and (max-width: $bp-small) {
     grid-column: full-start / full-end;
     padding: 10rem 2rem;
   }
   &__heading {
-    font-size: clamp(3rem, 2vw, 5rem);
+    // width: 25%;
+    font-size: clamp(4rem, 5.5vw, 6rem);
     color: $color-white;
     opacity: 1;
-    padding: 3rem 5rem 3rem 1rem;
-    margin: 0rem 0 10rem -12rem;
+    font-family: $font-primary-bold;
+    padding: 9rem 5rem 9rem 19rem;
+    margin-bottom: 10rem;
+    align-self: center;
     background-color: $color-primary;
-    // box-shadow: 0.2rem 0.8rem 0 -0.2rem $color-black;
+    text-transform: uppercase;
+
+    @media only screen and (max-width: $bp-xlarge) {
+      font-size: 3vw;
+      padding: 6rem 5rem 6rem 10rem;
+    }
+
+    @media only screen and (max-width: $bp-medium) {
+      margin-top: 0;
+      // padding: 7rem;
+    }
     @media only screen and (max-width: $bp-small) {
-      margin: 0rem 0 5rem 0rem;
+      // font-size: clamp(3rem, 2vw, 5rem);
+      font-size: 4rem;
+    }
+    @media only screen and (max-width: $bp-xsSmall) {
+      // font-size: clamp(3rem, 2vw, 5rem);
+      font-size: 3rem;
+      padding: 5rem;
+      width: 100%;
+      text-align: center;
     }
   }
 }
