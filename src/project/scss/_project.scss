@@ -12,6 +12,10 @@
     display: flex;
     justify-content: space-between;
     font-size: 1.5rem;
+
+    @media only screen and (max-width: $bp-medium) {
+      grid-column: col-start 1 / col-end 12;
+    }
     &-title {
       font-size: 2rem;
       text-decoration: underline;
@@ -35,19 +39,28 @@
     grid-column: col-start 1 / col-end 12;
     // background-color: $color-primary;
     margin-bottom: 20rem;
+    @media only screen and (max-width: $bp-2k) {
+      grid-column: col-start 2 / col-end 11;
+    }
 
     &-name {
-      font-size: clamp(5rem, 10vw, 25rem);
+      font-size: clamp(9rem, 8vw, 14rem);
       margin-left: 20rem;
       font-weight: 700;
       font-family: $font-primary;
+      @media only screen and (max-width: $bp-medium) {
+        margin-left: 0rem;
+      }
     }
     &-desc {
-      font-size: clamp(3rem, 10vw, 4.5rem);
+      font-size: clamp(2.5rem, 5vw, 3rem);
       opacity: 0.5;
       // padding: 0 25rem;
       // margin-right: 10rem;
       margin-bottom: 15rem;
+      @media only screen and (max-width: $bp-medium) {
+        margin-bottom: 10rem;
+      }
     }
     &-image {
       display: grid;
@@ -65,22 +78,36 @@
     grid-column: col-start 1 / col-end 12;
     // background-color: $color-primary;
     margin-bottom: 20rem;
-
+    @media only screen and (max-width: $bp-2k) {
+      grid-column: col-start 2 / col-end 11;
+    }
     &-name {
-      font-size: clamp(5rem, 10vw, 20rem);
+      font-size: clamp(9rem, 8vw, 14rem);
       margin-left: 20rem;
 
       font-weight: 700;
+      @media only screen and (max-width: $bp-medium) {
+        margin-left: 0rem;
+      }
     }
     &-desc {
-      font-size: clamp(3rem, 10vw, 4.5rem);
+      font-size: clamp(2.5rem, 5vw, 3rem);
       // padding: 0 25rem;
       opacity: 0.5;
       margin-bottom: 10rem;
+      @media only screen and (max-width: $bp-small) {
+        margin-bottom: 5rem;
+      }
     }
     &__objective {
       padding: 0 20rem;
       margin-bottom: 20rem;
+      @media only screen and (max-width: $bp-medium) {
+        padding: 0 8rem;
+      }
+      @media only screen and (max-width: $bp-small) {
+        padding: 0;
+      }
 
       &-name {
         font-size: 4rem;
@@ -88,7 +115,7 @@
         margin-bottom: 2rem;
       }
       &-desc {
-        font-size: clamp(2rem, 10vw, 3rem);
+        font-size: clamp(2rem, 4vw, 3rem);
         opacity: 0.5;
       }
     }
@@ -108,12 +135,12 @@
     margin-left: 5rem;
 
     &-name {
-      font-size: clamp(5rem, 10vw, 20rem);
+      font-size: clamp(9rem, 8vw, 14rem);
       // margin-left: 20rem;
       font-weight: 700;
     }
     &-desc {
-      font-size: clamp(1.5rem, 10vw, 2.5rem);
+      font-size: clamp(1.5rem, 5vw, 2.5rem);
       opacity: 0.5;
       // padding: 0 25rem;
       // margin-right: 10rem;
@@ -134,11 +161,11 @@
   &__sidescroll {
     grid-column: full-start / full-end;
     &-name {
-      font-size: clamp(1.5rem, 3vw, 2rem);
+      font-size: clamp(2rem, 5vw, 2rem);
       font-weight: 100;
     }
     &-desc {
-      font-size: clamp(1.5rem, 5vw, 8rem);
+      font-size: clamp(3rem, 5vw, 8rem);
       font-weight: 700;
     }
   }
