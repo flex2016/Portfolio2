@@ -4,10 +4,11 @@
     grid-column: full-start / full-end;
     display: grid;
     justify-items: flex-end;
+    // padding: 5vh 0;
   }
   &__header {
     grid-column: col-start 6 / col-end 12;
-    padding: 5rem 0;
+    padding: 10vh 0;
 
     display: flex;
     justify-content: space-between;
@@ -30,6 +31,10 @@
     &-link {
       color: $color-black;
       font-size: 2rem;
+      transition: all 0.2s;
+      &:hover {
+        color: $color-primary;
+      }
     }
   }
   &__client,
@@ -44,7 +49,7 @@
     }
 
     &-name {
-      font-size: clamp(9rem, 8vw, 14rem);
+      font-size: clamp(9rem, 10vw, 14rem);
       margin-left: 20rem;
       font-weight: 700;
       font-family: $font-primary;
@@ -57,9 +62,9 @@
       opacity: 0.5;
       // padding: 0 25rem;
       // margin-right: 10rem;
-      margin-bottom: 15rem;
+      margin-bottom: 15vh;
       @media only screen and (max-width: $bp-medium) {
-        margin-bottom: 10rem;
+        margin-bottom: 10vh;
       }
     }
     &-image {
@@ -77,12 +82,12 @@
   &__challenge {
     grid-column: col-start 1 / col-end 12;
     // background-color: $color-primary;
-    margin-bottom: 20rem;
+    margin-bottom: 15vh;
     @media only screen and (max-width: $bp-2k) {
       grid-column: col-start 2 / col-end 11;
     }
     &-name {
-      font-size: clamp(9rem, 8vw, 14rem);
+      font-size: clamp(9rem, 10vw, 14rem);
       margin-left: 20rem;
 
       font-weight: 700;
@@ -101,7 +106,7 @@
     }
     &__objective {
       padding: 0 20rem;
-      margin-bottom: 20rem;
+      margin-bottom: 15vh;
       @media only screen and (max-width: $bp-medium) {
         padding: 0 8rem;
       }
@@ -128,16 +133,35 @@
       height: 1200px;
     }
   }
+  &__impact {
+    // display: flex;
+    // align-content: center;
+
+    &-image img {
+      width: 30%;
+      height: auto;
+      margin: 0 auto;
+      @media only screen and (max-width: $bp-medium) {
+        width: 80%;
+      }
+    }
+  }
   &__results {
     grid-column: col-start 2 / col-end 12;
     // background-color: $color-primary;
     // margin-bottom: 20rem;
-    margin-left: 5rem;
+    // margin-left: 5rem;
+    @media only screen and (max-width: $bp-2k) {
+      grid-column: col-start 2 / col-end 11;
+    }
 
     &-name {
-      font-size: clamp(9rem, 8vw, 14rem);
-      // margin-left: 20rem;
+      font-size: clamp(9rem, 10vw, 14rem);
+      margin-left: 20rem;
       font-weight: 700;
+      @media only screen and (max-width: $bp-medium) {
+        margin-left: 0;
+      }
     }
     &-desc {
       font-size: clamp(1.5rem, 5vw, 2.5rem);
@@ -165,8 +189,43 @@
       font-weight: 100;
     }
     &-desc {
-      font-size: clamp(3rem, 5vw, 8rem);
+      font-size: clamp(3rem, 5vw, 5rem);
       font-weight: 700;
+    }
+  }
+  &__next {
+    grid-column: col-start 1 / col-end 11;
+    text-align: right;
+    font-family: $font-primary-bold;
+    text-transform: uppercase;
+    margin: 15vh 0;
+
+    & a {
+      perspective: 100vw;
+      display: block;
+      @media only screen and (max-width: $bp-medium) {
+        perspective: none;
+      }
+    }
+    & a:hover &-name {
+      transform: rotateY(0deg) translateZ(0);
+      color: $color-black;
+    }
+    &-nameholder {
+      font-size: clamp(2.2rem, 3vw, 4rem);
+      color: $color-black;
+    }
+    &-name {
+      font-size: clamp(6rem, 7vw, 9vw);
+      line-height: 0.9em;
+      color: transparent;
+      -webkit-text-stroke: 2px #000;
+      transform: rotateY(-45deg) translateZ(0);
+      transform-origin: right center;
+      transition: color 0.2s ease-in-out, transform 0.5s;
+      @media only screen and (max-width: $bp-medium) {
+        transform: rotateY(0deg) translateZ(0);
+      }
     }
   }
   // &__concept,
@@ -199,8 +258,7 @@
   overflow: hidden;
   width: 80%;
   height: 600px;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto;
 }
 
 .swiper-slide {
