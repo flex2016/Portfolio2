@@ -3,6 +3,7 @@ import "swiper/swiper-bundle.css";
 
 import "../scss/style.scss";
 
+
 // import * as helperModule from "./script";
 
 // const foo = (name) => {
@@ -26,3 +27,17 @@ var swipertwo = new Swiper(".swiper-container-two", {
     sensitivity:1,
   },
 });
+
+// On Mouse MOve teh backgroubnd position moves
+
+if('ontouchstart' in window == false){
+  var containertwo = document.querySelector(".container-two");
+  var projectNav = document.querySelector(".project__nav");
+  var projectNavText = document.querySelector(".project__nav-text");
+  containertwo.addEventListener('mousemove', e => {
+    var moveX = (e.pageX * -1 / 25);
+    var moveY = (e.pageY * -1 / 25);
+    projectNav.style.setProperty('background-position', moveX + 'px ' + moveY + 'px');
+    // projectNavText.style.transform = `translate(${moveY}px, ${moveX}px)`;
+})
+}

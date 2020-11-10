@@ -91,17 +91,17 @@ a {
 .container-two {
   display: grid;
   // background: $color-grey-light-1;
-
-  grid-template-rows: 10vh repeat(8, minmax(min-content, 14rem));
+  // overflow: hidden;
+  grid-template-rows: 100vh repeat(8, minmax(min-content, 14rem));
   grid-template-columns:
     [full-start]minmax(6rem, 1fr) [center-start]repeat(
-      12,
+      8,
       [col-start] minmax(min-content, 14rem) [col-end]
     )
     [center-end]minmax(6rem, 1fr) [full-end];
 
   @media only screen and (max-width: $bp-medium) {
-    // grid-template-rows: 100vh;
+    // padding: 2rem;
   }
 }
 

@@ -4,19 +4,71 @@
     grid-column: full-start / full-end;
     display: grid;
     justify-items: flex-end;
+    background-image: url(https://images.unsplash.com/photo-1517594422361-5eeb8ae275a9?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80);
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: top;
     // padding: 5vh 0;
+    &-text {
+      color: $color-white;
+      font-family: $font-primary-bold;
+      opacity: 0.7;
+      font-size: clamp(6rem, 9vw, 20rem);
+      text-align: center;
+      // text-align: center;
+      // align-self: center;
+      justify-self: center;
+    }
+  }
+  &__header-nav {
+    display: flex;
+    align-items: flex-start;
+    margin-top: 5rem;
+  }
+  &__nav-button {
+    display: block;
+    cursor: pointer;
+    font-size: 2.7rem;
+    background: none;
+    border: 0;
+    margin: 0 4rem 0 0;
+    padding: 0;
+    text-transform: inherit;
+    letter-spacing: 0.2rem;
+    font-family: $font-primary;
+    // font-weight: inherit;
+    color: $color-black;
+    & a {
+      display: block;
+      color: $color-primary;
+    }
+  }
+  // &__nav-button:not(:last-child) {
+  //   margin: 0 0 0 0;
+  // }
+  &__nav-button:focus {
+    outline: none;
+  }
+  &__nav-button:hover a {
+    animation: glitch-anim-text 0.5s linear alternate 1 backwards;
+    transition: all 0.2s;
+
+    color: $color-white;
   }
   &__header {
-    grid-column: col-start 6 / col-end 12;
-    padding: 10vh 0;
-
+    grid-column: col-start 3 / col-end 8;
+    padding: 10rem 0;
+    z-index: 10;
     display: flex;
     justify-content: space-between;
     font-size: 1.5rem;
 
     @media only screen and (max-width: $bp-medium) {
-      grid-column: col-start 1 / col-end 12;
+      grid-column: full-start / full-end;
+      padding: 10rem 0 6rem 0;
+      display: none;
     }
+
     &-title {
       font-size: 2rem;
       text-decoration: underline;
@@ -24,6 +76,9 @@
     &-column {
       display: flex;
       flex-direction: column;
+      @media only screen and (max-width: $bp-medium) {
+        display: none;
+      }
       & span:nth-of-type(2) {
         color: $color-grey-light-2;
       }
@@ -41,15 +96,18 @@
   &__concept,
   &__solution,
   &__impact {
-    grid-column: col-start 1 / col-end 12;
+    grid-column: col-start 1 / col-end 8;
     // background-color: $color-primary;
-    margin-bottom: 20rem;
-    @media only screen and (max-width: $bp-2k) {
-      grid-column: col-start 2 / col-end 11;
+    margin-bottom: 10vh;
+    // @media only screen and (max-width: $bp-2k) {
+    //   grid-column: col-start 2 / col-end 11;
+    // }
+    @media only screen and (max-width: $bp-medium) {
+      grid-column: full-start / full-end;
+      padding: 2rem;
     }
-
     &-name {
-      font-size: clamp(9rem, 10vw, 14rem);
+      font-size: clamp(7.9rem, 10vw, 14rem);
       margin-left: 20rem;
       font-weight: 700;
       font-family: $font-primary;
@@ -75,24 +133,28 @@
     &-image img {
       display: block;
       // margin: 0 auto;
-      width: 80%;
+      width: 100%;
       //height: 1000px;
     }
   }
   &__challenge {
-    grid-column: col-start 1 / col-end 12;
+    grid-column: col-start 1 / col-end 8;
     // background-color: $color-primary;
     margin-bottom: 15vh;
-    @media only screen and (max-width: $bp-2k) {
-      grid-column: col-start 2 / col-end 11;
+    // @media only screen and (max-width: $bp-2k) {
+    //   grid-column: col-start 2 / col-end 11;
+    // }
+    @media only screen and (max-width: $bp-medium) {
+      grid-column: full-start / full-end;
+      padding: 2rem;
     }
     &-name {
-      font-size: clamp(9rem, 10vw, 14rem);
+      font-size: clamp(7.9rem, 10vw, 14rem);
       margin-left: 20rem;
 
       font-weight: 700;
       @media only screen and (max-width: $bp-medium) {
-        margin-left: 0rem;
+        margin-left: -1rem;
       }
     }
     &-desc {
@@ -147,14 +209,17 @@
     }
   }
   &__results {
-    grid-column: col-start 2 / col-end 12;
+    grid-column: col-start 1 / col-end 8;
     // background-color: $color-primary;
     // margin-bottom: 20rem;
     // margin-left: 5rem;
-    @media only screen and (max-width: $bp-2k) {
-      grid-column: col-start 2 / col-end 11;
+    // @media only screen and (max-width: $bp-2k) {
+    //   grid-column: col-start 2 / col-end 11;
+    // }
+    @media only screen and (max-width: $bp-medium) {
+      grid-column: full-start / full-end;
+      padding: 2rem;
     }
-
     &-name {
       font-size: clamp(9rem, 10vw, 14rem);
       margin-left: 20rem;
@@ -194,12 +259,16 @@
     }
   }
   &__next {
-    grid-column: col-start 1 / col-end 11;
+    grid-column: full-start / col-end 8;
     text-align: right;
     font-family: $font-primary-bold;
     text-transform: uppercase;
     margin: 15vh 0;
-
+    @media only screen and (max-width: $bp-medium) {
+      grid-column: full-start / full-end;
+      margin: 3vh 0;
+      padding: 2rem;
+    }
     & a {
       perspective: 100vw;
       display: block;
@@ -259,6 +328,9 @@
   width: 80%;
   height: 600px;
   margin: 0 auto;
+  @media only screen and (max-width: $bp-medium) {
+    height: 300px;
+  }
 }
 
 .swiper-slide {
