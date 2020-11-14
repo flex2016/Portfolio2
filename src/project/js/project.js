@@ -82,14 +82,16 @@ var swipertwo = new Swiper(".swiper-container-two", {
 var containertwo = document.querySelector(".container-two");
 var projectNav = document.querySelector(".project__nav");
 var projectNavText = document.querySelector(".project__nav-text");
-if('ontouchstart' in window == false){
+if('ontouchstart' in window == true){
+  console.log("hello")
+  console.log("hello")
+  projectNav.style.setProperty('background-position', 'center','top');
+
+}else{
   containertwo.addEventListener('mousemove', e => {
     var moveX = (e.pageX * -1 / 25);
     var moveY = (e.pageY * -1 / 25);
     projectNav.style.setProperty('background-position', moveX + 'px ' + moveY + 'px');
     // projectNavText.style.transform = `translate(${moveY}px, ${moveX}px)`;
 })
-}else{
-  console.log("hello")
-  projectNav.style.setProperty('background-position', 'center','top');
 }
