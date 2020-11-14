@@ -7,7 +7,7 @@
     background-image: url(https://images.unsplash.com/photo-1517594422361-5eeb8ae275a9?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80);
     background-size: cover;
     background-attachment: fixed;
-    background-position: top;
+    background-position: center top;
     // padding: 5vh 0;
     &-text {
       color: $color-white;
@@ -107,15 +107,23 @@
       padding: 2rem;
     }
     &-name {
+      display: block;
       font-size: clamp(7.9rem, 10vw, 14rem);
       margin-left: 20rem;
       font-weight: 700;
       font-family: $font-primary;
+      // transform: translateY(110%);
+      // transition: transform 400ms cubic-bezier(0.25, 1, 0.5, 1);
+      // &.active {
+      //   transform: translateY(0);
+      //   transition-delay: 200ms;
+      // }
       @media only screen and (max-width: $bp-medium) {
         margin-left: 0rem;
       }
     }
     &-desc {
+      overflow: hidden;
       font-size: clamp(2.5rem, 5vw, 3rem);
       opacity: 0.5;
       // padding: 0 25rem;
@@ -221,7 +229,7 @@
       padding: 2rem;
     }
     &-name {
-      font-size: clamp(9rem, 10vw, 14rem);
+      font-size: clamp(7.9rem, 10vw, 14rem);
       margin-left: 20rem;
       font-weight: 700;
       @media only screen and (max-width: $bp-medium) {
@@ -323,6 +331,13 @@
   //   }
   // }
 }
+
+.gs_reveal {
+  opacity: 0;
+  visibility: hidden;
+  transition: transform 0s;
+}
+
 .swiper-container-two {
   overflow: hidden;
   width: 80%;
