@@ -82,16 +82,41 @@ var swipertwo = new Swiper(".swiper-container-two", {
 var containertwo = document.querySelector(".container-two");
 var projectNav = document.querySelector(".project__nav");
 var projectNavText = document.querySelector(".project__nav-text");
-if('ontouchstart' in window == true){
-  console.log("hello")
-  console.log("hello")
-  projectNav.style.setProperty('background-position', 'center','top');
-
-}else{
+if('onmousemove' in window == true){
   containertwo.addEventListener('mousemove', e => {
     var moveX = (e.pageX * -1 / 25);
     var moveY = (e.pageY * -1 / 25);
     projectNav.style.setProperty('background-position', moveX + 'px ' + moveY + 'px');
     // projectNavText.style.transform = `translate(${moveY}px, ${moveX}px)`;
 })
+}else{
+  console.log("hello")
+  projectNav.style.setProperty('background-position', 'center','top');
 }
+
+window.addEventListener('touchstart', function(event) {
+  console.log(event)
+    projectNav.style.setProperty('background-position', 'center','top');
+});
+
+
+
+
+///Page Preloader
+const preloader = document.querySelector('.preloader');
+const fadeEffect = setInterval(() => {
+  // if we don't set opacity 1 in CSS, then
+  // it will be equaled to "" -- that's why
+  // we check it, and if so, set opacity to 1
+  if (!preloader.style.opacity) {
+    preloader.style.opacity = 1;
+  }
+  if (preloader.style.opacity > 0) {
+    preloader.style.opacity -= 0.1;
+  } else {
+    preloader.style.visibility = "hidden"
+    clearInterval(fadeEffect);
+  }
+}, 100);
+
+window.addEventListener('load', fadeEffect);

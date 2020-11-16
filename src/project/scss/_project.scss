@@ -272,6 +272,7 @@
     font-family: $font-primary-bold;
     text-transform: uppercase;
     margin: 15vh 0;
+    z-index: 10;
     @media only screen and (max-width: $bp-medium) {
       grid-column: full-start / full-end;
       margin: 3vh 0;
