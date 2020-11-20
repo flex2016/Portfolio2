@@ -1,7 +1,11 @@
-import Swiper, { Pagination, Navigation, EffectCoverflow } from "swiper";
+import Swiper, { Pagination, Navigation, EffectCoverflow , Mousewheel} from "swiper";
 import "swiper/swiper-bundle.css";
 
 import "../scss/style.scss";
+import barba from '@barba/core';
+import barbaCss from '@barba/css';
+
+import "./shared"
 
 // import * as helperModule from "./script";
 
@@ -14,8 +18,48 @@ import "../scss/style.scss";
 
 // import Swiper JS
 
-// configure Swiper to use modules
-Swiper.use([Pagination, Navigation, EffectCoverflow]);
+
+
+
+
+// tell Barba to use the css plugin
+barba.use(barbaCss);
+
+
+barba.init({
+  transitions: [
+    {
+      name: 'home',
+      sync: true,
+      to: { namespace: ['home'] },
+      once() {},
+      leave() {},
+      enter() {},
+    }, {
+      name: 'fade',
+
+      to: { namespace: ['fade'] },
+      leave() {},
+      enter() {},
+    }, {
+      name: 'clip',
+      sync: true,
+      to: { namespace: ['clip'] },
+      leave() {},
+      enter() {},
+    }, {
+      name: 'with-cover',
+      sync: true,
+      to: { namespace: ['with-cover'] },
+      leave() {},
+      enter() {},
+    },
+  ],
+});
+
+
+
+Swiper.use([Pagination, Navigation, EffectCoverflow, Mousewheel]);
 
 var swiper = new Swiper(".swiper-container", {
   slidesPerView: 1,
@@ -30,47 +74,3 @@ var swiper = new Swiper(".swiper-container", {
     prevEl: ".swiper-button-prev",
   },
 });
-
-// var swiper = new Swiper(".swiper-container", {
-//   slidesPerView: 4,
-//   centeredSlides: true,
-//   spaceBetween: 30,
-//   grabCursor: true,
-//   pagination: {
-//     el: ".swiper-pagination",
-//     clickable: true,
-//   },
-//   navigation: {
-//     nextEl: ".swiper-button-next",
-//     prevEl: ".swiper-button-prev",
-//   },
-// });
-
-// var swiper = new Swiper(".swiper-container", {
-//   effect: "coverflow",
-//   grabCursor: true,
-//   centeredSlides: true,
-//   slidesPerView: "auto",
-//   coverflowEffect: {
-//     rotate: 50,
-//     stretch: 0,
-//     depth: 100,
-//     modifier: 1,
-//     slideShadows: true,
-//   },
-//   pagination: {
-//     el: ".swiper-pagination",
-//   },
-// });
-
-// var swiper = new Swiper(".swiper-container", {
-//   effect: "flip",
-//   grabCursor: true,
-//   pagination: {
-//     el: ".swiper-pagination",
-//   },
-//   navigation: {
-//     nextEl: ".swiper-button-next",
-//     prevEl: ".swiper-button-prev",
-//   },
-// });

@@ -398,7 +398,7 @@
       line-height: 1.2;
     }
     @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
-      font-size: clamp(6.5rem, 9vw, 20rem);
+      font-size: clamp(6.5rem, 12vw, 20rem);
       grid-row: 3 / 6;
       grid-column: 1 / -1;
       margin-left: 2rem;

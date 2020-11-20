@@ -3,11 +3,13 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const package = require("./package.json");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
 
+
 module.exports = {
   target: "web",
   entry: {
     // vendor: Object.keys(package.dependencies),
     // vendor: "./src/home/js/vendor.js",
+    shared: "./src/vendor.js",
     index: "./src/home/js/index.js",
 
     project: "./src/project/js/project.js",
@@ -54,8 +56,36 @@ module.exports = {
             },
     ],
   },
+  // optimization: {
+  //   splitChunks: {
+  //     cacheGroups: {
+  //       commons: {
+  //         name: 'commons',
+  //         chunks: 'initial',
+  //         minChunks: 2
+  //       }
+  //     }
+  //   }
+  // },
+
+  optimization: {
+    splitChunks: {
+      chunks: 'all',
+       cacheGroups: {
+        commons: {
+          name: 'commons',
+          chunks: 'initial',
+          minChunks: 2
+        }
+      }
+    },
+     runtimeChunk: {
+      name: 'runtime',
+    },
+  },
   resolve: { extensions: [".js", ".ts"] },
   plugins: [
+
     new HtmlWebpackPlugin({
       filename: "index.html", // output file
       inject: true,
