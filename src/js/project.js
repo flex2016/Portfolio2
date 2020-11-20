@@ -9,7 +9,7 @@ import barbaCss from '@barba/css';
 
 
 
-import "../../home/js/shared"
+import "./shared"
 
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger.js";

@@ -9,10 +9,10 @@ module.exports = {
   entry: {
     // vendor: Object.keys(package.dependencies),
     // vendor: "./src/home/js/vendor.js",
-    shared: "./src/vendor.js",
-    index: "./src/home/js/index.js",
+    // shared: "./src/vendor.js",
+    app: "./src/js/app.js",
 
-    project: "./src/project/js/project.js",
+    // project: "./src/project/js/project.js",
   },
     output: {
     filename: "[name].[contenthash].js",
@@ -89,8 +89,8 @@ module.exports = {
     new HtmlWebpackPlugin({
       filename: "index.html", // output file
       inject: true,
-      chunks: ["index"],
-      template: path.resolve(__dirname, "src/home", "index.html"),// template file
+      // chunks: ["app"],
+      template: path.resolve(__dirname, "src", "index.html"),// template file
     }),
     // new HtmlWebpackPlugin({
     //   filename: "project.html", // output file
@@ -101,8 +101,8 @@ module.exports = {
     new HtmlWebpackPlugin({
       filename: "bl.html", // output file
       inject: true,
-      chunks: ["project"],
-      template: path.resolve(__dirname, "src/project", "bl.html"),// template file
+      // chunks: ["project"],
+      template: path.resolve(__dirname, "src", "bl.html"),// template file
     }),
 
     new CopyWebpackPlugin({
