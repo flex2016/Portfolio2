@@ -12,6 +12,7 @@ module.exports = {
     // shared: "./src/vendor.js",
     app: "./src/js/app.js",
 
+
     // project: "./src/project/js/project.js",
   },
     output: {

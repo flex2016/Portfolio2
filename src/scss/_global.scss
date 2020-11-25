@@ -47,7 +47,9 @@ $bp-xsSmall: 26.25em; // 420px;
 //   font-family: KaruLight;
 //   src: url(/src/fonts/Karu-Light.otf);
 // }
-
+:root {
+  --easing: cubic-bezier(0.5, 0.7, 0.4, 1);
+}
 html {
   box-sizing: border-box;
   font-size: 62.5%; // 10px/16px = 62.5% -> 1rem = 10px
@@ -62,6 +64,8 @@ body {
   color: $color-secondary;
   // font-weight: 300;
   line-height: 1.6;
+  --page-background: #000;
+  background-color: var(--page-background);
 }
 
 ul,
@@ -135,84 +139,26 @@ a {
   z-index: 1;
 }
 
-// .transition {
-//   position: fixed;
-//   width: 100%;
-//   height: 100%;
-//   top: 0;
-//   left: 0;
-//   background-color: #c8cc98;
-//   display: flex;
-//   align-items: center;
-//   justify-content: center;
-//   transform: translateY(-100%);
-//   z-index: 1;
+/* Fade out current container */
 
-//   > h2 {
-//     font-size: 40px;
-//     color: #202020;
-//   }
-// }
+.fade-once {
+  opacity: 0;
+}
 
-// .container-main {
-//   transition: all 0.3s ease-out;
-//   opacity: 1;
-//   transform: translateY(0);
-// }
-/* Page load animation */
-// .home-once {
-//   opacity: 0;
-// }
+.fade-once-active {
+  transition: opacity 1.3s linear;
+}
 
-// .home-once-active {
-//   transition: all 1s linear 0.3s;
-// }
+.fade-once-to {
+  opacity: 1;
+}
 
-// .home-once-to {
-//   opacity: 1;
-// }
-
-// /* Slide to home */
-// .home-leave {
-//   transform: translateX(0);
-// }
-
-// .home-leave-active,
-// .home-leave-active .container-main {
-//   transition: all 0.7s var(--easing);
-// }
-
-// .home-leave-to .container-main {
-//   transform: translateX(-50%);
-// }
-
-// .home-leave-to {
-//   transform: translateX(100%);
-// }
-
-// .home-enter {
-//   transform: translateX(-100%);
-// }
-
-// .home-enter-active,
-// .home-enter-active .container-main {
-//   transition: all 0.7s var(--easing);
-// }
-
-// .home-enter-to {
-//   position: absolute;
-//   top: 0;
-//   left: 0;
-//   transform: translateX(0);
-// }
-
-// /* Fade out current container */
 .fade-leave {
   opacity: 1;
 }
 
 .fade-leave-active {
-  transition: opacity 0.3s linear;
+  transition: opacity 1.3s linear;
 }
 
 .fade-leave-to {
@@ -225,100 +171,9 @@ a {
 }
 
 .fade-enter-active {
-  transition: opacity 0.3s linear;
+  transition: opacity 1.3s linear;
 }
 
 .fade-enter-to {
   opacity: 1;
 }
-
-// /* Clip-path transition */
-// .clip-enter {
-//   clip-path: circle(0%);
-// }
-
-// .clip-enter-active {
-//   transition: all 0.75s var(--easing);
-//   position: absolute;
-//   top: 0;
-//   z-index: 2;
-// }
-
-// .clip-enter-to {
-//   clip-path: circle(75%);
-// }
-
-// .clip-leave {
-//   opacity: 1;
-// }
-
-// .clip-leave-active {
-//   transition: all 0.75s var(--easing);
-// }
-
-// .clip-leave-to {
-//   opacity: 0;
-// }
-
-// /* Transition with cover screen */
-// .with-cover-leave,
-// .with-cover-enter {
-//   transition: transform 0.5s var(--easing);
-// }
-
-// .with-cover-leave .transition {
-//   transform: translateY(-100%);
-// }
-
-// .with-cover-leave-active .transition {
-//   transition: transform 0.5s var(--easing);
-// }
-
-// .with-cover-leave-to .transition {
-//   transform: translateY(0);
-// }
-
-// .with-cover-leave .content {
-//   transform: translateY(0);
-// }
-
-// .with-cover-leave-active .content {
-//   transition: transform 0.5s var(--easing);
-// }
-
-// .with-cover-leave-to .content {
-//   transform: translateY(80px);
-// }
-
-// /* Cover back to top */
-// // .with-cover-enter .transition {
-// //     transform: translateY(0);
-// // }
-// // .with-cover-enter-active .transition {
-// //     transition: transform 0.5s var(--easing);
-// // }
-// // .with-cover-enter-to .transition {
-// //     transform: translateY(-100%);
-// // }
-
-// /* Cover down */
-// .with-cover-enter .transition {
-//   transform: translateY(0);
-// }
-
-// .with-cover-enter .content {
-//   transform: translateY(-80px);
-// }
-
-// .with-cover-enter-active .transition,
-// .with-cover-enter-active .content {
-//   transition: transform 0.5s var(--easing);
-// }
-
-// .with-cover-enter-to .transition {
-//   transform: translateY(100%);
-// }
-
-// .with-cover-enter-to .content {
-//   transform: translateY(0);
-// }

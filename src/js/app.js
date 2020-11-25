@@ -1,57 +1,60 @@
-
+import barba from '@barba/core';
 import Swiper, { Pagination, Navigation, EffectCoverflow , Mousewheel} from "swiper";
-
-
-import "swiper/swiper-bundle.css";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger.js";
 import { ScrollToPlugin } from "gsap/ScrollToPlugin.js";
 
-import barba from '@barba/core';
+
+import "swiper/swiper-bundle.css";
 import barbaCss from '@barba/css';
 import "../scss/style.scss";
 
-
 gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 Swiper.use([Pagination, Navigation, EffectCoverflow, Mousewheel]);
-
 // tell Barba to use the css plugin
 barba.use(barbaCss);
 
+const body = document.querySelector('body');
+
+barba.hooks.before((data) => {
+  const background = data.current.container.dataset.background;
+  body.style.setProperty('--page-background', background);
+});
 
 barba.init({
   transitions: [
-    {
-      name: 'home',
-      sync: true,
-      to: { namespace: ['home'] },
-      once() {},
-      leave() {},
-      enter() {},
-    }, {
+     {
       name: 'fade',
+      // sync: true,
       to: { namespace: ['fade'] },
-      beforeEnter() {
+      before(){
+        console.log("before")
+      },
+      after(){
+        console.log("after")
+      },
+      beforeOnce(data) {
+        console.log("before once")
+            scrollReveal()
+            swiper()
+            swipertwo()
+            data.next.container.style.backgroundColor = 'white';
+      },
+      once() {},
+      beforeLeave() {
+      console.log("before leave")
+      },
+      leave() {},
+      beforeEnter(data) {
 
             scrollReveal()
             swiper()
             swipertwo()
+            data.next.container.style.backgroundColor = 'white';
       },
-      leave() {},
-      enter() {},
-    }, {
-      name: 'clip',
-      sync: true,
-      to: { namespace: ['clip'] },
-      leave() {},
-      enter() {},
-    }, {
-      name: 'with-cover',
-      sync: true,
-      to: { namespace: ['with-cover'] },
-      leave() {},
       enter() {},
     },
+
   ],
 });
 
@@ -134,11 +137,11 @@ function scrollReveal() {
 }
 
 
-document.addEventListener("DOMContentLoaded", function() {
-  scrollReveal()
-  swiper()
-  swipertwo()
-});
+// document.addEventListener("DOMContentLoaded", function() {
+//   scrollReveal()
+//   swiper()
+//   swipertwo()
+// });
 
 // On Mouse MOve the background position moves
 // var containertwo = document.querySelector(".container-two");
