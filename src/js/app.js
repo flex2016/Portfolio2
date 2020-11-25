@@ -6,53 +6,94 @@ import { ScrollToPlugin } from "gsap/ScrollToPlugin.js";
 
 
 import "swiper/swiper-bundle.css";
-import barbaCss from '@barba/css';
+//import barbaCss from '@barba/css';
 import "../scss/style.scss";
 
 gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 Swiper.use([Pagination, Navigation, EffectCoverflow, Mousewheel]);
 // tell Barba to use the css plugin
-barba.use(barbaCss);
+// barba.use(barbaCss);
 
-const body = document.querySelector('body');
+// const body = document.querySelector('body');
 
-barba.hooks.before((data) => {
-  const background = data.current.container.dataset.background;
-  body.style.setProperty('--page-background', background);
-});
+// barba.hooks.enter(() => {
+//           scrollReveal()
+//             swiper()
+//             swipertwo()
+// });
+
+const animationEnter = (container) => {
+	// console.log(container);
+	return gsap.from(container, {
+		duration: .7,
+    autoAlpha: 0,
+    clearProps:"all",
+    ease:'none'
+	});
+}
+const animationLeave = (container, done) => {
+  // console.log(container);
+
+	return gsap.to(container, {
+				duration: .7,
+    autoAlpha: 0,
+    clearProps:"all",
+    ease:'none',
+     onComplete: () => done()
+	});
+}
 
 barba.init({
   transitions: [
      {
-      name: 'fade',
-      // sync: true,
-      to: { namespace: ['fade'] },
-      before(){
-        console.log("before")
-      },
-      after(){
-        console.log("after")
-      },
-      beforeOnce(data) {
-        console.log("before once")
-            scrollReveal()
-            swiper()
-            swipertwo()
-            data.next.container.style.backgroundColor = 'white';
-      },
-      once() {},
-      beforeLeave() {
-      console.log("before leave")
-      },
-      leave() {},
-      beforeEnter(data) {
 
-            scrollReveal()
-            swiper()
-            swipertwo()
-            data.next.container.style.backgroundColor = 'white';
+      // before(){
+      //   console.log("before")
+      //       scrollReveal()
+      //       swiper()
+      //       swipertwo()
+      // },
+      // after(){
+      //   console.log("after")
+      // },
+      // beforeOnce(data) {
+      //   console.log("before once")
+      //       scrollReveal()
+      //       swiper()
+      //       swipertwo()
+      //       data.next.container.style.backgroundColor = 'white';
+      // },
+      once({next}) {
+        scrollReveal()
+        swiper()
+        swipertwo()
+        console.log("once")
+        animationEnter(next.container)
       },
-      enter() {},
+      leave({current}) {
+        console.log("leave")
+        const done = this.async()
+        animationLeave(current.container, done)
+      },
+      enter({next}) {
+        scrollReveal()
+        swiper()
+        swipertwo()
+        console.log("enter")
+        animationEnter(next.container)
+      },
+      // beforeLeave() {
+      // console.log("before leave")
+      // },
+      // leave() {},
+      // beforeEnter() {
+
+      //       scrollReveal()
+      //       swiper()
+      //       swipertwo()
+      //       // data.next.container.style.backgroundColor = 'white';
+      // },
+      // enter() {},
     },
 
   ],
@@ -118,17 +159,19 @@ function animateFrom(elem, direction) {
 }
 
 function hide(elem) {
+  // console.log(`hide ${elem}`)
   gsap.set(elem, {autoAlpha: 0});
 }
 
 function scrollReveal() {
-//  gsap.registerPlugin(ScrollTrigger);
+   gsap.registerPlugin(ScrollTrigger);
   gsap.to(window, {duration: 0, scrollTo: 0});
   gsap.utils.toArray(".gs_reveal").forEach(function(elem) {
+    console.log(elem)
     hide(elem); // assure that the element is hidden when scrolled into view
 
     ScrollTrigger.create({
-      trigger: elem,
+      trigger: 'elem',
       onEnter: function() { animateFrom(elem) },
       onEnterBack: function() { animateFrom(elem, -1) },
       onLeave: function() { hide(elem) } // assure that the element is hidden when scrolled into view

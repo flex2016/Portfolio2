@@ -64,8 +64,8 @@ body {
   color: $color-secondary;
   // font-weight: 300;
   line-height: 1.6;
-  --page-background: #000;
-  background-color: var(--page-background);
+  //   --page-background: #000;
+  //   background-color: var(--page-background);
 }
 
 ul,
@@ -137,43 +137,4 @@ a {
   transition: opacity 0.3s linear;
   width: 100%;
   z-index: 1;
-}
-
-/* Fade out current container */
-
-.fade-once {
-  opacity: 0;
-}
-
-.fade-once-active {
-  transition: opacity 1.3s linear;
-}
-
-.fade-once-to {
-  opacity: 1;
-}
-
-.fade-leave {
-  opacity: 1;
-}
-
-.fade-leave-active {
-  transition: opacity 1.3s linear;
-}
-
-.fade-leave-to {
-  opacity: 0;
-}
-
-/* Fade in the next container */
-.fade-enter {
-  opacity: 0;
-}
-
-.fade-enter-active {
-  transition: opacity 1.3s linear;
-}
-
-.fade-enter-to {
-  opacity: 1;
 }
