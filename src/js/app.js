@@ -13,16 +13,30 @@ import "../scss/style.scss";
 gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 Swiper.use([Pagination, Navigation, EffectCoverflow, Mousewheel]);
 
-
+// let test = document.querySelector(".header a.header__contact i")
+// console.log(test)
+// const resetActiveLink = () => gsap.set('.test ', {
+//   xPercent:-100,
+//   transformOrigin: "left"
+// })
 
 barba.init({
   transitions: [
      {
       once({next}) {
+        // resetActiveLink()
+        gsap.from('.header__nav li, .hero__content-title h1, .project__nav-text span, .header__big test span', {
+            duration: .6,
+            yPercent: 100,
+            // autoAlpha: 0,
+            stagger: .2,
+            ease: 'power1.out',
+            onComplete: () =>animationEnter(next.container)
+        })
         scrollReveal()
         swiper()
         swipertwo()
-        animationEnter(next.container)
+        // animationEnter(next.container)
       },
       leave:({current}) => animationLeave(current.container),
       enter({next}) {

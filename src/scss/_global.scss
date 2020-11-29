@@ -76,22 +76,24 @@ nav {
 a {
   text-decoration: none;
 }
-
-.container-main {
-  display: grid;
-  // background: $color-grey-light-1;
-  grid-template-rows: 100vh repeat(4, minmax(min-content, 14rem)) 20vh;
-  grid-template-columns:
-    [full-start]minmax(6rem, 1fr) [center-start]repeat(
-      8,
-      [col-start] minmax(min-content, 14rem) [col-end]
-    )
-    [center-end]minmax(6rem, 1fr) [full-end];
-
-  @media only screen and (max-width: $bp-medium) {
-    grid-template-rows: 100vh;
-  }
+.grey {
+  color: $color-grey-light-1;
 }
+// .container-main {
+//   display: grid;
+//   // background: $color-grey-light-1;
+//   grid-template-rows: 100vh repeat(4, minmax(min-content, 14rem)) 20vh;
+//   grid-template-columns:
+//     [full-start]minmax(6rem, 1fr) [center-start]repeat(
+//       8,
+//       [col-start] minmax(min-content, 14rem) [col-end]
+//     )
+//     [center-end]minmax(6rem, 1fr) [full-end];
+
+//   @media only screen and (max-width: $bp-medium) {
+//     grid-template-rows: 100vh;
+//   }
+// }
 .container-two {
   display: grid;
   // background: $color-grey-light-1;
