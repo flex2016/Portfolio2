@@ -8,6 +8,7 @@
   justify-items: left;
   grid-row-gap: 5rem;
   opacity: 1;
+  margin: 30vh 10vw;
 
   // background-image: linear-gradient(
   //     to bottom right,
@@ -18,7 +19,7 @@
   // background-size: cover;
   // background-position: bottom;
   // background-attachment: fixed;
-  background-color: $color-black;
+  background-color: $color-white;
 
   // @media only screen and (min-resolution: 192dpi) and (min-width: 37.5em),
   //   only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 37.5em),
@@ -54,13 +55,13 @@
   &__heading {
     // width: 25%;
     font-size: clamp(4rem, 5.5vw, 6rem);
-    color: $color-white;
+    color: $color-black;
     opacity: 1;
-    font-family: $font-primary-bold;
-    padding: 9rem 5rem 9rem 32rem;
-    margin: 20rem 0;
+    font-family: $font-primary;
+    // padding: 9rem 5rem 9rem 32rem;
+    // margin: 20rem 0;
     align-self: center;
-    background-color: $color-primary;
+    // background-color: $color-black;
 
     @media only screen and (max-width: $bp-xlarge) {
       font-size: 3vw;
@@ -113,12 +114,14 @@
   &__details-heading a {
     position: absolute;
     left: 28%;
-    top: 30%;
+    top: 10%;
     width: 50%;
-    color: $color-primary;
+    color: transparent;
+    -webkit-text-stroke: 2px $color-primary;
     font-size: clamp(6rem, 10vw, 20rem);
     line-height: 100%;
     opacity: 0.8;
+    z-index: 10;
     transition: all 0.2s;
     font-family: $font-display;
     @media only screen and (max-width: $bp-xlarge) {
@@ -197,6 +200,9 @@
     width: 80%;
 
     border-radius: 1%;
+    filter: invert(0) brightness(100%) sepia(10%) saturate(1%) blur(1px)
+      invert(5%);
+    z-index: 0;
     display: block;
     margin: 10rem 0;
     @media only screen and (max-width: $bp-small) {

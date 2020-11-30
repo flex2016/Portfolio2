@@ -6,7 +6,6 @@ import { ScrollToPlugin } from "gsap/ScrollToPlugin.js";
 
 import {  animationEnter, animationLeave } from './animations';
 
-
 import "swiper/swiper-bundle.css";
 import "../scss/style.scss";
 
@@ -20,19 +19,25 @@ Swiper.use([Pagination, Navigation, EffectCoverflow, Mousewheel]);
 //   transformOrigin: "left"
 // })
 
+
 barba.init({
   transitions: [
      {
       once({next}) {
         // resetActiveLink()
-        gsap.from('.header__nav li, .hero__content-title h1, .project__nav-text span, .header__big test span', {
+        gsap.from('.header__nav li, .hero__content-title h1,.hero__content-message span, .project__nav-text span, .header__big test span', {
             duration: .6,
             yPercent: 100,
             // autoAlpha: 0,
             stagger: .2,
             ease: 'power1.out',
             onComplete: () =>animationEnter(next.container)
-        })
+        }),
+        gsap.fromTo('.hero__image-container img', {height:"100vh", width:"100%",},
+        {duration: 1.2, height:"50vh", width:"50%", delay: 1.2}, 0)
+
+
+
         scrollReveal()
         swiper()
         swipertwo()
