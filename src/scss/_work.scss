@@ -2,24 +2,15 @@
   position: relative;
   grid-column: full-start / full-end;
   // padding: 10rem 8vw;
-  display: grid;
-  align-content: center;
-  justify-content: center;
-  justify-items: left;
+  // display: grid;
+  // align-content: center;
+  // justify-content: center;
+  // justify-items: left;
   grid-row-gap: 5rem;
   opacity: 1;
-  margin: 30vh 10vw;
+  margin: 20vh 10vw;
 
-  // background-image: linear-gradient(
-  //     to bottom right,
-  //     $color-secondary,
-  //     #1f1e1bad
-  //   ),
-  //   url(../img/work_bg-small.jpg);
-  // background-size: cover;
-  // background-position: bottom;
-  // background-attachment: fixed;
-  background-color: $color-white;
+  // background-color: $color-white;
 
   // @media only screen and (min-resolution: 192dpi) and (min-width: 37.5em),
   //   only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 37.5em),
@@ -54,22 +45,22 @@
   // }
   &__heading {
     // width: 25%;
-    font-size: clamp(4rem, 5.5vw, 6rem);
+    font-size: clamp(4rem, 5.5vw, 9rem);
     color: $color-black;
     opacity: 1;
-    font-family: $font-primary;
+    font-family: $font-primary-bold;
     // padding: 9rem 5rem 9rem 32rem;
-    // margin: 20rem 0;
+    margin-bottom: 40rem;
     align-self: center;
     // background-color: $color-black;
 
     @media only screen and (max-width: $bp-xlarge) {
-      font-size: 3vw;
-      padding: 6rem 5rem 6rem 10rem;
+      // font-size: 3vw;
+      // padding: 6rem 5rem 6rem 10rem;
     }
 
     @media only screen and (max-width: $bp-medium) {
-      margin-top: 11rem;
+      // margin-top: 11rem;
       // padding: 7rem;
     }
     @media only screen and (max-width: $bp-small) {
@@ -85,12 +76,14 @@
     }
   }
   &__list {
+    position: relative;
     // display: grid;
     // grid-template-columns: auto auto;
     // grid-column-gap: 1rem;
     // grid-row-gap: 8vh;
     // align-items: start;
-    padding: 10rem 8vw;
+    // padding: 20rem 8vw;
+    margin: 60rem 0;
 
     @media only screen and (max-width: $bp-largest) {
       // grid-template-columns: 1fr;
@@ -114,10 +107,10 @@
   &__details-heading a {
     position: absolute;
     left: 28%;
-    top: 10%;
+    top: -25%;
     width: 50%;
-    color: transparent;
-    -webkit-text-stroke: 2px $color-primary;
+    color: $color-black;
+    -webkit-text-stroke: 2px $color-white;
     font-size: clamp(6rem, 10vw, 20rem);
     line-height: 100%;
     opacity: 0.8;
@@ -143,7 +136,9 @@
     }
   }
   &__details-heading a:hover {
-    color: $color-primary;
+    color: $color-white;
+    // color: transparent;
+    -webkit-text-stroke: 2px $color-black;
     opacity: 1;
     // letter-spacing: 0.5rem;
   }
@@ -152,11 +147,11 @@
     font-size: clamp(1.5rem, 1vw, 2.5rem);
     letter-spacing: 1rem;
     left: 70%;
-    top: 60%;
+    top: 50%;
     transform: rotate(90deg);
     font-family: $font-primary;
     // font-size: clamp(1.8rem, 1vw, 2.2rem);
-    color: $color-primary;
+    color: $color-black;
     text-transform: uppercase;
     @media only screen and (max-width: $bp-xlarge) {
       left: 70%;
@@ -177,7 +172,7 @@
     position: absolute;
     font-size: 1.7;
     right: 20%;
-    top: 80%;
+    top: 75%;
     z-index: 99;
     @media only screen and (max-width: $bp-xlarge) {
       right: 17%;
