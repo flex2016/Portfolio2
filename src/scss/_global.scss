@@ -140,3 +140,9 @@ a {
   width: 100%;
   z-index: 1;
 }
+
+.gs_reveal {
+  opacity: 0;
+  visibility: hidden;
+  transition: transform 0s;
+}
