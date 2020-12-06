@@ -4,8 +4,8 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger.js";
 import { ScrollToPlugin } from "gsap/ScrollToPlugin.js";
 
-import {  animationEnter, animationLeave } from './animations';
-
+import {   animationEnterHome, animationEnterProject, animationLeave, animationLeaveSlideImage } from './animations';
+import { textSlideUpAnimation, scrollReveal } from "./animations/gsap";
 import "swiper/swiper-bundle.css";
 import "../scss/style.scss";
 
@@ -18,71 +18,78 @@ Swiper.use([Pagination, Navigation, EffectCoverflow, Mousewheel]);
 //   xPercent:-100,
 //   transformOrigin: "left"
 // })
+barba.hooks.once(({next}) => {
+  scrollReveal(next.container);
+});
+barba.hooks.afterLeave(({current}) => {
+   current.container.remove();
+});
+barba.hooks.beforeEnter(() => {
+     ScrollTrigger.getAll().forEach(t => t.kill());
+});
 
+barba.hooks.enter(({next}) => {
+  window.scrollTo(0, 0);
+  scrollReveal(next.container);
+});
 
 barba.init({
 
   transitions: [
      {
-        once({next}) {
-
-        // resetActiveLink()
-        // gsap.from('.header__nav li, .hero__content-title h1,.hero__content-message span, .project__nav-text span, .header__big test span', {
-        //     duration: .6,
-        //     yPercent: 100,
-        //     // autoAlpha: 0,
-        //     stagger: .2,
-        //     ease: 'power1.out',
-        //     onComplete: () =>animationEnter(next.container)
-        // }),
-        // gsap.fromTo('.hero__image-container img', {height:"100vh", width:"100%",},
-        // {duration: 1.2, height:"50vh", width:"50%", delay: 1.2}, 0)
-
-
-
-        // scrollReveal(next.container)
-
-
-        swiper()
-        swipertwo()
-        // console.log(data)
-        animationEnter(next.container)
-      },
-       leave(data) {
-        console.log(data)
-        console.log("leave")
-        animationLeave(data.current.container)
-       data.current.container.remove();
-          console.log(data)
-        // ScrollTrigger.getAll().forEach(t => t.kill());
-
-      },
-      //  afterLeave(data){
-      //   console.log(data)
-      //     console.log("afterleave")
-      //   data.current.container.remove();
-      //   console.log(data)
-      // },
-      beforeEnter() {
-         ScrollTrigger.getAll().forEach(t => t.kill());
-        gsap.to(window, {duration: 0, scrollTo: 0});
-
-
+       name: 'home',
+      to: {
+				namespace: ['home']
 			},
-       enter({next}) {
-        // scrollReveal(next.container)
-
-
-
-          swiper()
-          swipertwo()
-        animationEnter(next.container)
+        once({next}) {
+        swiper()
+        animationEnterHome(next.container)
       },
+       leave: ({current}) => animationLeave(current.container),
+        // const done =this.async()
+        // animationLeave(current.container, done)
 
+      enter:({next})=> {
+        swiper()
+        animationEnterHome(next.container)
+      },
     },
+      {
+      name: 'from-home',
+      from: {
+				namespace: ['home']
+			},
+			to: {
+				namespace: ['project', 'architecture']
+			},
+      leave: ({ current }) => animationLeaveSlideImage(current.container),
+      enter:({next})=> {
+        swipertwo()
+        animationEnterProject(next.container)
+      },
+    },
+     {
+			name: 'project',
+			to: {
+				namespace: ['project']
+			},
+			once: ({ next }) => {
+        swipertwo()
+				animationEnterProject(next.container);
+			},
+			enter: ({ next }) => {
+        swipertwo()
+				animationEnterProject(next.container)
+			}
+		}
 
   ],
 });
+
+// if ('scrollRestoration' in history) {
+//     history.scrollRestoration = 'manual';
+//   }
+
 // function resize(){
 //   var tl;
 

@@ -4,10 +4,12 @@ const animationLeave = (container) => {
   // console.log(container);
 
 	return gsap.to(container, {
-				duration: .7,
+
     autoAlpha: 0,
+    duration: .7,
     clearProps:"all",
     ease:'none',
+
 
 	});
 }

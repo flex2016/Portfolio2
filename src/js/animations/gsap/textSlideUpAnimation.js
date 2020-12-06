@@ -1,8 +1,9 @@
 import { gsap } from "gsap";
 
+
 const textSlideUpAnimation = (elem) => {
 
-  return gsap.from(elem, {
+  return gsap.from(elem,  {
               duration: .6,
               yPercent: 100,
               // autoAlpha: 0,

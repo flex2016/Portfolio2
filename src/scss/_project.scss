@@ -1,13 +1,45 @@
 .project {
+  &__image-container {
+    // flex-basis: 30%;
+    // background-image: url(/dist/assets/img/img1.jpg);
+    // position: absolute;
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+
+    z-index: 0;
+    // position: relative;
+    & img {
+      object-fit: cover;
+      object-position: 50% 50%;
+      display: block;
+      // position: relative;
+      // height: 50vh;
+      // width: 50%;
+      // transform: scaleX(-1);
+      // filter: invert(0) brightness(100%) sepia(10%) saturate(1%) blur(1px)
+      //   invert(5%);
+      opacity: 1;
+    }
+  }
   &__nav {
-    background-color: $color-white;
+    z-index: 9;
+    // background-color: $color-black;
+    opacity: 0.6;
+
     grid-column: full-start / full-end;
     display: grid;
     justify-items: flex-end;
-    background-image: url(https://images.unsplash.com/photo-1517594422361-5eeb8ae275a9?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80);
-    background-size: cover;
-    background-attachment: fixed;
-    background-position: center top;
+    // background-image: url(https://images.unsplash.com/photo-1517594422361-5eeb8ae275a9?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80);
+    // background-size: cover;
+    // background-attachment: fixed;
+    // background-position: center top;
 
     padding: 5vh 0;
     &-text {
@@ -31,6 +63,7 @@
     }
   }
   &__header-nav {
+    z-index: 999;
     display: flex;
     align-items: flex-start;
     // margin-top: 5rem;
