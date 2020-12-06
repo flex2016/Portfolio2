@@ -1,4 +1,5 @@
 import barba from '@barba/core';
+import barbaPrefetch from '@barba/prefetch';
 import Swiper, { Pagination, Navigation, EffectCoverflow , Mousewheel} from "swiper";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger.js";
@@ -12,20 +13,15 @@ import "../scss/style.scss";
 gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 Swiper.use([Pagination, Navigation, EffectCoverflow, Mousewheel]);
 
-// let test = document.querySelector(".header a.header__contact i")
-// console.log(test)
-// const resetActiveLink = () => gsap.set('.test ', {
-//   xPercent:-100,
-//   transformOrigin: "left"
-// })
+
 barba.hooks.once(({next}) => {
   scrollReveal(next.container);
 });
 barba.hooks.afterLeave(({current}) => {
-   current.container.remove();
+  current.container.remove();
 });
 barba.hooks.beforeEnter(() => {
-     ScrollTrigger.getAll().forEach(t => t.kill());
+  ScrollTrigger.getAll().forEach(t => t.kill());
 });
 
 barba.hooks.enter(({next}) => {
@@ -33,22 +29,27 @@ barba.hooks.enter(({next}) => {
   scrollReveal(next.container);
 });
 
-barba.init({
+barba.use(barbaPrefetch)
 
+barba.init({
+  requestError: (trigger, action, url, response) => {
+    if(response.status ==+ 404)
+      barba.go('/');
+    return false;
+  },
   transitions: [
      {
        name: 'home',
       to: {
 				namespace: ['home']
 			},
-        once({next}) {
+      once({next}) {
         swiper()
         animationEnterHome(next.container)
       },
-       leave: ({current}) => animationLeave(current.container),
+      leave: ({current}) => animationLeave(current.container),
         // const done =this.async()
         // animationLeave(current.container, done)
-
       enter:({next})=> {
         swiper()
         animationEnterHome(next.container)
