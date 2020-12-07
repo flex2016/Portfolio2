@@ -13,9 +13,41 @@ import "../scss/style.scss";
 gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 Swiper.use([Pagination, Navigation, EffectCoverflow, Mousewheel]);
 
+function initIntro() {
+    let stl = gsap.timeline({
+        scrollTrigger: {
+            trigger: '.trigger',
+            scrub: 1,
+            start: "top bottom", // position of trigger meets the scroller position
+            end: "bottom top"
+        }
+    });
+
+    stl.to('.intro__title-designer', {
+        x: 500,
+        ease: 'power4.in',
+        duration: 3,
+
+    })
+    .to('.intro__description', {
+        y: 100,
+        ease: 'power4.in',
+        duration: 3,
+
+    }, 0);
+}
+// initIntro()
+
+
+
+
+
+
+
 
 barba.hooks.once(({next}) => {
   scrollReveal(next.container);
+  initIntro()
 });
 barba.hooks.afterLeave(({current}) => {
   current.container.remove();
@@ -25,6 +57,7 @@ barba.hooks.beforeEnter(() => {
 });
 
 barba.hooks.enter(({next}) => {
+  initIntro()
   window.scrollTo(0, 0);
   scrollReveal(next.container);
 });
@@ -32,11 +65,11 @@ barba.hooks.enter(({next}) => {
 barba.use(barbaPrefetch)
 
 barba.init({
-  requestError: (trigger, action, url, response) => {
-    if(response.status ==+ 404)
-      barba.go('/');
-    return false;
-  },
+  // requestError: (trigger, action, url, response) => {
+  //   if(response.status == 404)
+  //     barba.go('/');
+  //   return false;
+  // },
   transitions: [
      {
        name: 'home',
