@@ -7,7 +7,7 @@ import { ScrollToPlugin } from "gsap/ScrollToPlugin.js";
 
 import {   animationEnterHome, animationEnterProject,
              animationLeave, animationLeaveSlideImage } from './animations';
-import {  introSlide} from "./animations/gsap";
+import {  introSlide, skewImg} from "./animations/gsap";
 import { swiperProjects, swiperResults } from "./components/swiper";
 import { scrollReveal, scrollTo } from "./components/scroll";
 
@@ -18,13 +18,11 @@ gsap.registerPlugin(ScrollTrigger);
 
 
 
-
-
-
 barba.hooks.once(({next}) => {
   scrollReveal(next.container);
   introSlide()
   scrollTo()
+  skewImg ()
 
 });
 barba.hooks.afterLeave(({current}) => {
@@ -35,6 +33,7 @@ barba.hooks.beforeEnter(() => {
 });
 
 barba.hooks.enter(({next}) => {
+  skewImg()
   scrollTo()
   introSlide()
   window.scrollTo(0, 0);
@@ -98,6 +97,7 @@ barba.init({
 
   ],
 });
+
 
 
 // if ('scrollRestoration' in history) {
