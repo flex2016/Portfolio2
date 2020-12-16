@@ -1,4 +1,5 @@
 .personal {
+  position: relative;
   padding: 10rem 0;
   grid-column: full-start / full-end;
   display: grid;
@@ -91,5 +92,45 @@
   transition: all 0.2s;
   &:hover {
     color: $color-primary;
+  }
+}
+
+.slide-inner {
+  overflow: hidden;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background: #000;
+}
+.slide-inner--image {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  opacity: 0.2;
+  transform: scale(1.07);
+  -webkit-transition: opacity 0.6s ease-in-out, transform 2s ease 0.7s;
+  -moz-transition: opacity 0.6s ease-in-out, transform 2s ease 0.7s;
+  transition: opacity 0.6s ease-in-out, transform 2s ease 0.7s;
+}
+.swiper-slide-duplicate-active .slide-inner--image,
+.swiper-slide-active .slide-inner--image {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.slide-inner--info {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  & h1 {
+    font-size: 6rem;
+    color: $color-white;
   }
 }

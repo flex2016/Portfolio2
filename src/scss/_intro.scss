@@ -3,7 +3,7 @@
   grid-column: full-start / full-end;
   padding: 10%;
   background-color: $color-primary;
-
+  overflow: hidden;
   &__title-designer {
     color: $color-white;
     font-size: clamp(7rem, 17vw, 25rem);

@@ -1,9 +1,5 @@
 import { gsap } from "gsap";
-import { textSlideUpAnimation, scrollReveal } from "./gsap"
-
-
-
-
+import { textSlideUpAnimation } from "./gsap"
 
 const animationEnterProject = ( container) => {
 
@@ -35,13 +31,6 @@ const animationEnterProject = ( container) => {
   ;
 	return tl;
 
-
-	// return gsap.from(container, {
-	// 	duration: .7,
-  //   autoAlpha: 0,
-  //   clearProps:"all",
-  //   ease:'none'
-	// });
 }
 
 

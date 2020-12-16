@@ -1,43 +1,19 @@
 import barba from '@barba/core';
 import barbaPrefetch from '@barba/prefetch';
-import Swiper, { Pagination, Navigation, EffectCoverflow , Mousewheel} from "swiper";
+
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger.js";
 import { ScrollToPlugin } from "gsap/ScrollToPlugin.js";
 
-import {   animationEnterHome, animationEnterProject, animationLeave, animationLeaveSlideImage } from './animations';
-import { textSlideUpAnimation, scrollReveal } from "./animations/gsap";
-import "swiper/swiper-bundle.css";
+import {   animationEnterHome, animationEnterProject,
+             animationLeave, animationLeaveSlideImage } from './animations';
+import {  introSlide} from "./animations/gsap";
+import { swiperProjects, swiperResults } from "./components/swiper";
+import { scrollReveal, scrollTo } from "./components/scroll";
+
 import "../scss/style.scss";
 
-gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
-Swiper.use([Pagination, Navigation, EffectCoverflow, Mousewheel]);
-
-function initIntro() {
-    let stl = gsap.timeline({
-        scrollTrigger: {
-            trigger: '.trigger',
-            scrub: 1,
-            start: "top bottom", // position of trigger meets the scroller position
-            end: "bottom top"
-        }
-    });
-
-    stl.to('.intro__title-designer', {
-        x: 500,
-        ease: 'power4.in',
-        duration: 3,
-
-    })
-    .to('.intro__description', {
-        y: 100,
-        ease: 'power4.in',
-        duration: 3,
-
-    }, 0);
-}
-// initIntro()
-
+gsap.registerPlugin(ScrollTrigger);
 
 
 
@@ -47,7 +23,9 @@ function initIntro() {
 
 barba.hooks.once(({next}) => {
   scrollReveal(next.container);
-  initIntro()
+  introSlide()
+  scrollTo()
+
 });
 barba.hooks.afterLeave(({current}) => {
   current.container.remove();
@@ -57,7 +35,8 @@ barba.hooks.beforeEnter(() => {
 });
 
 barba.hooks.enter(({next}) => {
-  initIntro()
+  scrollTo()
+  introSlide()
   window.scrollTo(0, 0);
   scrollReveal(next.container);
 });
@@ -77,14 +56,14 @@ barba.init({
 				namespace: ['home']
 			},
       once({next}) {
-        swiper()
+        swiperProjects()
         animationEnterHome(next.container)
       },
       leave: ({current}) => animationLeave(current.container),
         // const done =this.async()
         // animationLeave(current.container, done)
       enter:({next})=> {
-        swiper()
+        swiperProjects()
         animationEnterHome(next.container)
       },
     },
@@ -98,7 +77,7 @@ barba.init({
 			},
       leave: ({ current }) => animationLeaveSlideImage(current.container),
       enter:({next})=> {
-        swipertwo()
+        swiperResults()
         animationEnterProject(next.container)
       },
     },
@@ -108,17 +87,18 @@ barba.init({
 				namespace: ['project']
 			},
 			once: ({ next }) => {
-        swipertwo()
+        swiperResults()
 				animationEnterProject(next.container);
 			},
 			enter: ({ next }) => {
-        swipertwo()
+        swiperResults()
 				animationEnterProject(next.container)
 			}
 		}
 
   ],
 });
+
 
 // if ('scrollRestoration' in history) {
 //     history.scrollRestoration = 'manual';
@@ -162,40 +142,7 @@ barba.init({
 // }
 
 
-function swipertwo() {
-    var swipertwo = new Swiper(".swiper-container-two", {
-    slidesPerView: 1,
-    // autoHeight: true,
-    // loop: true,
-    mousewheel: {
-      releaseOnEdges: true,
-      sensitivity:1,
-    },
-    breakpoints: {
-                  800: {
-                      slidesPerView: 2
-                  }
-              }
-  });
-  return swipertwo
 
-}
-function swiper() {
-    var swiper = new Swiper(".swiper-container", {
-    slidesPerView: 1,
-    spaceBetween: 30,
-    loop: true,
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
-    },
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-    },
-  });
-  return swiper
-}
 
 
 
