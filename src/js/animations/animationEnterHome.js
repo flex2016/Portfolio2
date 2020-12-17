@@ -1,5 +1,6 @@
 import { gsap } from "gsap";
 import { textSlideUpAnimation, scrollReveal } from "./gsap"
+import {tiltImage } from "../components/"
 
 
 
@@ -13,7 +14,7 @@ const animationEnterHome = ( container) => {
 
   const tl = gsap.timeline({
 		onStart: () => console.log('starting animationLeave'),
-		onComplete: () => console.log('completed animationLeave'),
+		onComplete: () => tiltImage(),
 		defaults: {
 			duration: 0.8, ease: 'power1.in'
 		}

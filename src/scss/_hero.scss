@@ -37,8 +37,8 @@
     // margin: 10rem 0vw;
     // position: absolute;
     // margin: 0 auto;
-
-    z-index: 0;
+    transform-style: preserve-3d;
+    z-index: 99;
     // position: relative;
     & img {
       object-fit: cover;

@@ -1,5 +1,6 @@
 import barba from '@barba/core';
 import barbaPrefetch from '@barba/prefetch';
+// import VanillaTilt from 'vanilla-tilt';
 
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger.js";
@@ -15,6 +16,12 @@ import "../scss/style.scss";
 
 gsap.registerPlugin(ScrollTrigger);
 
+// function tiltImage(){
+//  VanillaTilt.init(document.querySelector(".hero__test"), {
+// 		max: 25,
+// 		speed: 400
+// 	});
+// }
 
 
 
