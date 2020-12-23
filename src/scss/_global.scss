@@ -35,6 +35,9 @@ $bp-xsSmall: 26.25em; // 420px;
   box-sizing: border-box;
 }
 
+.white {
+  color: $color-white !important;
+}
 // @font-face {
 //   font-family: KaruBold;
 //   src: url(/src/fonts/Karu-Bold.otf);

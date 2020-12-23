@@ -4,7 +4,7 @@ import { textSlideUpAnimation } from "./gsap"
 const animationEnterProject = ( container) => {
 
   const projectImage = container.querySelector('.project__image-container  img');
-  const heroText = container.querySelector('.project__nav-text span');
+  const heroText = container.querySelector('.project__hero-text span');
 
   textSlideUpAnimation(".hero__content-title h1, .hero__content-message span, .header__nav li")
 
@@ -27,7 +27,7 @@ const animationEnterProject = ( container) => {
               ease: 'power1.out',
               delay:.5
   })
-    .to(".project__nav", {duration: 1.9, backgroundColor:"#000", opacity: .6},0)
+    .to(".project__hero", {duration: 1.9, backgroundColor:"#000", opacity: .6},0)
   ;
 	return tl;
 
