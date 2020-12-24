@@ -52,13 +52,14 @@
     opacity: 1;
     font-family: $font-primary-bold;
     // padding: 9rem 5rem 9rem 32rem;
-    margin-bottom: 40rem;
+    margin-bottom: 30vh;
     align-self: flex-start;
     // background-color: $color-black;
 
     @media only screen and (max-width: $bp-xlarge) {
       // font-size: 3vw;
       // padding: 6rem 5rem 6rem 10rem;
+      margin-bottom: 20vh;
     }
 
     @media only screen and (max-width: $bp-medium) {
@@ -79,6 +80,21 @@
   }
   &__list {
     position: relative;
+    // overflow: hidden;
+    // display: grid;
+    // grid-template-columns: auto auto;
+    // grid-column-gap: 1rem;
+    // grid-row-gap: 8vh;
+    // align-items: start;
+    // padding: 20rem 8vw;
+
+    @media only screen and (max-width: $bp-largest) {
+      // grid-template-columns: 1fr;
+
+      // grid-row-gap: 0vh;
+    }
+  }
+  &__list:not(:last-child) {
     // overflow: hidden;
     // display: grid;
     // grid-template-columns: auto auto;
@@ -122,20 +138,20 @@
     font-family: $font-display;
     @media only screen and (max-width: $bp-xlarge) {
       left: 8%;
-      top: 32%;
+      // top: 32%;
     }
     @media only screen and (max-width: $bp-large) {
-      top: 40%;
+      // top: 40%;
     }
     @media only screen and (max-width: $bp-medium) {
-      top: 29.5%;
+      // top: 29.5%;
     }
 
     @media only screen and (max-width: $bp-small) {
-      top: 37.5%;
+      // top: 37.5%;
     }
     @media only screen and (max-width: $bp-small) and (orientation: landscape) {
-      top: 32.5%;
+      // top: 32.5%;
     }
   }
   &__details-heading a:hover {
@@ -165,6 +181,7 @@
     @media only screen and (max-width: $bp-large) {
       left: 68%;
       top: 70%;
+      color: $color-white;
     }
     @media only screen and (max-width: $bp-small) {
       transform: rotate(0deg);
@@ -207,7 +224,9 @@
     overflow: hidden;
     width: 75%;
     // overflow: hidden;
-
+    @media only screen and (max-width: $bp-large) {
+      width: 100%;
+    }
     // @media only screen and (max-width: $bp-small) {
     //   margin-bottom: 7rem;
     //   width: 100%;

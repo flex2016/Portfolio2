@@ -18,9 +18,10 @@ function introSlide() {
 
     })
     .to('.intro__description', {
-        x: 100,
+        y: 800,
         ease: 'power4.in',
-        duration: 3,
+        duration: 8,
+        delay:.2,
 
 
     }, 0);
