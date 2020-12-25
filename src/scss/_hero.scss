@@ -68,25 +68,47 @@
       flex-direction: column;
       align-items: flex-start;
 
-      padding: 10vh 10vw;
+      padding: 10rem 10vw;
 
       justify-content: center;
+      @media only screen and (max-width: $bp-medium) {
+        // line-height: 1.7;
+        padding: 10rem 2vw;
+      }
     }
     &-title {
       overflow: hidden;
       display: flex;
       font-family: $font-primary-bold;
-      font-size: clamp(5rem, 6vw, 14rem);
+      font-size: clamp(5.6rem, 8vh, 14rem);
+      @media only screen and (max-width: $bp-xsSmall) {
+        // line-height: 1.7;
+        // padding: 10rem 2vw;
+        font-size: 5rem;
+      }
 
       // line-height: 1;
-      & h1 {
+      & h1:not(:first-child) {
         margin: 0 2rem;
+      }
+    }
+    &-message-container {
+      font-size: clamp(1.8rem, 4vw, 3.5rem);
+      // margin-left: 15rem;
+      margin-top: 5rem;
+      align-self: flex-end;
+      overflow: hidden;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      @media only screen and (max-width: $bp-small) {
+        align-self: center;
       }
     }
     &-message {
       font-size: clamp(1.8rem, 4vw, 3.5rem);
       // margin-left: 15rem;
-      align-self: flex-end;
+      // align-self: flex-end;
       overflow: hidden;
       display: flex;
       flex-wrap: wrap;
@@ -97,8 +119,4 @@
       }
     }
   }
-}
-.class2 {
-  height: 50vh;
-  width: 50%;
 }

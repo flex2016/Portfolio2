@@ -61,6 +61,9 @@
 
       & span {
         display: block;
+        @media only screen and (max-width: $bp-medium) {
+          text-align: center;
+        }
       }
     }
   }
