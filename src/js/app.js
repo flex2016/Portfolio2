@@ -10,7 +10,7 @@ import {   animationEnterHome, animationEnterProject,
              animationLeave, animationLeaveSlideImage } from './animations';
 import {  introSlide, skewImg} from "./animations/gsap";
 import { swiperProjects, swiperResults } from "./components/swiper";
-import { scrollReveal, scrollTo } from "./components/scroll";
+import { scrollReveal, scrollTo, scrollHeader } from "./components/scroll";
 
 import "../scss/style.scss";
 
@@ -30,6 +30,7 @@ barba.hooks.once(({next}) => {
   introSlide()
   scrollTo()
   skewImg ()
+  scrollHeader()
 
 });
 barba.hooks.afterLeave(({current}) => {
@@ -40,11 +41,11 @@ barba.hooks.beforeEnter(() => {
 });
 
 barba.hooks.enter(({next}) => {
-  skewImg()
   scrollTo()
   introSlide()
   window.scrollTo(0, 0);
   scrollReveal(next.container);
+  // scrollHeader();
 });
 
 barba.use(barbaPrefetch)
@@ -69,6 +70,7 @@ barba.init({
         // const done =this.async()
         // animationLeave(current.container, done)
       enter:({next})=> {
+        skewImg()
         swiperProjects()
         animationEnterHome(next.container)
       },
