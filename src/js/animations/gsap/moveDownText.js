@@ -22,16 +22,19 @@ function moveDownText(sliderDOM) {
     duration:2,
     startAt: {
       autoAlpha: 0,
-      y: "-150%",
-      x: "100%"
+      // y: "-150%",
+      // x: "100%"
+      xPercent: 100,
+      yPercent: -150
 
     },
 
     autoAlpha: 1,
-    y: "50%",
-    x: "35%",
+    xPercent: 0,
+    yPercent: 0,
 
-    display: "block" });
+    // display: "block"
+   });
 
 }
 
