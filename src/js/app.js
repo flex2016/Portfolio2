@@ -4,13 +4,14 @@ import barbaPrefetch from '@barba/prefetch';
 
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger.js";
-import { ScrollToPlugin } from "gsap/ScrollToPlugin.js";
+// import { ScrollToPlugin } from "gsap/ScrollToPlugin.js";
 
 import {   animationEnterHome, animationEnterProject,
              animationLeave, animationLeaveSlideImage } from './animations';
 import {  introSlide, skewImg} from "./animations/gsap";
 import { swiperProjects, swiperResults } from "./components/swiper";
 import { scrollReveal, scrollTo, scrollHeader } from "./components/scroll";
+import { textTransform } from "./components";
 
 import "../scss/style.scss";
 
@@ -31,6 +32,7 @@ barba.hooks.once(({next}) => {
   scrollTo()
   skewImg ()
   scrollHeader()
+  textTransform()
 
 });
 barba.hooks.afterLeave(({current}) => {
@@ -46,6 +48,7 @@ barba.hooks.enter(({next}) => {
   window.scrollTo(0, 0);
   scrollReveal(next.container);
   // scrollHeader();
+  textTransform()
 });
 
 barba.use(barbaPrefetch)
@@ -160,22 +163,21 @@ barba.init({
 //   swiper()
 //   swipertwo()
 // });
-
-// On Mouse MOve the background position moves
+// function test(){
+// // On Mouse MOve the background position moves
 // var containertwo = document.querySelector(".container-two");
-// var projectNav = document.querySelector(".project__nav");
-// var projectNavText = document.querySelector(".project__nav-text");
+// // var projectNav = document.querySelector(".project__nav");
+// var projectNavText = document.querySelector(".project__hero-text");
 // if('onmousemove' in window == true){
 //   containertwo.addEventListener('mousemove', e => {
-//     var moveX = (e.pageX * -1 / 25);
-//     var moveY = (e.pageY * -1 / 25);
-//     projectNav.style.setProperty('background-position', moveX + 'px ' + moveY + 'px');
-//     // projectNavText.style.transform = `translate(${moveY}px, ${moveX}px)`;
+//     var moveX = (e.pageY * -1 / 25);
+//     var moveY = (e.pageX * -1 / 25);
+//     // projectNav.style.setProperty('background-position', moveX + 'px ' + moveY + 'px');
+//     projectNavText.style.transform = `translate(${moveY}px, ${moveX}px)`;
 // })
-// }else{
-//   console.log("hello")
-//   projectNav.style.setProperty('background-position', 'center','top');
 // }
+// }
+
 
 // window.addEventListener('touchstart', function(event) {
 //   console.log(event)
