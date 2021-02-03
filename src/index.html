@@ -74,7 +74,7 @@
 
       </div>
       <div class="hero__image-container">
-        <img class="hero__test" src="assets/img/img1.jpg"  alt="">
+        <img class="hero__image" src="assets/img/img1.jpg"  alt="">
       </div>
     </section>
     <section class="work" id="work">
@@ -91,29 +91,36 @@
             </a>
           </div>
         </div>
-        <div class="work__image">
-          <img class="work__img "  loading="lazy" srcset="assets/img/fire.jpg 600w, assets/img/fire.jpg 1000w"
-            sizes="(max-width: 56.25em) 88vw, (max-width: 37.5em) 86vw, 1000px" alt="Work 2"
-            src="assets/img/fire.jpg" />
+        <div class="work__image-container">
+            <div class="work__image">
+              <img class="work__img " loading="lazy" srcset="assets/img/fire.jpg 600w, assets/img/fire.jpg 1000w"
+                sizes="(max-width: 56.25em) 88vw, (max-width: 37.5em) 86vw, 1000px" alt="Work 2" src="assets/img/fire.jpg" />
+            </div>
+            </div>
+
         </div>
-      </div>
+
           <div class="work__list">
             <div class="work__details">
               <h1 class="work__details-heading">
-                <a class=" work__details-heading-link gs_reveal" href="bl.html">The Light Walk</a>
+                <a class=" work__details-heading-link gs_reveal" href="tlw.html">The Light Walk</a>
               </h1>
               <h5 class="work__type">Identity & Website</h5>
               <div class="work__type-link">
-                <a href="bl.html">
+                <a href="tlw.html">
                   <button class="btn-test">View Project</button>
                 </a>
               </div>
             </div>
-            <div class="work__image trigger">
-              <img loading="lazy" srcset="assets/img/fire.jpg 600w, assets/img/fire.jpg 1000w"
-                sizes="(max-width: 56.25em) 88vw, (max-width: 37.5em) 86vw, 1000px" alt="Work 2" class="work__img"
-                src="assets/img/fire.jpg" />
-            </div>
+              <div class="work__image-container">
+                    <div class="work__image trigger">
+                      <img loading="lazy"
+                        srcset="https://images.unsplash.com/photo-1494603976222-89db76b28a3f?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2700&q=80 600w, https://images.unsplash.com/photo-1494603976222-89db76b28a3f?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2700&q=80 1000w"
+                        sizes="(max-width: 56.25em) 88vw, (max-width: 37.5em) 86vw, 1000px" alt="Work 2" class="work__img"
+                        src="https://images.unsplash.com/photo-1494603976222-89db76b28a3f?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2700&q=80" />
+                    </div>
+              </div>
+
           </div>
     </section>
   <section class="intro" >
@@ -136,10 +143,12 @@
           <div class="swiper-slide ">
               <div class="slide-inner" >
                 <!-- <div class="overlay"></div> -->
-                <div class="slide-inner--image" style="background-image: url('assets/img/fire.jpg')"></div>
+                <div class="slide-inner--image" style="
+                background:linear-gradient(0deg, rgba(240, 219, 219, 0.3), rgba(0, 0, 0, 0.9)), url(https://images.unsplash.com/photo-1586281380349-632531db7ed4?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80);
+               "></div>
                 <div class="slide-inner--info">
                   <h1>Job Tracker</h1>
-                  <a href="bl.html">
+                  <a href="jobtracker.html">
                     <button class="btn-test">View Project</button>
                   </a>
                 </div>
@@ -148,19 +157,7 @@
           <div class="swiper-slide">
               <div class="slide-inner" >
                 <!-- <div class="overlay"></div> -->
-                <div class="slide-inner--image" style="background-image: url('assets/img/img1.jpg')"></div>
-                <div class="slide-inner--info">
-                  <h1>Restaurant App</h1>
-                  <a href="bl.html">
-                    <button class="btn-test">View Project</button>
-                  </a>
-                </div>
-              </div>
-          </div>
-          <div class="swiper-slide">
-              <div class="slide-inner" >
-                <!-- <div class="overlay"></div> -->
-                <div class="slide-inner--image" style="background-image: url('assets/img/img2.jpg')"></div>
+                <div class="slide-inner--image" style="background-image: url('https://images.unsplash.com/flagged/photo-1558954157-aa76c0d246c6?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1489&q=80')"></div>
                 <div class="slide-inner--info">
                   <h1>Real Estate App</h1>
                   <a href="bl.html">
@@ -169,18 +166,33 @@
                 </div>
               </div>
           </div>
-          <div class="swiper-slide ">
+          <div class="swiper-slide">
               <div class="slide-inner" >
-                <div class="overlay"></div>
-                <div class="slide-inner--image" style="background-image: url('assets/img/img3.jpg')"></div>
+                <!-- <div class="overlay"></div> -->
+                <div class="slide-inner--image" style="background-image: url('https://images.unsplash.com/photo-1527224538127-2104bb71c51b?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1351&q=80')"></div>
                 <div class="slide-inner--info">
-                  <h1>Games Review App</h1>
-                  <a href="bl.html">
-                    <button class="btn-test">View Project</button>
+                  <h1>Restaurant App</h1>
+                  <a href="">
+                    <button class="btn-test">Coming Soon</button>
                   </a>
                 </div>
               </div>
           </div>
+          <!-- <div class="swiper-slide ">
+              <div class="slide-inner" >
+                <div class="overlay"></div>
+                <div class="slide-inner--image" style= "
+
+
+                background-image: url('assets/img/img3.jpg')"></div>
+                <div class="slide-inner--info">
+                  <h1>Games Review App</h1>
+                  <a href="tlw.html">
+                    <button class="btn-test">View Project</button>
+                  </a>
+                </div>
+              </div>
+          </div> -->
         </div>
         <div class="swiper-button-prev"></div>
         <div class="swiper-button-next"></div>

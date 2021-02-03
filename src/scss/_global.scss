@@ -3,7 +3,7 @@ $color-primary: #ef1618;
 
 $color-secondary: #1f1e1c;
 
-$color-grey-light-1: #cccccc;
+$color-grey-light-1: #f0f0f0;
 $color-grey-light-2: #9299a0;
 
 $color-grey-dark-1: #6f7781;
@@ -68,7 +68,7 @@ body {
   // font-weight: 300;
   line-height: 1.6;
   //   --page-background: #000;
-  //   background-color: var(--page-background);
+  // background-color: $color-grey-light-1;
 }
 
 ul,

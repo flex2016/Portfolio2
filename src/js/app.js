@@ -105,7 +105,21 @@ barba.init({
         swiperResults()
 				animationEnterProject(next.container)
 			}
-		}
+		},
+      {
+      name: 'from-project',
+      from: {
+				namespace: ['project']
+			},
+			to: {
+				namespace: ['project', 'architecture']
+			},
+      leave: ({current}) => animationLeave(current.container),
+      enter:({next})=> {
+        swiperResults()
+        animationEnterProject(next.container)
+      },
+    }
 
   ],
 });

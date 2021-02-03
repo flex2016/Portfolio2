@@ -7,7 +7,7 @@ function introSlide() {
             scrub: 1,
             start: "top bottom", // position of trigger meets the scroller position
             end: "bottom top",
-            markers: true
+            // markers: true
         }
     });
 

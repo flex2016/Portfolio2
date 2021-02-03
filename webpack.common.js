@@ -112,6 +112,24 @@ module.exports = {
       // chunks: ["project"],
       template: path.resolve(__dirname, "src", "bl.html"),// template file
     }),
+    new HtmlWebpackPlugin({
+      filename: "tlw.html", // output file
+      inject: true,
+      // chunks: ["project"],
+      template: path.resolve(__dirname, "src", "tlw.html"),// template file
+    }),
+    new HtmlWebpackPlugin({
+      filename: "jobtracker.html", // output file
+      inject: true,
+      // chunks: ["project"],
+      template: path.resolve(__dirname, "src", "jobtracker.html"),// template file
+    }),
+    new HtmlWebpackPlugin({
+      filename: "realestate.html", // output file
+      inject: true,
+      // chunks: ["project"],
+      template: path.resolve(__dirname, "src", "realestate.html"),// template file
+    }),
 
     new CopyWebpackPlugin({
       patterns: [

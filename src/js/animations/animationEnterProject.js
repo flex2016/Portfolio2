@@ -17,8 +17,8 @@ const animationEnterProject = ( container) => {
   });
   tl
     .from(container, {duration: 1,autoAlpha: 0,clearProps:"all",ease:'none'})
-		.fromTo(projectImage, {height:"50vh", width:"50%",},
-        {duration: 1.2, height:"100vh", width:"100%"},0)
+		.fromTo(projectImage, {height:"50vh", width:"50%",autoAlpha: 0,},
+        {duration: 1.2, height:"100vh", width:"100%", autoAlpha: 1},0)
     .from(heroText,  {
               duration: .6,
               yPercent: 100,
@@ -27,7 +27,7 @@ const animationEnterProject = ( container) => {
               ease: 'power1.out',
               delay:.5
   })
-    .to(".project__hero", {duration: 1.9, backgroundColor:"#000", opacity: .6},0)
+    // .to(".project__hero", {duration: 1.9, backgroundColor:"#000", opacity: 0},0)
   ;
 	return tl;
 
