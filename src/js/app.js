@@ -6,7 +6,7 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger.js";
 // import { ScrollToPlugin } from "gsap/ScrollToPlugin.js";
 
-import {   animationEnterHome, animationEnterProject,
+import {   animationEnterHome, animationEnterProject,animationEnterProjectFadeIn,
              animationLeave, animationLeaveSlideImage } from './animations';
 import {  introSlide, skewImg} from "./animations/gsap";
 import { swiperProjects, swiperResults } from "./components/swiper";
@@ -104,6 +104,21 @@ barba.init({
 			enter: ({ next }) => {
         swiperResults()
 				animationEnterProject(next.container)
+			}
+		},
+     {
+			name: 'project-fadeIn',
+			to: {
+				namespace: ['project-fadeIn']
+      },
+      leave: ({current}) => animationLeave(current.container),
+			once: ({ next }) => {
+        swiperResults()
+				animationEnterProjectFadeIn(next.container);
+			},
+			enter: ({ next }) => {
+        swiperResults()
+				animationEnterProjectFadeIn(next.container)
 			}
 		},
       {
