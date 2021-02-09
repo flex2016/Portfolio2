@@ -101,7 +101,7 @@ a {
   display: grid;
   // background: $color-grey-light-1;
   // overflow: hidden;
-  grid-template-rows: 100vh repeat(8, minmax(min-content, 14rem));
+  grid-template-rows: 100vh repeat(6, minmax(min-content, 14rem));
   grid-template-columns:
     [full-start]minmax(6rem, 1fr) [center-start]repeat(
       8,

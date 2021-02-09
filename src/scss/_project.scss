@@ -185,6 +185,7 @@
     @media only screen and (max-width: $bp-medium) {
       grid-column: full-start / full-end;
       padding: 2rem;
+      margin: 2vh 0;
     }
     &-name {
       display: block;
@@ -220,6 +221,9 @@
       margin-bottom: 10rem;
       background-color: rgb(245, 245, 245);
       padding: 2rem;
+    }
+    &-image:last-child {
+      margin-bottom: 0;
     }
     &-image img {
       display: block;
@@ -264,6 +268,7 @@
       margin-bottom: 15vh;
       @media only screen and (max-width: $bp-medium) {
         padding: 0 8rem;
+        margin-bottom: 9vh;
       }
       @media only screen and (max-width: $bp-small) {
         padding: 0;
