@@ -28,9 +28,6 @@ gsap.registerPlugin(ScrollTrigger);
 
 barba.hooks.once(({next}) => {
   scrollReveal(next.container);
-  introSlide()
-  scrollTo()
-  skewImg ()
   scrollHeader()
   textTransform()
 
@@ -43,8 +40,6 @@ barba.hooks.beforeEnter(() => {
 });
 
 barba.hooks.enter(({next}) => {
-  scrollTo()
-  introSlide()
   window.scrollTo(0, 0);
   scrollReveal(next.container);
   // scrollHeader();
@@ -67,15 +62,20 @@ barba.init({
 			},
       once({next}) {
         swiperProjects()
+        skewImg ()
+        scrollTo()
+        introSlide()
         animationEnterHome(next.container)
       },
       leave: ({current}) => animationLeave(current.container),
         // const done =this.async()
         // animationLeave(current.container, done)
       enter:({next})=> {
-        skewImg()
-        swiperProjects()
         animationEnterHome(next.container)
+        skewImg()
+        introSlide()
+        swiperProjects()
+
       },
     },
       {

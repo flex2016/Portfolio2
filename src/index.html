@@ -4,12 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Taras Kurilo Portfolio</title>
-    <link
+    <!-- <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
       integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
       crossorigin="anonymous"
-    />
+    /> -->
     <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Archivo:wght@400;500;600;700&display=swap"
       rel="stylesheet">
     <!-- <link rel="stylesheet" href="/src/fonts/BlackOpsOne-Regular.ttf"/> -->
@@ -64,17 +64,16 @@
               <span class=""> need</span>
             </h2>
             <h2 class="hero__content-message">
-
               <span class=""> &</span>
               <span class="">Magic</span>
               <span class="">Will </span>
               <span class=""> Happen</span>
             </h2>
           </div>
-
       </div>
       <div class="hero__image-container">
-        <img class="hero__image" src="assets/img/img1.jpg"  alt="">
+        <img class="hero__image" loading="lazy" srcset="assets/img/run-small.jpg 600w, assets/img/run.jpg 1000w"
+          sizes="(max-width: 56.25em) 88vw, (max-width: 37.5em) 86vw, 1000px" alt="Work 2" src="assets/img/run.jpg" />
       </div>
     </section>
     <section class="work" id="work">
@@ -93,8 +92,8 @@
         </div>
         <div class="work__image-container">
             <div class="work__image">
-              <img class="work__img " loading="lazy" srcset="assets/img/fire.jpg 600w, assets/img/fire.jpg 1000w"
-                sizes="(max-width: 56.25em) 88vw, (max-width: 37.5em) 86vw, 1000px" alt="Work 2" src="assets/img/fire.jpg" />
+              <img class="work__img " loading="lazy" srcset="assets/img/bl/fire-small.jpg 600w, assets/img/bl/fire.jpg 1000w"
+                sizes="(max-width: 56.25em) 88vw, (max-width: 37.5em) 86vw, 1000px" alt="Work 2" src="assets/img/bl/fire.jpg" />
             </div>
             </div>
 
@@ -115,9 +114,9 @@
               <div class="work__image-container">
                     <div class="work__image trigger">
                       <img loading="lazy"
-                        srcset="https://images.unsplash.com/photo-1494603976222-89db76b28a3f?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2700&q=80 600w, https://images.unsplash.com/photo-1494603976222-89db76b28a3f?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2700&q=80 1000w"
+                        srcset="assets/img/tlw/kid-walk-small.jpg 600w, assets/img/tlw/kid-walk.jpg 1000w"
                         sizes="(max-width: 56.25em) 88vw, (max-width: 37.5em) 86vw, 1000px" alt="Work 2" class="work__img"
-                        src="https://images.unsplash.com/photo-1494603976222-89db76b28a3f?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2700&q=80" />
+                        src="assets/img/tlw/kid-walk.jpg" />
                     </div>
               </div>
 
@@ -144,10 +143,10 @@
               <div class="slide-inner" >
                 <!-- <div class="overlay"></div> -->
                 <div class="slide-inner--image" style="
-                background:linear-gradient(0deg, rgba(240, 219, 219, 0.3), rgba(0, 0, 0, 0.9)), url(https://images.unsplash.com/photo-1586281380349-632531db7ed4?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80);
+                background-image: url(assets/img/job/jobTracker.webp);
                "></div>
                 <div class="slide-inner--info">
-                  <h1>Job Tracker</h1>
+                  <h1>Job Tracker App</h1>
                   <a href="jobtracker.html">
                     <button class="btn-test">View Project</button>
                   </a>
@@ -157,7 +156,7 @@
           <div class="swiper-slide">
               <div class="slide-inner" >
                 <!-- <div class="overlay"></div> -->
-                <div class="slide-inner--image" style="background-image: url('https://images.unsplash.com/flagged/photo-1558954157-aa76c0d246c6?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1489&q=80')"></div>
+                <div class="slide-inner--image" style="background-image: url(assets/img/real/realestate.jpg)"></div>
                 <div class="slide-inner--info">
                   <h1>Real Estate App</h1>
                   <a href="realestate.html">
@@ -166,9 +165,9 @@
                 </div>
               </div>
           </div>
-          <div class="swiper-slide">
+          <!-- <div class="swiper-slide">
               <div class="slide-inner" >
-                <!-- <div class="overlay"></div> -->
+
                 <div class="slide-inner--image" style="background-image: url('https://images.unsplash.com/photo-1527224538127-2104bb71c51b?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1351&q=80')"></div>
                 <div class="slide-inner--info">
                   <h1>Restaurant App</h1>
@@ -177,7 +176,7 @@
                   </a>
                 </div>
               </div>
-          </div>
+          </div> -->
           <!-- <div class="swiper-slide ">
               <div class="slide-inner" >
                 <div class="overlay"></div>
@@ -250,11 +249,6 @@
                       class="footer__logo"
                     />
     </footer> -->
-
-
-
-
     </main>
-
   </body>
 </html>
