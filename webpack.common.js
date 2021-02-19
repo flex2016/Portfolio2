@@ -98,7 +98,7 @@ module.exports = {
       filename: "index.html", // output file
       inject: true,
       // chunks: ["app"],
-      template: path.resolve(__dirname, "src", "index.html"),// template file
+      template: path.resolve(__dirname, "src/views", "index.html"),// template file
     }),
     // new HtmlWebpackPlugin({
     //   filename: "project.html", // output file
@@ -110,25 +110,25 @@ module.exports = {
       filename: "bl.html", // output file
       inject: true,
       // chunks: ["project"],
-      template: path.resolve(__dirname, "src", "bl.html"),// template file
+      template: path.resolve(__dirname, "src/views", "bl.html"),// template file
     }),
     new HtmlWebpackPlugin({
       filename: "tlw.html", // output file
       inject: true,
       // chunks: ["project"],
-      template: path.resolve(__dirname, "src", "tlw.html"),// template file
+      template: path.resolve(__dirname, "src/views", "tlw.html"),// template file
     }),
     new HtmlWebpackPlugin({
       filename: "jobtracker.html", // output file
       inject: true,
       // chunks: ["project"],
-      template: path.resolve(__dirname, "src", "jobtracker.html"),// template file
+      template: path.resolve(__dirname, "src/views", "jobtracker.html"),// template file
     }),
     new HtmlWebpackPlugin({
       filename: "realestate.html", // output file
       inject: true,
       // chunks: ["project"],
-      template: path.resolve(__dirname, "src", "realestate.html"),// template file
+      template: path.resolve(__dirname, "src/views", "realestate.html"),// template file
     }),
 
     new CopyWebpackPlugin({
