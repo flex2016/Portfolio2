@@ -9,8 +9,6 @@ const animationEnterProject = ( container) => {
   textSlideUpAnimation(".hero__content-title h1, .hero__content-message span, .header__nav li")
 
   const tl = gsap.timeline({
-		onStart: () => console.log('starting animationLeave'),
-		onComplete: () => console.log('completed animationLeave'),
 		defaults: {
 			duration: 0.8, ease: 'power1.in'
 		}
@@ -22,12 +20,10 @@ const animationEnterProject = ( container) => {
     .from(heroText,  {
               duration: .6,
               yPercent: 100,
-              // autoAlpha: 0,
               stagger: .2,
               ease: 'power1.out',
               delay:.5
   })
-    // .to(".project__hero", {duration: 1.9, backgroundColor:"#000", opacity: 0},0)
   ;
 	return tl;
 

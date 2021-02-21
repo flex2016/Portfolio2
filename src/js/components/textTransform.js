@@ -1,5 +1,3 @@
-
-
 function textTransform(){
   // On Mouse MOve the background position moves
   var containertwo = document.querySelector(".container-two");

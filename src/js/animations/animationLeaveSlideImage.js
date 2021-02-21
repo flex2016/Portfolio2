@@ -4,11 +4,6 @@ const animationLeaveSlideImage = (container) => {
 
 	const projects = container.querySelectorAll('.work__image');
 	const images = container.querySelectorAll('.work__img');
-	const title = container.querySelectorAll('.work__heading');
-	const projectName = container.querySelectorAll('.work__details-heading-link');
-	const type = container.querySelectorAll('.work__type');
-	const button = container.querySelectorAll('.btn-test');
-	const header = container.querySelector('.header .scrolling-active');
 	const tl = gsap.timeline({
 		onStart: () => console.log('starting animationLeave'),
 		onComplete: () => console.log('completed animationLeave'),

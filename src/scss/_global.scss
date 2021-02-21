@@ -42,11 +42,11 @@ $bp-xsSmall: 26.25em; // 420px;
 
 @font-face {
   font-family: ArcivoReg;
-  src: url(/src/fonts/Archivo-Regular.ttf);
+  src: url(../assets/fonts/Archivo-Regular.ttf);
 }
 @font-face {
   font-family: ArcivoBlackReg;
-  src: url(/src/fonts/ArchivoBlack-Regular.ttf);
+  src: url(../assets/fonts/ArchivoBlack-Regular.ttf);
 }
 :root {
   --easing: cubic-bezier(0.5, 0.7, 0.4, 1);
