@@ -1,0 +1,15 @@
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="802" height="757" viewBox="0 0 802 757">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #FF0000;
+      }
+    </style>
+    <symbol id="New_Symbol" data-name="New Symbol" viewBox="0 0 802 757">
+      <polygon class="cls-1" points="689.14 99.71 84 99 0 0 802 0 689.14 99.71"/>
+      <rect class="cls-1" x="254.16" y="93.9" width="114.98" height="663.1"/>
+      <polygon class="cls-1" points="802 0 440.15 339.78 802 757 654 757 285.72 331.07 646.44 0 802 0"/>
+    </symbol>
+  </defs>
+  <use width="802" height="757" xlink:href="#New_Symbol"/>
+</svg>
