@@ -1,12 +1,19 @@
 @import "~reset-css/reset.css";
-@import "global.scss";
-@import "typography.scss";
-@import "header.scss";
-@import "hero.scss";
-@import "main.scss";
-@import "work.scss";
-@import "intro.scss";
-@import "personal-projects.scss";
-@import "contact.scss";
-@import "footer.scss";
-@import "project.scss";
+@import "abstracts/variables";
+
+@import "base/animations";
+@import "base/base";
+
+@import "layout/navigation";
+@import "layout/header";
+@import "layout/footer";
+@import "layout/container";
+
+@import "components/buttons";
+@import "components/form";
+@import "components/links";
+@import "components/waves";
+
+@import "pages/home";
+@import "pages/contact";
+@import "pages/project";

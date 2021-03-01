@@ -1,0 +1,80 @@
+// COLOR VARIABLES
+$color-primary: #ef1618;
+$color-secondary: #1f1e1c;
+
+$color-grey-light-1: #f0f0f0;
+$color-grey-light-2: #9299a0;
+
+$color-grey-dark-1: #6f7781;
+$color-grey-dark-2: #6d5d4b;
+
+$color-white: #fff;
+$color-black: #000;
+
+.white {
+  color: $color-white !important;
+}
+
+// FONT VARIABLES
+
+$font-primary: "ArcivoReg", "sans-serif";
+$font-primary-bold: "ArcivoBlackReg";
+
+$font-display: "ArcivoBlackReg", "sans-serif";
+
+// RESPONSIVE BREAKPOINTS
+$bp-2k: 125em; // 2000px;
+$bp-2xlarge: 112.5em; // 1800px;
+$bp-xlarge: 100em; // 1600px;
+$bp-largest: 75em; // 1200px
+$bp-large: 62.5em; // 1000px
+$bp-medium: 50em; // 800px;
+$bp-small: 37.5em; // 600px;
+$bp-xsSmall: 26.25em; // 420px;
+
+@font-face {
+  font-family: ArcivoReg;
+  font-display: swap;
+  src: url(../assets/fonts/Archivo-Regular.ttf);
+}
+@font-face {
+  font-family: ArcivoBlackReg;
+  font-display: swap;
+  src: url(../assets/fonts/ArchivoBlack-Regular.ttf);
+}
+
+.underline--magical {
+  background-image: linear-gradient(
+    120deg,
+    $color-primary 0%,
+    $color-grey-light-1 100%
+  );
+
+  background-repeat: no-repeat;
+  background-size: 100% 0.3em;
+  background-position: 0 80%;
+  transition: background-size 0.25s ease-in;
+  &:hover {
+    background-size: 100% 80%;
+  }
+}
+
+.preloader {
+  align-items: center;
+  background: rgb(23, 22, 22);
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  left: 0;
+  position: fixed;
+  top: 0;
+  transition: opacity 0.3s linear;
+  width: 100%;
+  z-index: 1;
+}
+
+.gs_reveal {
+  opacity: 0;
+  visibility: hidden;
+  transition: transform 0s;
+}

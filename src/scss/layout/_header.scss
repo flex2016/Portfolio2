@@ -1,0 +1,45 @@
+.header {
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 2vh 2vw;
+  align-items: center;
+  z-index: 9999;
+  opacity: 1;
+  transition: background-color 0.5s ease;
+  // font-family: $font-primary;
+  &__logo {
+    height: 4.5rem;
+    width: 6rem;
+  }
+
+  &__nav {
+    // margin-right: -3.5rem;
+    // position: absolute;
+    // top: calc(100vh - 45rem);
+    // left: 30vw;
+    // width: 15vw;
+    // height: 10vh;
+    // justify-content: center;
+    // align-items: center;
+    & ul {
+      // overflow: hidden;
+      display: flex;
+    }
+    &-link {
+      color: $color-black;
+      text-transform: uppercase;
+      margin: 0 1.2rem;
+      // transition: all 0.2s;
+      // &:hover {
+      //   font-weight: 500;
+      //   text-decoration: line-through;
+      // }
+    }
+  }
+}
+.scrolling-active {
+  background-color: red;
+  box-shadow: 0 3px 1rem rgba(0, 0, 0, 0.1);
+}

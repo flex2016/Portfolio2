@@ -130,6 +130,13 @@ module.exports = {
       // chunks: ["project"],
       template: path.resolve(__dirname, "src/views", "realestate.html"),// template file
     }),
+    new HtmlWebpackPlugin({
+      filename: "contact.html", // output file
+      inject: true,
+      // chunks: ["project"],
+      template: path.resolve(__dirname, "src/views", "contact.html"),// template file
+    }),
+
 
     new CopyWebpackPlugin({
       patterns: [

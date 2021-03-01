@@ -1,0 +1,186 @@
+.contact {
+  // position: relative;
+  display: flex;
+  height: 100vh;
+  // justify-content: center;
+  // align-items: stretch;
+  flex-wrap: wrap;
+  // margin: 0 auto;
+  padding: 20vh 5vw;
+  // background-color: lightgray;
+  @media only screen and (max-width: $bp-large) {
+    //       margin-top: 4rem;
+    padding: 10vh 5vw;
+  }
+  &__left {
+    // background-color: grey;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    @media only screen and (max-width: $bp-largest) {
+      //       margin-top: 4rem;
+      justify-content: center;
+    }
+    @media only screen and (max-width: $bp-large) {
+      width: 100%;
+      //       margin-top: 4rem;
+      // padding: 26vh 5vw;
+    }
+    @media only screen and (max-width: $bp-small) {
+      margin: 3rem;
+    }
+    & svg {
+      @media only screen and (max-width: $bp-large) {
+        // display: none;
+        width: 60% !important;
+      }
+      @media only screen and (max-width: $bp-medium) {
+        display: none;
+        // width: 60% !important;
+      }
+    }
+    &-socials {
+      text-transform: uppercase;
+      font-size: 2rem;
+      display: flex;
+      width: 50%;
+      justify-content: space-between;
+      // flex-direction: row;
+      @media only screen and (max-width: $bp-small) {
+        font-size: 1.5rem;
+      }
+      & a {
+        // margin: 0 4.5rem;
+        color: $color-black;
+        transition: all 0.2s;
+        &:hover {
+          color: $color-primary;
+        }
+      }
+      // & a:first-child {
+      //   margin: 0 4rem 0 0;
+      // }
+    }
+  }
+  &__right {
+    // background-color: lightblue;
+
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    @media only screen and (max-width: $bp-large) {
+      width: 100%;
+      //       margin-top: 4rem;
+      // padding: 26vh 5vw;
+    }
+    &-title {
+      font-size: clamp(4.5rem, 3.5vw, 5rem);
+      // margin: 5vh;
+      @media only screen and (max-width: $bp-small) {
+        font-size: 3rem;
+      }
+    }
+  }
+
+  &__form {
+    // margin: 20rem 0;
+    width: 80%;
+    align-self: center;
+    // grid-row: 6 / -1;
+    // grid-column: 5 / 9;
+    display: grid;
+    align-items: center;
+    @media only screen and (min-width: $bp-2xlarge) {
+      width: 50%;
+    }
+    @media only screen and (max-width: $bp-medium) {
+      margin: 0;
+      padding: 3rem;
+    }
+    @media only screen and (max-width: $bp-small) {
+      width: 100%;
+    }
+  }
+}
+
+#Vector_37 {
+  animation: scaleDown 5s ease-in infinite;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+
+#Vector_38 {
+  animation: scaleDown 3s ease-in infinite;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+#Group_6 {
+  animation: hideshow 5s ease-in infinite;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+#Group_5 {
+  animation: hideshow 10s ease-in infinite;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+#envelope2,
+#envelope1 {
+  animation: hideshow 3s ease-in infinite;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+#Group_4,
+#phone,
+#Vector_43 {
+  animation: kaboom 5s ease-in infinite;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+#Vector_77 {
+  animation: kaboomSmall 5s ease-in infinite;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+#triangle_up {
+  animation: rotate 10s infinite linear;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+#bottomCircle {
+  animation: rotate 5s infinite linear;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+#Vector_114 {
+  animation: rotate 2s infinite linear;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+#cloud_big {
+  animation: left 5s infinite linear;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+#pink_cloud {
+  animation: right 5s infinite linear;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+#flower,
+#Vector_46,
+#Vector_116,
+#Vector_107,
+#Vector_108,
+#Vector_63,
+#Vector_65,
+#Vector_55,
+#Vector_57 {
+  animation: rotate 5s infinite linear;
+  transform-origin: center;
+  transform-box: fill-box;
+}
