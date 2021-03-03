@@ -10,8 +10,13 @@ import {  introSlide} from "./animations/gsap";
 import { swiperProjects, swiperResults } from "./components/swiper";
 import { scrollReveal, scrollTo, scrollHeader } from "./components/scroll";
 import { textTransform } from "./components";
+import "splitting/dist/splitting.css";
+// import "splitting/dist/splitting-cells.css";
+import Splitting from "splitting";
 
 import "../scss/style.scss";
+
+
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -23,12 +28,17 @@ barba.hooks.once(({next}) => {
   scrollHeader()
   textTransform()
 
+
+
+
 });
 barba.hooks.afterLeave(({current}) => {
   current.container.remove();
 });
 barba.hooks.beforeEnter(() => {
   ScrollTrigger.getAll().forEach(t => t.kill());
+
+
 });
 
 barba.hooks.enter(({next}) => {
@@ -36,6 +46,8 @@ barba.hooks.enter(({next}) => {
   scrollReveal(next.container);
   // scrollHeader();
   textTransform()
+
+
 });
 
 barba.use(barbaPrefetch)
@@ -57,6 +69,7 @@ barba.init({
         scrollTo()
         introSlide()
         animationEnterHome(next.container)
+        Splitting();
       },
       leave: ({current}) => animationLeave(current.container),
         // const done =this.async()
@@ -65,6 +78,8 @@ barba.init({
         animationEnterHome(next.container)
         introSlide()
         swiperProjects()
+        Splitting();
+
 
       },
     },

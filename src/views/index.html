@@ -200,14 +200,14 @@
       </div>
     </section>
     <article itemscope itemtype="http://schema.org/Article" class="work" id="work">
-        <h1 itemprop="name" class="work__heading gs_reveal">RECENT WORK</h1>
+        <h1 itemprop="name" class="work__heading gs_reveal spread-out" data-splitting>RECENT WORK</h1>
         <div itemprop="articleBody">
             <div class="work__list">
               <div class="work__details ">
                 <h1 class="work__details-heading">
-                  <a class="work__details-heading-link gs_reveal" href="bl.html">B&L Cremation</a>
+                  <a class="work__details-heading-link gs_reveal zip-it" data-splitting href="bl.html">B&L Cremation</a>
                 </h1>
-                <h2 class="work__type">Identity & Website</h2>
+                <h2 class="work__type fall-out" data-splitting>Identity & Website</h2>
                 <div class="work__type-link">
                   <a href="bl.html">
                     <!-- <button class="btn-test">View Project</button> -->
@@ -248,9 +248,9 @@
             <div class="work__list">
               <div class="work__details">
                 <h1 class="work__details-heading">
-                  <a class=" work__details-heading-link gs_reveal" href="tlw.html">The Light Walk</a>
+                  <a class=" work__details-heading-link gs_reveal spread-out" data-splitting href="tlw.html">The Light Walk</a>
                 </h1>
-                <h2 class="work__type">Identity & Website</h2>
+                <h2 class="work__type wiggle-it" data-splitting>Identity & Website</h2>
                 <div class="work__type-link">
                   <a href="tlw.html">
                     <!-- <button class="btn-test">View Project</button> -->
@@ -296,7 +296,7 @@
 
   <section class="intro" >
     <h1 class="intro__title-designer ">Designer</h1>
-    <h1 class="intro__title-developer gs_reveal">Developer</h1>
+    <h1 class="intro__title-developer gs_reveal glitch-it" data-splitting>Developer</h1>
     <p class="intro__description">
       I build websites that drive engagement, traffic and conversion for
       industry-leading brands and startups.
@@ -304,11 +304,42 @@
   </section>
     <section class="personal">
       <h1 class="personal__heading">Personal Projects</h1>
+      <!-- <div class="work__item js-scroll-monitor">
+        <div class="work__thumb-fixed"><img class="work__thumb-fixed-img"
+            src="/images/cover.b08d7ab720a0b1f8904e7c1ec5e1cea9.webp"></div>
+        <div class="work__item-con js-reveal" style="transform: translate(0px, 0px); opacity: 1;">
+          <div class="work__item-wrapper">
+            <div class="line"></div>
+            <div class="work__item-details">
+              <div class="work__item-details-num overflow-hidden"><span>01</span></div>
+              <div class="work__item-details-title">
+                <div class="overflow-hidden">
+                  <h2>booz player</h2>
+                </div>
+                <div class="overflow-hidden"><span class="sub-caps">UI / UX</span></div>
+              </div>
+            </div>
+          </div>
+          <div class="work__item-thumbnail"><svg class="thumbnail" viewBox="0 0 430 300" width="100%" height="100%"
+              preserveAspectRatio="none">
+              <defs>
+                <mask id="maskThumbnail">
+                  <polygon points="430, 300 0, 270 0, 30 430, 0 430, 300" fill="#fff" width="100%" height="100%"></polygon>
+                </mask>
+              </defs>
+              <image xlink:href="/images/cover.b08d7ab720a0b1f8904e7c1ec5e1cea9.webp" mask="url(#maskThumbnail)"
+                preserveAspectRatio="none"></image>
+            </svg>
+            <div class="work__item-thumbnail-bg" style="background:#e0f1f7"></div>
+          </div><a class="page__link link__decor link__decor--bg link work__item-link" href="/projects/booz"><span
+              class="link-text">VIEW PROJECT</span><span class="line"></span></a>
+        </div>
+      </div> -->
       <div class="swiper-container">
         <div class="swiper-wrapper">
           <div class="swiper-slide ">
               <div class="slide-inner" >
-                <!-- <div class="overlay"></div> -->
+
                 <div class="slide-inner--image" style="
                 background-image: url(assets/img/job/jobTracker.webp);
                "></div>
@@ -322,7 +353,7 @@
           </div>
           <div class="swiper-slide">
               <div class="slide-inner" >
-                <!-- <div class="overlay"></div> -->
+
                 <div class="slide-inner--image" style="background-image: url(assets/img/real/realestate.webp)"></div>
                 <div class="slide-inner--info">
                   <h1>Real Estate App</h1>
@@ -332,33 +363,6 @@
                 </div>
               </div>
           </div>
-          <!-- <div class="swiper-slide">
-              <div class="slide-inner" >
-
-                <div class="slide-inner--image" style="background-image: url('https://images.unsplash.com/photo-1527224538127-2104bb71c51b?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1351&q=80')"></div>
-                <div class="slide-inner--info">
-                  <h1>Restaurant App</h1>
-                  <a href="">
-                    <button class="btn-test">Coming Soon</button>
-                  </a>
-                </div>
-              </div>
-          </div> -->
-          <!-- <div class="swiper-slide ">
-              <div class="slide-inner" >
-                <div class="overlay"></div>
-                <div class="slide-inner--image" style= "
-
-
-                background-image: url('assets/img/img3.jpg')"></div>
-                <div class="slide-inner--info">
-                  <h1>Games Review App</h1>
-                  <a href="tlw.html">
-                    <button class="btn-test">View Project</button>
-                  </a>
-                </div>
-              </div>
-          </div> -->
         </div>
         <div class="swiper-button-prev"></div>
         <div class="swiper-button-next"></div>
@@ -414,6 +418,18 @@
                       class="footer__logo"
                     />
     </footer> -->
+  <!-- <svg class="cursor" width="200" height="200" viewBox="0 0 200 200">
+    <defs>
+      <filter id="filter-1" x="-50%" y="-50%" width="200%" height="200%" filterUnits="objectBoundingBox">
+        <feTurbulence type="fractalNoise" baseFrequency="0" numOctaves="5" result="warp" />
+        <feDisplacementMap xChannelSelector="R" yChannelSelector="G" scale="90" in="SourceGraphic" in2="warp" />
+      </filter>
+    </defs>
+    <circle class="cursor__inner" cx="100" cy="100" r="60" />
+  </svg> -->
     </main>
+    <!-- <div id="cursor">
+      <strong class="circle">{:"data-splitting" => "chars"}SEE•Moore</strong>
+    </div> -->
   </body>
 </html>

@@ -42,6 +42,7 @@
     "@barba/prefetch": "^2.1.10",
     "gsap": "^3.6.0",
     "reset-css": "^5.0.1",
+    "splitting": "^1.0.6",
     "swiper": "^6.2.0",
     "vanilla-tilt": "^1.7.0"
   }
