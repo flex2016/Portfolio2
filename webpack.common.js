@@ -100,12 +100,6 @@ module.exports = {
       // chunks: ["app"],
       template: path.resolve(__dirname, "src/views", "index.html"),// template file
     }),
-    // new HtmlWebpackPlugin({
-    //   filename: "project.html", // output file
-    //   inject: true,
-    //   chunks: ["project"],
-    //   template: path.resolve(__dirname, "src/project", "project.html"),// template file
-    // }),
     new HtmlWebpackPlugin({
       filename: "bl.html", // output file
       inject: true,
@@ -124,12 +118,12 @@ module.exports = {
       // chunks: ["project"],
       template: path.resolve(__dirname, "src/views", "jobtracker.html"),// template file
     }),
-    // new HtmlWebpackPlugin({
-    //   filename: "realestate.html", // output file
-    //   inject: true,
-    //   // chunks: ["project"],
-    //   template: path.resolve(__dirname, "src/views", "realestate.html"),// template file
-    // }),
+    new HtmlWebpackPlugin({
+      filename: "realestate.html", // output file
+      inject: true,
+      // chunks: ["project"],
+      template: path.resolve(__dirname, "src/views", "realestate.html"),// template file
+    }),
     new HtmlWebpackPlugin({
       filename: "contact.html", // output file
       inject: true,
