@@ -1,12 +1,13 @@
 import { gsap } from "gsap";
 
-function introSlide() {
+function introSlide(container) {
   let stl = gsap.timeline({
         scrollTrigger: {
             trigger: '.intro',
             scrub: 1,
             start: "top bottom", // position of trigger meets the scroller position
             end: "bottom top",
+            // scroller: container.parentNode,
             // markers: true
         }
     });

@@ -2,7 +2,13 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger.js";
 gsap.registerPlugin(ScrollTrigger);
 
-const animateFrom = (elem, direction) =>{
+const pageContainer = document.querySelector('[data-scroll-container]');
+import LocomotiveScroll from 'locomotive-scroll';
+
+
+
+
+const animateFrom = (elem,container, direction) =>{
   direction = direction | 1;
 // console.log(elem)
   var x = 0,
@@ -20,7 +26,8 @@ const animateFrom = (elem, direction) =>{
     y: 0,
     autoAlpha: 1,
     ease: "expo",
-    overwrite: "auto"
+    overwrite: "auto",
+    //  scroller: container
   });
 }
 
@@ -31,15 +38,16 @@ const hide = (elem) => {
 
 const scrollReveal = (container)=>{
   const reveal = container.querySelectorAll('.gs_reveal');
-
+  let newContainer =container.parentNode
   gsap.utils.toArray(reveal).forEach(function(elem) {
 
     hide(elem); // assure that the element is hidden when scrolled into view
 
     ScrollTrigger.create({
       trigger: elem,
-      onEnter: function() {animateFrom(elem) },
-      onEnterBack: function() { animateFrom(elem, -1)},
+      // scroller: newContainer,
+      onEnter: function() {animateFrom(elem, newContainer) },
+      onEnterBack: function() { animateFrom(elem,newContainer, -1)},
       onLeave: function() { hide(elem) } // assure that the element is hidden when scrolled into view
 		});
 

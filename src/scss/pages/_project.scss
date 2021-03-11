@@ -132,8 +132,7 @@
   }
   &__client,
   &__concept,
-  &__solution,
-  &__impact {
+  &__solution {
     grid-column: col-start 1 / col-end 8;
     margin: 5vh 0;
     @media only screen and (max-width: $bp-medium) {
@@ -264,7 +263,7 @@
       display: grid;
       place-items: center;
       margin-bottom: 10rem;
-      background-color: rgb(245, 245, 245);
+      // background-color: rgb(245, 245, 245);
       padding: 0rem;
     }
     &-image:last-child {
@@ -276,7 +275,10 @@
       height: auto;
       margin: 0 auto;
       @media only screen and (max-width: $bp-medium) {
-        width: 80%;
+        width: 60%;
+      }
+      @media only screen and (max-width: $bp-small) {
+        width: 70%;
       }
     }
   }
