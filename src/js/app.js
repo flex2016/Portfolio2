@@ -70,6 +70,7 @@ gsap.registerPlugin(ScrollTrigger);
 // update the scroll after entering a page
 barba.hooks.after(() => {
   scroll.update();
+<<<<<<< HEAD
 });
 
 barba.hooks.once(({next}) => {
@@ -79,6 +80,17 @@ barba.hooks.once(({next}) => {
   	// smooth(next.container);
 });
 
+=======
+});
+
+barba.hooks.once(({next}) => {
+  scrollReveal(next.container);
+  scrollHeader()
+  textTransform()
+  	// smooth(next.container);
+});
+
+>>>>>>> 80169445dbdf32bbbed9eb109c0caee532c389c5
 barba.hooks.afterLeave(({current}) => {
   current.container.remove();
 });
@@ -130,7 +142,10 @@ barba.init({
         introSlide(next.container)
         swiperProjects()
         Splitting();
+<<<<<<< HEAD
         scrollTo()
+=======
+>>>>>>> 80169445dbdf32bbbed9eb109c0caee532c389c5
         	// smooth(next.container);
 
 

@@ -9,6 +9,8 @@ const animationEnterProject = ( container) => {
   textSlideUpAnimation(".hero__content-title h1, .hero__content-message span, .header__nav li")
 
   const tl = gsap.timeline({
+    onStart: () => console.log('starting animationEnterProject'),
+		onComplete: () => console.log('completed animationEnterProject'),
 		defaults: {
 			duration: 0.8, ease: 'power1.in'
 		}
