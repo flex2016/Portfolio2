@@ -101,7 +101,8 @@
       @media only screen and (max-width: $bp-medium) {
         display: none;
       }
-      & span:nth-of-type(2) {
+      & li,
+      h3 {
         color: $color-grey-light-2;
       }
     }
