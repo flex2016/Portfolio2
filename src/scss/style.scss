@@ -8,13 +8,15 @@
 @import "layout/header";
 @import "layout/footer";
 @import "layout/container";
+@import "layout/form";
 
 @import "components/buttons";
-@import "components/form";
+
 @import "components/links";
 @import "components/waves";
-@import "components/splitting";
-@import "components/locomotive-scroll";
+
+@import "vendors/splitting";
+@import "vendors/locomotive-scroll";
 
 @import "pages/home";
 @import "pages/contact";
