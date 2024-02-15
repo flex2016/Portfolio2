@@ -69,7 +69,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 // update the scroll after entering a page
 barba.hooks.after(() => {
-  scroll.update();
+  // scroll.update();
 
 });
 
@@ -90,7 +90,7 @@ barba.hooks.beforeEnter(() => {
 
 barba.hooks.enter(({next}) => {
   window.scrollTo(0, 0);
-  scrollReveal(next.container);
+  // scrollReveal(next.container);
   // scrollHeader();
   textTransform()
   // smooth(next.container);
